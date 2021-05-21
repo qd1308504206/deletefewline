@@ -792,6 +792,28 @@ namespace DeleteFirstFewLine
             catch
             { return false; }
         }
+        public static bool IsUtf8BomFile(string fileFullPath)
+        {
+            var fs = File.OpenRead(fileFullPath);
+            var binnaryReader = new BinaryReader(fs);
+            
+
+            byte[] u8bom = {0xEF,0xBB,0xBF };
+
+            for (int i = 0; i < 3; i++)
+            {
+                byte[] arr = binnaryReader.ReadBytes(1);
+                if (arr[0] == u8bom[i])
+                    continue;
+                else
+                {
+                    binnaryReader.Close();
+                    return false;
+                }
+            }
+            binnaryReader.Close();
+            return true;
+        }
 
         public static bool AddDataTopEndFile(string filePath, bool ckedBak, string data, bool blTop, bool blEnd, bool blOverWrite)
         {
@@ -802,9 +824,18 @@ namespace DeleteFirstFewLine
                 { return false; }
             }
             List<string> lsData = MyString.ConvertToListString(data);
+            
+
             try
             {              
                 Encoding en = FileEncoding.EncodingType.GetType(filePath);
+                var en_nobom = new System.Text.UTF8Encoding(false);
+                bool isU8_noBom = en.EncodingName == en_nobom.EncodingName;
+                if (isU8_noBom)
+                {
+                    isU8_noBom = !IsUtf8BomFile(filePath);
+                }
+
                 List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
 
                 if(blOverWrite)
@@ -829,12 +860,19 @@ namespace DeleteFirstFewLine
                         ls.AddRange(lsData);
                     }
                 }
-               
 
-                File.WriteAllLines(filePath, ls.ToArray(), en);
+
+                if (isU8_noBom)
+                {
+                    File.WriteAllLines(filePath, ls.ToArray(), en_nobom);
+                }
+                else
+                {
+                    File.WriteAllLines(filePath, ls.ToArray(), en);
+                }
                 return true;
             }
-            catch
+            catch(Exception e)
             { return false; }
         }
 
