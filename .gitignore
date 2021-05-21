@@ -1,0 +1,13 @@
+*.d
+*.obj
+*.vs
+*.o
+*.tlog
+*.lastbuildstate
+*.idb
+*.pdb
+*~
+*.swp
+
+DeleteFirstFewLine/bin
+DeleteFirstFewLine/obj
