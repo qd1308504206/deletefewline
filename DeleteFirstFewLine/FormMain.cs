@@ -282,7 +282,7 @@ namespace DeleteFirstFewLine
                 case "开始添加到文件的首尾":
                     if(!checkBoxAddData_TopFile.Checked && ! checkBoxAddData_EndFile.Checked)
                     {  return;  }
-                    if(txbMerge_AddDataAmongFiles.Text == "")
+                    if(txbAddData_TopEndOfFile.Text == "")
                     {  return;  }
                     DeleteLine("AddDataTopEndFile");
                     break;

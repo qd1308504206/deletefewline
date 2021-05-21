@@ -37,6 +37,8 @@
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.捐赠ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
             this.DGV = new System.Windows.Forms.DataGridView();
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -170,6 +172,9 @@
             this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
             this.txbFileDelete = new System.Windows.Forms.TextBox();
             this.tpOther = new System.Windows.Forms.TabPage();
+            this.panelOtherSort = new System.Windows.Forms.Panel();
+            this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
+            this.radioBtnSortUp = new System.Windows.Forms.RadioButton();
             this.panelOtherChangeFileType = new System.Windows.Forms.Panel();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -196,11 +201,6 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.panelOtherSort = new System.Windows.Forms.Panel();
-            this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
-            this.radioBtnSortUp = new System.Windows.Forms.RadioButton();
-            this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.捐赠ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -232,12 +232,12 @@
             this.panelAddData_TopEndOfFile.SuspendLayout();
             this.tpDeleteLineFromFile.SuspendLayout();
             this.tpOther.SuspendLayout();
+            this.panelOtherSort.SuspendLayout();
             this.panelOtherChangeFileType.SuspendLayout();
             this.panelOtherFind.SuspendLayout();
             this.panelOtherRename.SuspendLayout();
             this.panelOtherAddFolder.SuspendLayout();
             this.panelStart.SuspendLayout();
-            this.panelOtherSort.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1
@@ -302,6 +302,20 @@
             this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
             this.帮助HToolStripMenuItem.Text = "帮助(&H)";
             this.帮助HToolStripMenuItem.Click += new System.EventHandler(this.帮助HToolStripMenuItem_Click);
+            // 
+            // 关于我们ToolStripMenuItem
+            // 
+            this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于我们ToolStripMenuItem.Text = "关于我们";
+            this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.关于我们ToolStripMenuItem_Click);
+            // 
+            // 捐赠ToolStripMenuItem
+            // 
+            this.捐赠ToolStripMenuItem.Name = "捐赠ToolStripMenuItem";
+            this.捐赠ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.捐赠ToolStripMenuItem.Text = "捐赠";
+            this.捐赠ToolStripMenuItem.Click += new System.EventHandler(this.捐赠ToolStripMenuItem_Click);
             // 
             // panelMain
             // 
@@ -1296,11 +1310,11 @@
             // 
             // tpAddData
             // 
+            this.tpAddData.Controls.Add(this.label34);
+            this.tpAddData.Controls.Add(this.comboBoxAddData);
             this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfLine);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfFile);
-            this.tpAddData.Controls.Add(this.label34);
-            this.tpAddData.Controls.Add(this.comboBoxAddData);
             this.tpAddData.Location = new System.Drawing.Point(4, 22);
             this.tpAddData.Name = "tpAddData";
             this.tpAddData.Size = new System.Drawing.Size(673, 79);
@@ -1619,6 +1633,37 @@
             this.tpOther.Text = "其他处理方式";
             this.tpOther.UseVisualStyleBackColor = true;
             // 
+            // panelOtherSort
+            // 
+            this.panelOtherSort.Controls.Add(this.radioBtnSortDown);
+            this.panelOtherSort.Controls.Add(this.radioBtnSortUp);
+            this.panelOtherSort.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherSort.Name = "panelOtherSort";
+            this.panelOtherSort.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherSort.TabIndex = 24;
+            // 
+            // radioBtnSortDown
+            // 
+            this.radioBtnSortDown.AutoSize = true;
+            this.radioBtnSortDown.Location = new System.Drawing.Point(142, 18);
+            this.radioBtnSortDown.Name = "radioBtnSortDown";
+            this.radioBtnSortDown.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortDown.TabIndex = 2;
+            this.radioBtnSortDown.TabStop = true;
+            this.radioBtnSortDown.Text = "字母降序";
+            this.radioBtnSortDown.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnSortUp
+            // 
+            this.radioBtnSortUp.AutoSize = true;
+            this.radioBtnSortUp.Location = new System.Drawing.Point(39, 18);
+            this.radioBtnSortUp.Name = "radioBtnSortUp";
+            this.radioBtnSortUp.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortUp.TabIndex = 1;
+            this.radioBtnSortUp.TabStop = true;
+            this.radioBtnSortUp.Text = "字母升序";
+            this.radioBtnSortUp.UseVisualStyleBackColor = true;
+            // 
             // panelOtherChangeFileType
             // 
             this.panelOtherChangeFileType.Controls.Add(this.label44);
@@ -1865,51 +1910,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panelOtherSort
-            // 
-            this.panelOtherSort.Controls.Add(this.radioBtnSortDown);
-            this.panelOtherSort.Controls.Add(this.radioBtnSortUp);
-            this.panelOtherSort.Location = new System.Drawing.Point(0, 0);
-            this.panelOtherSort.Name = "panelOtherSort";
-            this.panelOtherSort.Size = new System.Drawing.Size(484, 73);
-            this.panelOtherSort.TabIndex = 24;
-            // 
-            // radioBtnSortDown
-            // 
-            this.radioBtnSortDown.AutoSize = true;
-            this.radioBtnSortDown.Location = new System.Drawing.Point(142, 18);
-            this.radioBtnSortDown.Name = "radioBtnSortDown";
-            this.radioBtnSortDown.Size = new System.Drawing.Size(71, 16);
-            this.radioBtnSortDown.TabIndex = 2;
-            this.radioBtnSortDown.TabStop = true;
-            this.radioBtnSortDown.Text = "字母降序";
-            this.radioBtnSortDown.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnSortUp
-            // 
-            this.radioBtnSortUp.AutoSize = true;
-            this.radioBtnSortUp.Location = new System.Drawing.Point(39, 18);
-            this.radioBtnSortUp.Name = "radioBtnSortUp";
-            this.radioBtnSortUp.Size = new System.Drawing.Size(71, 16);
-            this.radioBtnSortUp.TabIndex = 1;
-            this.radioBtnSortUp.TabStop = true;
-            this.radioBtnSortUp.Text = "字母升序";
-            this.radioBtnSortUp.UseVisualStyleBackColor = true;
-            // 
-            // 关于我们ToolStripMenuItem
-            // 
-            this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
-            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.关于我们ToolStripMenuItem.Text = "关于我们";
-            this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.关于我们ToolStripMenuItem_Click);
-            // 
-            // 捐赠ToolStripMenuItem
-            // 
-            this.捐赠ToolStripMenuItem.Name = "捐赠ToolStripMenuItem";
-            this.捐赠ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.捐赠ToolStripMenuItem.Text = "捐赠";
-            this.捐赠ToolStripMenuItem.Click += new System.EventHandler(this.捐赠ToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -1978,6 +1978,8 @@
             this.tpDeleteLineFromFile.PerformLayout();
             this.tpOther.ResumeLayout(false);
             this.tpOther.PerformLayout();
+            this.panelOtherSort.ResumeLayout(false);
+            this.panelOtherSort.PerformLayout();
             this.panelOtherChangeFileType.ResumeLayout(false);
             this.panelOtherChangeFileType.PerformLayout();
             this.panelOtherFind.ResumeLayout(false);
@@ -1988,8 +1990,6 @@
             this.panelOtherAddFolder.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
-            this.panelOtherSort.ResumeLayout(false);
-            this.panelOtherSort.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
