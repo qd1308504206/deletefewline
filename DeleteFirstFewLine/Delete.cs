@@ -829,12 +829,6 @@ namespace DeleteFirstFewLine
             try
             {              
                 Encoding en = FileEncoding.EncodingType.GetType(filePath);
-                var en_nobom = new System.Text.UTF8Encoding(false);
-                bool isU8_noBom = en.EncodingName == en_nobom.EncodingName;
-                if (isU8_noBom)
-                {
-                    isU8_noBom = !IsUtf8BomFile(filePath);
-                }
 
                 List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
 
@@ -861,15 +855,7 @@ namespace DeleteFirstFewLine
                     }
                 }
 
-
-                if (isU8_noBom)
-                {
-                    File.WriteAllLines(filePath, ls.ToArray(), en_nobom);
-                }
-                else
-                {
-                    File.WriteAllLines(filePath, ls.ToArray(), en);
-                }
+                File.WriteAllLines(filePath, ls.ToArray(), en);
                 return true;
             }
             catch(Exception e)

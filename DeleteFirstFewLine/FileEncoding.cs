@@ -32,8 +32,8 @@ namespace FileEncoding
         /// <returns>文件的编码类型</returns>
         public static System.Text.Encoding GetType(FileStream fs)
         {
-            byte[] Unicode = new byte[] { 0xFF, 0xFE, 0x41 };
-            byte[] UnicodeBIG = new byte[] { 0xFE, 0xFF, 0x00 };
+            byte[] Unicode = new byte[] { 0xFF, 0xFE };
+            byte[] UnicodeBIG = new byte[] { 0xFE, 0xFF };
             byte[] UTF8 = new byte[] { 0xEF, 0xBB, 0xBF }; //带BOM
             Encoding reVal = Encoding.Default;
 
@@ -41,7 +41,7 @@ namespace FileEncoding
             int i;
             int.TryParse(fs.Length.ToString(), out i);
             byte[] ss = r.ReadBytes(i);
-            if (IsUTF8Bytes(ss) || (ss[0] == 0xEF && ss[1] == 0xBB && ss[2] == 0xBF))
+            if (ss[0] == 0xEF && ss[1] == 0xBB && ss[2] == 0xBF)
             {
                 reVal = Encoding.UTF8;
             }
@@ -52,6 +52,10 @@ namespace FileEncoding
             else if (ss[0] == 0xFF && ss[1] == 0xFE && ss[2] == 0x41)
             {
                 reVal = Encoding.Unicode;
+            }
+            else if (IsUTF8Bytes(ss))
+            {
+                reVal = new UTF8Encoding(false);
             }
             r.Close();
             return reVal;
