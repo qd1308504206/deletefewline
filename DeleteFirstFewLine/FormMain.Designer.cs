@@ -142,6 +142,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.nudSplit_Count = new System.Windows.Forms.NumericUpDown();
             this.tpAddData = new System.Windows.Forms.TabPage();
+            this.label34 = new System.Windows.Forms.Label();
+            this.comboBoxAddData = new System.Windows.Forms.ComboBox();
             this.panelAddData_FileName = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.checkBoxAddData_ContainExtension = new System.Windows.Forms.CheckBox();
@@ -162,15 +164,7 @@
             this.checkBoxAddData_EndFile = new System.Windows.Forms.CheckBox();
             this.checkBoxAddData_TopFile = new System.Windows.Forms.CheckBox();
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.comboBoxAddData = new System.Windows.Forms.ComboBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
-            this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
-            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
-            this.txbFileDelete = new System.Windows.Forms.TextBox();
             this.tpOther = new System.Windows.Forms.TabPage();
             this.panelOtherSort = new System.Windows.Forms.Panel();
             this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
@@ -201,6 +195,22 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.panel_DealMultiLine = new System.Windows.Forms.Panel();
+            this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
+            this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
+            this.txbFileDelete = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.nud_startLine = new System.Windows.Forms.NumericUpDown();
+            this.nud_endLine = new System.Windows.Forms.NumericUpDown();
+            this.label48 = new System.Windows.Forms.Label();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -238,6 +248,11 @@
             this.panelOtherRename.SuspendLayout();
             this.panelOtherAddFolder.SuspendLayout();
             this.panelStart.SuspendLayout();
+            this.panel_DealMultiLine.SuspendLayout();
+            this.panel_dealMultiLine2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -1322,6 +1337,30 @@
             this.tpAddData.Text = "添加数据";
             this.tpAddData.UseVisualStyleBackColor = true;
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(637, 17);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(29, 12);
+            this.label34.TabIndex = 22;
+            this.label34.Text = "模式";
+            // 
+            // comboBoxAddData
+            // 
+            this.comboBoxAddData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAddData.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBoxAddData.FormattingEnabled = true;
+            this.comboBoxAddData.Items.AddRange(new object[] {
+            "添加到文件的首尾",
+            "添加到行的首尾",
+            "添加文件名到文件"});
+            this.comboBoxAddData.Location = new System.Drawing.Point(493, 12);
+            this.comboBoxAddData.Name = "comboBoxAddData";
+            this.comboBoxAddData.Size = new System.Drawing.Size(138, 22);
+            this.comboBoxAddData.TabIndex = 21;
+            this.comboBoxAddData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAddData_SelectionChangeCommitted);
+            // 
             // panelAddData_FileName
             // 
             this.panelAddData_FileName.Controls.Add(this.label37);
@@ -1523,37 +1562,15 @@
             this.txbAddData_TopEndOfFile.Size = new System.Drawing.Size(254, 58);
             this.txbAddData_TopEndOfFile.TabIndex = 0;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(637, 17);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(29, 12);
-            this.label34.TabIndex = 22;
-            this.label34.Text = "模式";
-            // 
-            // comboBoxAddData
-            // 
-            this.comboBoxAddData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAddData.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBoxAddData.FormattingEnabled = true;
-            this.comboBoxAddData.Items.AddRange(new object[] {
-            "添加到文件的首尾",
-            "添加到行的首尾",
-            "添加文件名到文件"});
-            this.comboBoxAddData.Location = new System.Drawing.Point(493, 12);
-            this.comboBoxAddData.Name = "comboBoxAddData";
-            this.comboBoxAddData.Size = new System.Drawing.Size(138, 22);
-            this.comboBoxAddData.TabIndex = 21;
-            this.comboBoxAddData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAddData_SelectionChangeCommitted);
-            // 
             // tpDeleteLineFromFile
             // 
-            this.tpDeleteLineFromFile.Controls.Add(this.btnFile2DeleteBrower);
+            this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
+            this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
+            this.tpDeleteLineFromFile.Controls.Add(this.numericUpDown2);
+            this.tpDeleteLineFromFile.Controls.Add(this.label45);
             this.tpDeleteLineFromFile.Controls.Add(this.btnFile1DeleteBrowser);
-            this.tpDeleteLineFromFile.Controls.Add(this.label19);
+            this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.label18);
-            this.tpDeleteLineFromFile.Controls.Add(this.txbFileShaiXuan);
             this.tpDeleteLineFromFile.Controls.Add(this.txbFileDelete);
             this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
@@ -1561,61 +1578,6 @@
             this.tpDeleteLineFromFile.TabIndex = 5;
             this.tpDeleteLineFromFile.Text = "删除多行从文件";
             this.tpDeleteLineFromFile.UseVisualStyleBackColor = true;
-            // 
-            // btnFile2DeleteBrower
-            // 
-            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(596, 41);
-            this.btnFile2DeleteBrower.Name = "btnFile2DeleteBrower";
-            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(50, 32);
-            this.btnFile2DeleteBrower.TabIndex = 8;
-            this.btnFile2DeleteBrower.Text = "浏览";
-            this.btnFile2DeleteBrower.UseVisualStyleBackColor = true;
-            this.btnFile2DeleteBrower.Click += new System.EventHandler(this.btnFile2DeleteBrower_Click);
-            // 
-            // btnFile1DeleteBrowser
-            // 
-            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(596, 7);
-            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
-            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
-            this.btnFile1DeleteBrowser.TabIndex = 7;
-            this.btnFile1DeleteBrowser.Text = "浏览";
-            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
-            this.btnFile1DeleteBrowser.Click += new System.EventHandler(this.btnFile1DeleteBrowser_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(5, 44);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 12);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "要筛选的文件:";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 17);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 12);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "要处理的文件:";
-            // 
-            // txbFileShaiXuan
-            // 
-            this.txbFileShaiXuan.Location = new System.Drawing.Point(88, 41);
-            this.txbFileShaiXuan.Name = "txbFileShaiXuan";
-            this.txbFileShaiXuan.Size = new System.Drawing.Size(502, 21);
-            this.txbFileShaiXuan.TabIndex = 4;
-            this.txbFileShaiXuan.Click += new System.EventHandler(this.txbFileShaiXuan_Click);
-            // 
-            // txbFileDelete
-            // 
-            this.txbFileDelete.Location = new System.Drawing.Point(88, 14);
-            this.txbFileDelete.Name = "txbFileDelete";
-            this.txbFileDelete.Size = new System.Drawing.Size(502, 21);
-            this.txbFileDelete.TabIndex = 3;
-            this.txbFileDelete.Click += new System.EventHandler(this.txbFileDelete_Click);
             // 
             // tpOther
             // 
@@ -1910,6 +1872,169 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // panel_DealMultiLine
+            // 
+            this.panel_DealMultiLine.Controls.Add(this.btnFile2DeleteBrower);
+            this.panel_DealMultiLine.Controls.Add(this.label19);
+            this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
+            this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
+            this.panel_DealMultiLine.Name = "panel_DealMultiLine";
+            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 40);
+            this.panel_DealMultiLine.TabIndex = 12;
+            // 
+            // btnFile2DeleteBrower
+            // 
+            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(414, 5);
+            this.btnFile2DeleteBrower.Name = "btnFile2DeleteBrower";
+            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(50, 32);
+            this.btnFile2DeleteBrower.TabIndex = 14;
+            this.btnFile2DeleteBrower.Text = "浏览";
+            this.btnFile2DeleteBrower.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 14);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(59, 12);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "筛选文件:";
+            // 
+            // txbFileShaiXuan
+            // 
+            this.txbFileShaiXuan.Location = new System.Drawing.Point(82, 9);
+            this.txbFileShaiXuan.Name = "txbFileShaiXuan";
+            this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
+            this.txbFileShaiXuan.TabIndex = 10;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(636, 16);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(29, 12);
+            this.label45.TabIndex = 25;
+            this.label45.Text = "模式";
+            // 
+            // comboBox_DealMultiLine
+            // 
+            this.comboBox_DealMultiLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_DealMultiLine.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBox_DealMultiLine.FormattingEnabled = true;
+            this.comboBox_DealMultiLine.Items.AddRange(new object[] {
+            "替换指定行之间内容",
+            "筛选文件"});
+            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(482, 11);
+            this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
+            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
+            this.comboBox_DealMultiLine.TabIndex = 24;
+            this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
+            // 
+            // panel_dealMultiLine2
+            // 
+            this.panel_dealMultiLine2.Controls.Add(this.label48);
+            this.panel_dealMultiLine2.Controls.Add(this.nud_endLine);
+            this.panel_dealMultiLine2.Controls.Add(this.label47);
+            this.panel_dealMultiLine2.Controls.Add(this.label46);
+            this.panel_dealMultiLine2.Controls.Add(this.nud_startLine);
+            this.panel_dealMultiLine2.Location = new System.Drawing.Point(6, 35);
+            this.panel_dealMultiLine2.Name = "panel_dealMultiLine2";
+            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 43);
+            this.panel_dealMultiLine2.TabIndex = 12;
+            // 
+            // txbFileDelete
+            // 
+            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
+            this.txbFileDelete.Name = "txbFileDelete";
+            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
+            this.txbFileDelete.TabIndex = 9;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(14, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 12);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "模板文件:";
+            // 
+            // btnFile1DeleteBrowser
+            // 
+            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
+            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
+            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
+            this.btnFile1DeleteBrowser.TabIndex = 13;
+            this.btnFile1DeleteBrowser.Text = "浏览";
+            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(571, 45);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(61, 21);
+            this.numericUpDown2.TabIndex = 6;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(458, 16);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 12);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "结束行数:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(311, 18);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(59, 12);
+            this.label46.TabIndex = 10;
+            this.label46.Text = "开始行数:";
+            // 
+            // nud_startLine
+            // 
+            this.nud_startLine.Location = new System.Drawing.Point(376, 14);
+            this.nud_startLine.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_startLine.Name = "nud_startLine";
+            this.nud_startLine.Size = new System.Drawing.Size(73, 21);
+            this.nud_startLine.TabIndex = 9;
+            // 
+            // nud_endLine
+            // 
+            this.nud_endLine.Location = new System.Drawing.Point(526, 14);
+            this.nud_endLine.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_endLine.Name = "nud_endLine";
+            this.nud_endLine.Size = new System.Drawing.Size(71, 21);
+            this.nud_endLine.TabIndex = 12;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(3, 3);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(257, 36);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "1:将文件中的内容替换为模板文件里面的内容\r\n2:开始行数为0是行首，3:结束行数为0是行尾。\r\n4:结束小于开始，表示插入到开始位置";
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -1990,6 +2115,13 @@
             this.panelOtherAddFolder.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
+            this.panel_DealMultiLine.ResumeLayout(false);
+            this.panel_DealMultiLine.PerformLayout();
+            this.panel_dealMultiLine2.ResumeLayout(false);
+            this.panel_dealMultiLine2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2054,12 +2186,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TabPage tpDeleteLineFromFile;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txbFileShaiXuan;
-        private System.Windows.Forms.TextBox txbFileDelete;
-        private System.Windows.Forms.Button btnFile2DeleteBrower;
-        private System.Windows.Forms.Button btnFile1DeleteBrowser;
         private System.Windows.Forms.NumericUpDown nudSplit_Line;
         private System.Windows.Forms.CheckBox checkBoxMerge_AddFileName;
         private System.Windows.Forms.Panel panelMerge_AddDataAmongFile;
@@ -2168,7 +2294,22 @@
         private System.Windows.Forms.RadioButton radioBtnSortUp;
         private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 捐赠ToolStripMenuItem;
-
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox comboBox_DealMultiLine;
+        private System.Windows.Forms.Panel panel_DealMultiLine;
+        private System.Windows.Forms.Button btnFile2DeleteBrower;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txbFileShaiXuan;
+        private System.Windows.Forms.Panel panel_dealMultiLine2;
+        private System.Windows.Forms.Button btnFile1DeleteBrowser;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txbFileDelete;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.NumericUpDown nud_endLine;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.NumericUpDown nud_startLine;
     }
 }
 

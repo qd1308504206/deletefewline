@@ -599,6 +599,44 @@ namespace DeleteFirstFewLine
             { return false; }
 
         }
+
+
+        public static bool DeleteReplaceMultiLine(string filePath, bool ckedBak, int startline, int endline, string strModlePath)
+        {
+            if (ckedBak == true)
+            {
+                bool bak = DoBak(filePath);
+                if (bak == false)
+                { return false; }
+            }
+
+            try
+            {
+                Encoding en = FileEncoding.EncodingType.GetType(filePath);
+                List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
+                List<string> lsModle = new List<string>(File.ReadAllLines(strModlePath, en));
+
+                if (startline == 0 && (endline == 0 || endline > ls.Count()))
+                {
+                    File.WriteAllLines(filePath, lsModle.ToArray(), en);
+                }
+                else if ( (endline == 0 || endline > ls.Count()))//先做到这
+                {
+                    
+                }
+
+                
+
+
+
+
+                File.WriteAllLines(filePath, ls.ToArray(), en);
+                return true;
+            }
+            catch
+            { return false; }
+
+        }
         public static bool DeleteFileEvenOdd(string filePath, bool ckedBak, bool evenOdd)
         {
             if (ckedBak == true)

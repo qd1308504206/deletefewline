@@ -236,6 +236,12 @@ namespace DeleteFirstFewLine
                     //ReplaceMulData();
                     break;
 
+                case "开始替换指定行之间":
+
+                    DeleteLine("DealReplaceMultiLine");
+
+                    break;
+
                 case "开始删除行首数字":
                     DeleteLine("DeleteTopNumberOfLine");
                     break;
@@ -534,7 +540,15 @@ namespace DeleteFirstFewLine
                             successState = "拆分成功";
                             failedState = "拆分失败";
                             break;
+                        case "DealReplaceMultiLine":
+                            int nStart = Convert.ToInt32(nud_startLine.Value);
+                            int nEnd = Convert.ToInt32(nud_endLine.Value);
+                            string strModlePath = txbFileDelete.Text;
+                            bl = Delete.DeleteReplaceMultiLine(filePath, false,nStart,nEnd, strModlePath);
 
+                            successState = "替换成功";
+                            failedState = "替换失败";
+                            break;
 
                         case "AddDataTopEndFile"://开始添加到文件的首尾
 
@@ -1259,6 +1273,7 @@ namespace DeleteFirstFewLine
             }
         }
 
+        
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
 
@@ -2201,6 +2216,33 @@ namespace DeleteFirstFewLine
             fm.ShowDialog();
         }
 
+        private void comboBox_DealMultiLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitDealMultiLine();
+        }
+
+
+        private void InitDealMultiLine()
+        {
+            switch (this.comboBox_DealMultiLine.Text)
+            {
+                case "替换指定行之间内容":
+                    this.btnStart.Text = "开始替换指定行之间";
+                    this.panel_dealMultiLine2.Show();
+                    this.panel_DealMultiLine.Hide();
+                    break;
+
+                case "筛选文件":
+                    this.btnStart.Text = "开始筛选文件";
+                    this.panel_DealMultiLine.Show();
+                    this.panel_dealMultiLine2.Hide();
+                    break;
+
+                default:
+                    this.btnStart.Text = "还没做";
+                    break;
+            }
+        }
     }
 }
 
