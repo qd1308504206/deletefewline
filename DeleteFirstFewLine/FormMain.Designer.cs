@@ -165,6 +165,22 @@
             this.checkBoxAddData_TopFile = new System.Windows.Forms.CheckBox();
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
+            this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.nud_endLine = new System.Windows.Forms.NumericUpDown();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.nud_startLine = new System.Windows.Forms.NumericUpDown();
+            this.panel_DealMultiLine = new System.Windows.Forms.Panel();
+            this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label45 = new System.Windows.Forms.Label();
+            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
+            this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txbFileDelete = new System.Windows.Forms.TextBox();
             this.tpOther = new System.Windows.Forms.TabPage();
             this.panelOtherSort = new System.Windows.Forms.Panel();
             this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
@@ -195,22 +211,6 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.panel_DealMultiLine = new System.Windows.Forms.Panel();
-            this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
-            this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
-            this.txbFileDelete = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.nud_startLine = new System.Windows.Forms.NumericUpDown();
-            this.nud_endLine = new System.Windows.Forms.NumericUpDown();
-            this.label48 = new System.Windows.Forms.Label();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -241,6 +241,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).BeginInit();
             this.panelAddData_TopEndOfFile.SuspendLayout();
             this.tpDeleteLineFromFile.SuspendLayout();
+            this.panel_dealMultiLine2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).BeginInit();
+            this.panel_DealMultiLine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tpOther.SuspendLayout();
             this.panelOtherSort.SuspendLayout();
             this.panelOtherChangeFileType.SuspendLayout();
@@ -248,11 +253,6 @@
             this.panelOtherRename.SuspendLayout();
             this.panelOtherAddFolder.SuspendLayout();
             this.panelStart.SuspendLayout();
-            this.panel_DealMultiLine.SuspendLayout();
-            this.panel_dealMultiLine2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -1576,8 +1576,177 @@
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
             this.tpDeleteLineFromFile.Size = new System.Drawing.Size(673, 79);
             this.tpDeleteLineFromFile.TabIndex = 5;
-            this.tpDeleteLineFromFile.Text = "删除多行从文件";
+            this.tpDeleteLineFromFile.Text = "处理多行从文件";
             this.tpDeleteLineFromFile.UseVisualStyleBackColor = true;
+            // 
+            // panel_dealMultiLine2
+            // 
+            this.panel_dealMultiLine2.Controls.Add(this.label46);
+            this.panel_dealMultiLine2.Controls.Add(this.label48);
+            this.panel_dealMultiLine2.Controls.Add(this.nud_endLine);
+            this.panel_dealMultiLine2.Controls.Add(this.label47);
+            this.panel_dealMultiLine2.Controls.Add(this.nud_startLine);
+            this.panel_dealMultiLine2.Location = new System.Drawing.Point(6, 35);
+            this.panel_dealMultiLine2.Name = "panel_dealMultiLine2";
+            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 43);
+            this.panel_dealMultiLine2.TabIndex = 12;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(3, 3);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(353, 36);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "1:将文件中开始行和结束行之间的内容替换为模板文件里面的内容\r\n2:开始行数为0是行首，3:结束行数为0是行尾。\r\n4:结束小于开始，表示插入到开始位置";
+            // 
+            // nud_endLine
+            // 
+            this.nud_endLine.Location = new System.Drawing.Point(526, 14);
+            this.nud_endLine.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_endLine.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.nud_endLine.Name = "nud_endLine";
+            this.nud_endLine.Size = new System.Drawing.Size(71, 21);
+            this.nud_endLine.TabIndex = 12;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(458, 16);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 12);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "结束行数:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(311, 18);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(59, 12);
+            this.label46.TabIndex = 10;
+            this.label46.Text = "开始行数:";
+            // 
+            // nud_startLine
+            // 
+            this.nud_startLine.Location = new System.Drawing.Point(376, 14);
+            this.nud_startLine.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_startLine.Name = "nud_startLine";
+            this.nud_startLine.Size = new System.Drawing.Size(73, 21);
+            this.nud_startLine.TabIndex = 9;
+            // 
+            // panel_DealMultiLine
+            // 
+            this.panel_DealMultiLine.Controls.Add(this.btnFile2DeleteBrower);
+            this.panel_DealMultiLine.Controls.Add(this.label19);
+            this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
+            this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
+            this.panel_DealMultiLine.Name = "panel_DealMultiLine";
+            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 40);
+            this.panel_DealMultiLine.TabIndex = 12;
+            // 
+            // btnFile2DeleteBrower
+            // 
+            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(414, 5);
+            this.btnFile2DeleteBrower.Name = "btnFile2DeleteBrower";
+            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(50, 32);
+            this.btnFile2DeleteBrower.TabIndex = 14;
+            this.btnFile2DeleteBrower.Text = "浏览";
+            this.btnFile2DeleteBrower.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 14);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(59, 12);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "筛选文件:";
+            // 
+            // txbFileShaiXuan
+            // 
+            this.txbFileShaiXuan.Location = new System.Drawing.Point(82, 9);
+            this.txbFileShaiXuan.Name = "txbFileShaiXuan";
+            this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
+            this.txbFileShaiXuan.TabIndex = 10;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(571, 45);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(61, 21);
+            this.numericUpDown2.TabIndex = 6;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(636, 16);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(29, 12);
+            this.label45.TabIndex = 25;
+            this.label45.Text = "模式";
+            // 
+            // btnFile1DeleteBrowser
+            // 
+            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
+            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
+            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
+            this.btnFile1DeleteBrowser.TabIndex = 13;
+            this.btnFile1DeleteBrowser.Text = "浏览";
+            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
+            this.btnFile1DeleteBrowser.Click += new System.EventHandler(this.btnFile1DeleteBrowser_Click);
+            // 
+            // comboBox_DealMultiLine
+            // 
+            this.comboBox_DealMultiLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_DealMultiLine.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBox_DealMultiLine.FormattingEnabled = true;
+            this.comboBox_DealMultiLine.Items.AddRange(new object[] {
+            "替换指定行之间内容",
+            "筛选文件"});
+            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(482, 11);
+            this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
+            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
+            this.comboBox_DealMultiLine.TabIndex = 24;
+            this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(14, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 12);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "模板文件:";
+            // 
+            // txbFileDelete
+            // 
+            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
+            this.txbFileDelete.Name = "txbFileDelete";
+            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
+            this.txbFileDelete.TabIndex = 9;
             // 
             // tpOther
             // 
@@ -1872,169 +2041,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel_DealMultiLine
-            // 
-            this.panel_DealMultiLine.Controls.Add(this.btnFile2DeleteBrower);
-            this.panel_DealMultiLine.Controls.Add(this.label19);
-            this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
-            this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
-            this.panel_DealMultiLine.Name = "panel_DealMultiLine";
-            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 40);
-            this.panel_DealMultiLine.TabIndex = 12;
-            // 
-            // btnFile2DeleteBrower
-            // 
-            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(414, 5);
-            this.btnFile2DeleteBrower.Name = "btnFile2DeleteBrower";
-            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(50, 32);
-            this.btnFile2DeleteBrower.TabIndex = 14;
-            this.btnFile2DeleteBrower.Text = "浏览";
-            this.btnFile2DeleteBrower.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 14);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 12);
-            this.label19.TabIndex = 12;
-            this.label19.Text = "筛选文件:";
-            // 
-            // txbFileShaiXuan
-            // 
-            this.txbFileShaiXuan.Location = new System.Drawing.Point(82, 9);
-            this.txbFileShaiXuan.Name = "txbFileShaiXuan";
-            this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
-            this.txbFileShaiXuan.TabIndex = 10;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(636, 16);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(29, 12);
-            this.label45.TabIndex = 25;
-            this.label45.Text = "模式";
-            // 
-            // comboBox_DealMultiLine
-            // 
-            this.comboBox_DealMultiLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_DealMultiLine.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBox_DealMultiLine.FormattingEnabled = true;
-            this.comboBox_DealMultiLine.Items.AddRange(new object[] {
-            "替换指定行之间内容",
-            "筛选文件"});
-            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(482, 11);
-            this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
-            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
-            this.comboBox_DealMultiLine.TabIndex = 24;
-            this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
-            // 
-            // panel_dealMultiLine2
-            // 
-            this.panel_dealMultiLine2.Controls.Add(this.label48);
-            this.panel_dealMultiLine2.Controls.Add(this.nud_endLine);
-            this.panel_dealMultiLine2.Controls.Add(this.label47);
-            this.panel_dealMultiLine2.Controls.Add(this.label46);
-            this.panel_dealMultiLine2.Controls.Add(this.nud_startLine);
-            this.panel_dealMultiLine2.Location = new System.Drawing.Point(6, 35);
-            this.panel_dealMultiLine2.Name = "panel_dealMultiLine2";
-            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 43);
-            this.panel_dealMultiLine2.TabIndex = 12;
-            // 
-            // txbFileDelete
-            // 
-            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
-            this.txbFileDelete.Name = "txbFileDelete";
-            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
-            this.txbFileDelete.TabIndex = 9;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 12);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "模板文件:";
-            // 
-            // btnFile1DeleteBrowser
-            // 
-            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
-            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
-            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
-            this.btnFile1DeleteBrowser.TabIndex = 13;
-            this.btnFile1DeleteBrowser.Text = "浏览";
-            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(571, 45);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(61, 21);
-            this.numericUpDown2.TabIndex = 6;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(458, 16);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 12);
-            this.label47.TabIndex = 11;
-            this.label47.Text = "结束行数:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(311, 18);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(59, 12);
-            this.label46.TabIndex = 10;
-            this.label46.Text = "开始行数:";
-            // 
-            // nud_startLine
-            // 
-            this.nud_startLine.Location = new System.Drawing.Point(376, 14);
-            this.nud_startLine.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_startLine.Name = "nud_startLine";
-            this.nud_startLine.Size = new System.Drawing.Size(73, 21);
-            this.nud_startLine.TabIndex = 9;
-            // 
-            // nud_endLine
-            // 
-            this.nud_endLine.Location = new System.Drawing.Point(526, 14);
-            this.nud_endLine.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_endLine.Name = "nud_endLine";
-            this.nud_endLine.Size = new System.Drawing.Size(71, 21);
-            this.nud_endLine.TabIndex = 12;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(3, 3);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(257, 36);
-            this.label48.TabIndex = 13;
-            this.label48.Text = "1:将文件中的内容替换为模板文件里面的内容\r\n2:开始行数为0是行首，3:结束行数为0是行尾。\r\n4:结束小于开始，表示插入到开始位置";
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -2049,7 +2055,7 @@
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "删除多行";
+            this.Text = "小波TXT文本批量处理 v1.2";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
@@ -2101,6 +2107,13 @@
             this.panelAddData_TopEndOfFile.PerformLayout();
             this.tpDeleteLineFromFile.ResumeLayout(false);
             this.tpDeleteLineFromFile.PerformLayout();
+            this.panel_dealMultiLine2.ResumeLayout(false);
+            this.panel_dealMultiLine2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).EndInit();
+            this.panel_DealMultiLine.ResumeLayout(false);
+            this.panel_DealMultiLine.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tpOther.ResumeLayout(false);
             this.tpOther.PerformLayout();
             this.panelOtherSort.ResumeLayout(false);
@@ -2115,13 +2128,6 @@
             this.panelOtherAddFolder.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
-            this.panel_DealMultiLine.ResumeLayout(false);
-            this.panel_DealMultiLine.PerformLayout();
-            this.panel_dealMultiLine2.ResumeLayout(false);
-            this.panel_dealMultiLine2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

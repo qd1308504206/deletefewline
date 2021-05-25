@@ -616,21 +616,28 @@ namespace DeleteFirstFewLine
                 List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
                 List<string> lsModle = new List<string>(File.ReadAllLines(strModlePath, en));
 
+                // 全部替换
                 if (startline == 0 && (endline == 0 || endline > ls.Count()))
                 {
                     File.WriteAllLines(filePath, lsModle.ToArray(), en);
+                    return true;
                 }
-                else if ( (endline == 0 || endline > ls.Count()))//先做到这
-                {
-                    
-                }
-
                 
+                if ( startline > endline)//插入到指定位置
+                {
+                    ls.InsertRange(startline, lsModle);
+                    File.WriteAllLines(filePath, lsModle.ToArray(), en);
+                    return true;
+                }
+                if (endline <= 0 || endline > ls.Count())
+                {
+                    endline = ls.Count();
+                }
 
+                ls.RemoveRange(startline, endline - startline);
+                ls.InsertRange(startline, lsModle);
+                File.WriteAllLines(filePath, lsModle.ToArray(), en);
 
-
-
-                File.WriteAllLines(filePath, ls.ToArray(), en);
                 return true;
             }
             catch
