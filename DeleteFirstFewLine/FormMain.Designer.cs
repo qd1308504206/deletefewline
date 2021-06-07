@@ -166,10 +166,10 @@
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
             this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.nud_endLine = new System.Windows.Forms.NumericUpDown();
             this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.nud_startLine = new System.Windows.Forms.NumericUpDown();
             this.panel_DealMultiLine = new System.Windows.Forms.Panel();
             this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
@@ -257,12 +257,14 @@
             // 
             // menu1
             // 
+            this.menu1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件FToolStripMenuItem,
             this.帮助HToolStripMenuItem});
             this.menu1.Location = new System.Drawing.Point(0, 0);
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(695, 25);
+            this.menu1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menu1.Size = new System.Drawing.Size(927, 28);
             this.menu1.TabIndex = 0;
             this.menu1.Text = "menuStrip1";
             // 
@@ -274,14 +276,14 @@
             this.退出ToolStripMenuItem,
             this.打开文件夹ToolStripMenuItem});
             this.文件FToolStripMenuItem.Name = "文件FToolStripMenuItem";
-            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
+            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.文件FToolStripMenuItem.Text = "文件(&F)";
             // 
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
             this.打开ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
@@ -289,7 +291,7 @@
             // 
             this.默认设置ToolStripMenuItem.Name = "默认设置ToolStripMenuItem";
             this.默认设置ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.默认设置ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.默认设置ToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.默认设置ToolStripMenuItem.Text = "默认设置";
             this.默认设置ToolStripMenuItem.Click += new System.EventHandler(this.默认设置ToolStripMenuItem_Click);
             // 
@@ -297,14 +299,14 @@
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             this.退出ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.退出ToolStripMenuItem.Text = "退出";
             // 
             // 打开文件夹ToolStripMenuItem
             // 
             this.打开文件夹ToolStripMenuItem.Name = "打开文件夹ToolStripMenuItem";
             this.打开文件夹ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.打开文件夹ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.打开文件夹ToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
             this.打开文件夹ToolStripMenuItem.Text = "打开文件夹";
             this.打开文件夹ToolStripMenuItem.Click += new System.EventHandler(this.打开文件夹ToolStripMenuItem_Click);
             // 
@@ -314,21 +316,21 @@
             this.关于我们ToolStripMenuItem,
             this.捐赠ToolStripMenuItem});
             this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.帮助HToolStripMenuItem.Text = "帮助(&H)";
             this.帮助HToolStripMenuItem.Click += new System.EventHandler(this.帮助HToolStripMenuItem_Click);
             // 
             // 关于我们ToolStripMenuItem
             // 
             this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
-            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.关于我们ToolStripMenuItem.Text = "关于我们";
             this.关于我们ToolStripMenuItem.Click += new System.EventHandler(this.关于我们ToolStripMenuItem_Click);
             // 
             // 捐赠ToolStripMenuItem
             // 
             this.捐赠ToolStripMenuItem.Name = "捐赠ToolStripMenuItem";
-            this.捐赠ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.捐赠ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.捐赠ToolStripMenuItem.Text = "捐赠";
             this.捐赠ToolStripMenuItem.Click += new System.EventHandler(this.捐赠ToolStripMenuItem_Click);
             // 
@@ -339,9 +341,10 @@
             this.panelMain.Controls.Add(this.tabControl1);
             this.panelMain.Controls.Add(this.panelStart);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 25);
+            this.panelMain.Location = new System.Drawing.Point(0, 28);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(695, 427);
+            this.panelMain.Size = new System.Drawing.Size(927, 537);
             this.panelMain.TabIndex = 1;
             // 
             // DGV
@@ -353,17 +356,20 @@
             this.FileName,
             this.State});
             this.DGV.ContextMenuStrip = this.contextMenu_DGV;
-            this.DGV.Location = new System.Drawing.Point(7, 124);
+            this.DGV.Location = new System.Drawing.Point(9, 155);
+            this.DGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGV.Name = "DGV";
+            this.DGV.RowHeadersWidth = 51;
             this.DGV.RowTemplate.Height = 23;
             this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(569, 249);
+            this.DGV.Size = new System.Drawing.Size(759, 311);
             this.DGV.TabIndex = 1;
             this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
             // 
             // FilePath
             // 
             this.FilePath.HeaderText = "路径";
+            this.FilePath.MinimumWidth = 6;
             this.FilePath.Name = "FilePath";
             this.FilePath.Visible = false;
             this.FilePath.Width = 200;
@@ -372,18 +378,21 @@
             // 
             this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FileName.HeaderText = "文件名称";
+            this.FileName.MinimumWidth = 6;
             this.FileName.Name = "FileName";
             this.FileName.ReadOnly = true;
             // 
             // State
             // 
             this.State.HeaderText = "状态";
+            this.State.MinimumWidth = 6;
             this.State.Name = "State";
             this.State.ReadOnly = true;
             this.State.Width = 150;
             // 
             // contextMenu_DGV
             // 
+            this.contextMenu_DGV.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenu_DGV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.删除ToolStripMenuItem,
             this.全部删除ToolStripMenuItem,
@@ -403,78 +412,78 @@
             this.统计行数ToolStripMenuItem,
             this.统计字数ToolStripMenuItem});
             this.contextMenu_DGV.Name = "contextMenuStrip1";
-            this.contextMenu_DGV.Size = new System.Drawing.Size(149, 314);
+            this.contextMenu_DGV.Size = new System.Drawing.Size(169, 340);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.删除ToolStripMenuItem.Text = "删除选中行";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
             // 全部删除ToolStripMenuItem
             // 
             this.全部删除ToolStripMenuItem.Name = "全部删除ToolStripMenuItem";
-            this.全部删除ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.全部删除ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.全部删除ToolStripMenuItem.Text = "删除全部";
             this.全部删除ToolStripMenuItem.Click += new System.EventHandler(this.全部删除ToolStripMenuItem_Click);
             // 
             // 删除成功行ToolStripMenuItem
             // 
             this.删除成功行ToolStripMenuItem.Name = "删除成功行ToolStripMenuItem";
-            this.删除成功行ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.删除成功行ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.删除成功行ToolStripMenuItem.Text = "删除成功行";
             this.删除成功行ToolStripMenuItem.Click += new System.EventHandler(this.删除成功行ToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(165, 6);
             // 
             // 清空状态ToolStripMenuItem
             // 
             this.清空状态ToolStripMenuItem.Name = "清空状态ToolStripMenuItem";
-            this.清空状态ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.清空状态ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.清空状态ToolStripMenuItem.Text = "清空状态";
             this.清空状态ToolStripMenuItem.Click += new System.EventHandler(this.清空状态ToolStripMenuItem_Click);
             // 
             // 清除选中状态ToolStripMenuItem
             // 
             this.清除选中状态ToolStripMenuItem.Name = "清除选中状态ToolStripMenuItem";
-            this.清除选中状态ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.清除选中状态ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.清除选中状态ToolStripMenuItem.Text = "清除选中状态";
             this.清除选中状态ToolStripMenuItem.Click += new System.EventHandler(this.清除选中状态ToolStripMenuItem_Click);
             // 
             // 整理列表ToolStripMenuItem
             // 
             this.整理列表ToolStripMenuItem.Name = "整理列表ToolStripMenuItem";
-            this.整理列表ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.整理列表ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.整理列表ToolStripMenuItem.Text = "整理列表";
             this.整理列表ToolStripMenuItem.Click += new System.EventHandler(this.整理列表ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
             // 
             // 添加文件ToolStripMenuItem
             // 
             this.添加文件ToolStripMenuItem.Name = "添加文件ToolStripMenuItem";
-            this.添加文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.添加文件ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.添加文件ToolStripMenuItem.Text = "添加文件";
             this.添加文件ToolStripMenuItem.Click += new System.EventHandler(this.添加文件ToolStripMenuItem_Click);
             // 
             // 添加文件夹ToolStripMenuItem
             // 
             this.添加文件夹ToolStripMenuItem.Name = "添加文件夹ToolStripMenuItem";
-            this.添加文件夹ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.添加文件夹ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.添加文件夹ToolStripMenuItem.Text = "添加文件夹";
             this.添加文件夹ToolStripMenuItem.Click += new System.EventHandler(this.添加文件夹ToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(165, 6);
             // 
             // 文件信息ToolStripMenuItem
             // 
@@ -483,60 +492,60 @@
             this.复制文件名ToolStripMenuItem,
             this.文件详细信息ToolStripMenuItem});
             this.文件信息ToolStripMenuItem.Name = "文件信息ToolStripMenuItem";
-            this.文件信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.文件信息ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.文件信息ToolStripMenuItem.Text = "文件信息";
             // 
             // 复制文件路径ToolStripMenuItem
             // 
             this.复制文件路径ToolStripMenuItem.Name = "复制文件路径ToolStripMenuItem";
-            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.复制文件路径ToolStripMenuItem.Text = "复制文件路径";
             this.复制文件路径ToolStripMenuItem.Click += new System.EventHandler(this.复制文件路径ToolStripMenuItem_Click);
             // 
             // 复制文件名ToolStripMenuItem
             // 
             this.复制文件名ToolStripMenuItem.Name = "复制文件名ToolStripMenuItem";
-            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.复制文件名ToolStripMenuItem.Text = "复制文件名";
             this.复制文件名ToolStripMenuItem.Click += new System.EventHandler(this.复制文件名ToolStripMenuItem_Click);
             // 
             // 文件详细信息ToolStripMenuItem
             // 
             this.文件详细信息ToolStripMenuItem.Name = "文件详细信息ToolStripMenuItem";
-            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.文件详细信息ToolStripMenuItem.Text = "文件详细信息";
             this.文件详细信息ToolStripMenuItem.Click += new System.EventHandler(this.文件详细信息ToolStripMenuItem_Click);
             // 
             // 打开文件ToolStripMenuItem
             // 
             this.打开文件ToolStripMenuItem.Name = "打开文件ToolStripMenuItem";
-            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.打开文件ToolStripMenuItem.Text = "打开文件";
             this.打开文件ToolStripMenuItem.Click += new System.EventHandler(this.打开文件ToolStripMenuItem_Click);
             // 
             // 打开文件夹ToolStripMenuItem1
             // 
             this.打开文件夹ToolStripMenuItem1.Name = "打开文件夹ToolStripMenuItem1";
-            this.打开文件夹ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.打开文件夹ToolStripMenuItem1.Size = new System.Drawing.Size(168, 24);
             this.打开文件夹ToolStripMenuItem1.Text = "打开文件夹";
             this.打开文件夹ToolStripMenuItem1.Click += new System.EventHandler(this.打开文件夹ToolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(165, 6);
             // 
             // 统计行数ToolStripMenuItem
             // 
             this.统计行数ToolStripMenuItem.Name = "统计行数ToolStripMenuItem";
-            this.统计行数ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.统计行数ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.统计行数ToolStripMenuItem.Text = "统计行数";
             this.统计行数ToolStripMenuItem.Click += new System.EventHandler(this.统计行数ToolStripMenuItem_Click);
             // 
             // 统计字数ToolStripMenuItem
             // 
             this.统计字数ToolStripMenuItem.Name = "统计字数ToolStripMenuItem";
-            this.统计字数ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.统计字数ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.统计字数ToolStripMenuItem.Text = "统计字数";
             this.统计字数ToolStripMenuItem.Click += new System.EventHandler(this.统计字数ToolStripMenuItem_Click);
             // 
@@ -548,16 +557,18 @@
             this.panelDGV_Deal.Controls.Add(this.btnAddFile);
             this.panelDGV_Deal.Controls.Add(this.btnDGV_ClearAll);
             this.panelDGV_Deal.Controls.Add(this.btnDGV_Delete);
-            this.panelDGV_Deal.Location = new System.Drawing.Point(575, 124);
+            this.panelDGV_Deal.Location = new System.Drawing.Point(767, 155);
+            this.panelDGV_Deal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDGV_Deal.Name = "panelDGV_Deal";
-            this.panelDGV_Deal.Size = new System.Drawing.Size(112, 249);
+            this.panelDGV_Deal.Size = new System.Drawing.Size(149, 311);
             this.panelDGV_Deal.TabIndex = 11;
             // 
             // btnDGV_ClearState
             // 
-            this.btnDGV_ClearState.Location = new System.Drawing.Point(7, 184);
+            this.btnDGV_ClearState.Location = new System.Drawing.Point(9, 230);
+            this.btnDGV_ClearState.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDGV_ClearState.Name = "btnDGV_ClearState";
-            this.btnDGV_ClearState.Size = new System.Drawing.Size(101, 28);
+            this.btnDGV_ClearState.Size = new System.Drawing.Size(135, 35);
             this.btnDGV_ClearState.TabIndex = 8;
             this.btnDGV_ClearState.Text = "清除状态";
             this.btnDGV_ClearState.UseVisualStyleBackColor = true;
@@ -565,9 +576,10 @@
             // 
             // btnDGV_DeleteSuccess
             // 
-            this.btnDGV_DeleteSuccess.Location = new System.Drawing.Point(7, 116);
+            this.btnDGV_DeleteSuccess.Location = new System.Drawing.Point(9, 145);
+            this.btnDGV_DeleteSuccess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDGV_DeleteSuccess.Name = "btnDGV_DeleteSuccess";
-            this.btnDGV_DeleteSuccess.Size = new System.Drawing.Size(101, 28);
+            this.btnDGV_DeleteSuccess.Size = new System.Drawing.Size(135, 35);
             this.btnDGV_DeleteSuccess.TabIndex = 7;
             this.btnDGV_DeleteSuccess.Text = "删除成功行";
             this.btnDGV_DeleteSuccess.UseVisualStyleBackColor = true;
@@ -575,9 +587,10 @@
             // 
             // btnAddFolder
             // 
-            this.btnAddFolder.Location = new System.Drawing.Point(8, 37);
+            this.btnAddFolder.Location = new System.Drawing.Point(11, 46);
+            this.btnAddFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFolder.Name = "btnAddFolder";
-            this.btnAddFolder.Size = new System.Drawing.Size(101, 28);
+            this.btnAddFolder.Size = new System.Drawing.Size(135, 35);
             this.btnAddFolder.TabIndex = 3;
             this.btnAddFolder.Text = "添加文件夹";
             this.btnAddFolder.UseVisualStyleBackColor = true;
@@ -585,9 +598,10 @@
             // 
             // btnAddFile
             // 
-            this.btnAddFile.Location = new System.Drawing.Point(8, 3);
+            this.btnAddFile.Location = new System.Drawing.Point(11, 4);
+            this.btnAddFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFile.Name = "btnAddFile";
-            this.btnAddFile.Size = new System.Drawing.Size(101, 28);
+            this.btnAddFile.Size = new System.Drawing.Size(135, 35);
             this.btnAddFile.TabIndex = 2;
             this.btnAddFile.Text = "添加文件";
             this.btnAddFile.UseVisualStyleBackColor = true;
@@ -595,9 +609,10 @@
             // 
             // btnDGV_ClearAll
             // 
-            this.btnDGV_ClearAll.Location = new System.Drawing.Point(7, 150);
+            this.btnDGV_ClearAll.Location = new System.Drawing.Point(9, 188);
+            this.btnDGV_ClearAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDGV_ClearAll.Name = "btnDGV_ClearAll";
-            this.btnDGV_ClearAll.Size = new System.Drawing.Size(101, 28);
+            this.btnDGV_ClearAll.Size = new System.Drawing.Size(135, 35);
             this.btnDGV_ClearAll.TabIndex = 6;
             this.btnDGV_ClearAll.Text = "清空列表";
             this.btnDGV_ClearAll.UseVisualStyleBackColor = true;
@@ -605,9 +620,10 @@
             // 
             // btnDGV_Delete
             // 
-            this.btnDGV_Delete.Location = new System.Drawing.Point(7, 82);
+            this.btnDGV_Delete.Location = new System.Drawing.Point(9, 102);
+            this.btnDGV_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDGV_Delete.Name = "btnDGV_Delete";
-            this.btnDGV_Delete.Size = new System.Drawing.Size(101, 28);
+            this.btnDGV_Delete.Size = new System.Drawing.Size(135, 35);
             this.btnDGV_Delete.TabIndex = 3;
             this.btnDGV_Delete.Text = "删除选中行";
             this.btnDGV_Delete.UseVisualStyleBackColor = true;
@@ -622,24 +638,26 @@
             this.tabControl1.Controls.Add(this.tpAddData);
             this.tabControl1.Controls.Add(this.tpDeleteLineFromFile);
             this.tabControl1.Controls.Add(this.tpOther);
-            this.tabControl1.Location = new System.Drawing.Point(7, 13);
+            this.tabControl1.Location = new System.Drawing.Point(9, 16);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(681, 105);
+            this.tabControl1.Size = new System.Drawing.Size(908, 131);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tpDeleteLine
             // 
-            this.tpDeleteLine.Controls.Add(this.panelDelLine_KeyWords);
-            this.tpDeleteLine.Controls.Add(this.panelDelLine_TeDing);
-            this.tpDeleteLine.Controls.Add(this.panelDelLine1);
             this.tpDeleteLine.Controls.Add(this.label11);
             this.tpDeleteLine.Controls.Add(this.comboBoxDeleteLine);
-            this.tpDeleteLine.Location = new System.Drawing.Point(4, 22);
+            this.tpDeleteLine.Controls.Add(this.panelDelLine1);
+            this.tpDeleteLine.Controls.Add(this.panelDelLine_KeyWords);
+            this.tpDeleteLine.Controls.Add(this.panelDelLine_TeDing);
+            this.tpDeleteLine.Location = new System.Drawing.Point(4, 25);
+            this.tpDeleteLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpDeleteLine.Name = "tpDeleteLine";
-            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeleteLine.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpDeleteLine.Size = new System.Drawing.Size(900, 102);
             this.tpDeleteLine.TabIndex = 0;
             this.tpDeleteLine.Text = "批量删除行";
             this.tpDeleteLine.UseVisualStyleBackColor = true;
@@ -651,36 +669,40 @@
             this.panelDelLine_KeyWords.Controls.Add(this.checkBoxDelLine_KeyWord);
             this.panelDelLine_KeyWords.Controls.Add(this.label31);
             this.panelDelLine_KeyWords.Controls.Add(this.txbDelLine_TeDingData);
-            this.panelDelLine_KeyWords.Location = new System.Drawing.Point(1, 3);
+            this.panelDelLine_KeyWords.Location = new System.Drawing.Point(1, 4);
+            this.panelDelLine_KeyWords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDelLine_KeyWords.Name = "panelDelLine_KeyWords";
-            this.panelDelLine_KeyWords.Size = new System.Drawing.Size(473, 67);
+            this.panelDelLine_KeyWords.Size = new System.Drawing.Size(631, 84);
             this.panelDelLine_KeyWords.TabIndex = 15;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(324, 46);
+            this.label33.Location = new System.Drawing.Point(432, 58);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(131, 12);
+            this.label33.Size = new System.Drawing.Size(167, 15);
             this.label33.TabIndex = 6;
             this.label33.Text = "例如：我爱你+520+祖国";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(348, 16);
+            this.label32.Location = new System.Drawing.Point(464, 20);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(119, 12);
+            this.label32.Size = new System.Drawing.Size(150, 15);
             this.label32.TabIndex = 6;
             this.label32.Text = "关键词之间用+号间隔";
             // 
             // checkBoxDelLine_KeyWord
             // 
             this.checkBoxDelLine_KeyWord.AutoSize = true;
-            this.checkBoxDelLine_KeyWord.Location = new System.Drawing.Point(17, 45);
+            this.checkBoxDelLine_KeyWord.Location = new System.Drawing.Point(23, 56);
+            this.checkBoxDelLine_KeyWord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxDelLine_KeyWord.Name = "checkBoxDelLine_KeyWord";
-            this.checkBoxDelLine_KeyWord.Size = new System.Drawing.Size(288, 16);
+            this.checkBoxDelLine_KeyWord.Size = new System.Drawing.Size(359, 19);
             this.checkBoxDelLine_KeyWord.TabIndex = 7;
             this.checkBoxDelLine_KeyWord.Text = "现在是只有一个关键字，删除含有这个关键字的行";
             this.checkBoxDelLine_KeyWord.UseVisualStyleBackColor = true;
@@ -689,17 +711,19 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(15, 19);
+            this.label31.Location = new System.Drawing.Point(20, 24);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(47, 12);
+            this.label31.Size = new System.Drawing.Size(60, 15);
             this.label31.TabIndex = 6;
             this.label31.Text = "关键字:";
             // 
             // txbDelLine_TeDingData
             // 
-            this.txbDelLine_TeDingData.Location = new System.Drawing.Point(68, 16);
+            this.txbDelLine_TeDingData.Location = new System.Drawing.Point(91, 20);
+            this.txbDelLine_TeDingData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDelLine_TeDingData.Name = "txbDelLine_TeDingData";
-            this.txbDelLine_TeDingData.Size = new System.Drawing.Size(274, 21);
+            this.txbDelLine_TeDingData.Size = new System.Drawing.Size(364, 25);
             this.txbDelLine_TeDingData.TabIndex = 6;
             // 
             // panelDelLine_TeDing
@@ -710,34 +734,38 @@
             this.panelDelLine_TeDing.Controls.Add(this.label28);
             this.panelDelLine_TeDing.Controls.Add(this.label27);
             this.panelDelLine_TeDing.Controls.Add(this.label26);
-            this.panelDelLine_TeDing.Location = new System.Drawing.Point(3, 3);
+            this.panelDelLine_TeDing.Location = new System.Drawing.Point(4, 4);
+            this.panelDelLine_TeDing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDelLine_TeDing.Name = "panelDelLine_TeDing";
-            this.panelDelLine_TeDing.Size = new System.Drawing.Size(473, 67);
+            this.panelDelLine_TeDing.Size = new System.Drawing.Size(631, 84);
             this.panelDelLine_TeDing.TabIndex = 14;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(228, 44);
+            this.label30.Location = new System.Drawing.Point(304, 55);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(89, 12);
+            this.label30.Size = new System.Drawing.Size(116, 15);
             this.label30.TabIndex = 5;
             this.label30.Text = "例如：1,3,7,10";
             // 
             // txbDelLine_TeDing
             // 
-            this.txbDelLine_TeDing.Location = new System.Drawing.Point(211, 9);
+            this.txbDelLine_TeDing.Location = new System.Drawing.Point(281, 11);
+            this.txbDelLine_TeDing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDelLine_TeDing.Name = "txbDelLine_TeDing";
-            this.txbDelLine_TeDing.Size = new System.Drawing.Size(259, 21);
+            this.txbDelLine_TeDing.Size = new System.Drawing.Size(344, 25);
             this.txbDelLine_TeDing.TabIndex = 4;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(7, 34);
+            this.label29.Location = new System.Drawing.Point(9, 42);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(131, 12);
+            this.label29.Size = new System.Drawing.Size(165, 15);
             this.label29.TabIndex = 3;
             this.label29.Text = "2、输入的数字不能重复";
             // 
@@ -745,9 +773,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(7, 51);
+            this.label28.Location = new System.Drawing.Point(9, 64);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(167, 12);
+            this.label28.Size = new System.Drawing.Size(210, 15);
             this.label28.TabIndex = 2;
             this.label28.Text = "3、数字之间用英语的逗号间隔";
             // 
@@ -755,136 +784,171 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(7, 20);
+            this.label27.Location = new System.Drawing.Point(9, 25);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(173, 12);
+            this.label27.Size = new System.Drawing.Size(218, 15);
             this.label27.TabIndex = 1;
             this.label27.Text = "1、输入递增的数字，非负整数.";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(7, 7);
+            this.label26.Location = new System.Drawing.Point(9, 9);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(77, 12);
+            this.label26.Size = new System.Drawing.Size(97, 15);
             this.label26.TabIndex = 0;
             this.label26.Text = "特定行注意：";
             // 
             // panelDelLine1
             // 
-            this.panelDelLine1.Controls.Add(this.label1);
+            this.panelDelLine1.Controls.Add(this.nudDelLine_LastLineFile);
             this.panelDelLine1.Controls.Add(this.nudDelLine_TopLineFile);
+            this.panelDelLine1.Controls.Add(this.label1);
             this.panelDelLine1.Controls.Add(this.label9);
             this.panelDelLine1.Controls.Add(this.label2);
             this.panelDelLine1.Controls.Add(this.nudDelLine_ContinueLast);
             this.panelDelLine1.Controls.Add(this.label4);
             this.panelDelLine1.Controls.Add(this.label7);
             this.panelDelLine1.Controls.Add(this.nudDelLine_ContinueFirst);
-            this.panelDelLine1.Controls.Add(this.nudDelLine_LastLineFile);
             this.panelDelLine1.Controls.Add(this.label8);
             this.panelDelLine1.Controls.Add(this.label3);
-            this.panelDelLine1.Location = new System.Drawing.Point(6, 3);
+            this.panelDelLine1.Location = new System.Drawing.Point(8, 4);
+            this.panelDelLine1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDelLine1.Name = "panelDelLine1";
-            this.panelDelLine1.Size = new System.Drawing.Size(479, 73);
+            this.panelDelLine1.Size = new System.Drawing.Size(639, 91);
             this.panelDelLine1.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 16);
+            this.label1.Location = new System.Drawing.Point(28, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.Size = new System.Drawing.Size(90, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "删除文件前:";
             // 
             // nudDelLine_TopLineFile
             // 
-            this.nudDelLine_TopLineFile.Location = new System.Drawing.Point(98, 14);
+            this.nudDelLine_TopLineFile.Location = new System.Drawing.Point(121, 18);
+            this.nudDelLine_TopLineFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudDelLine_TopLineFile.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudDelLine_TopLineFile.Name = "nudDelLine_TopLineFile";
-            this.nudDelLine_TopLineFile.Size = new System.Drawing.Size(40, 21);
+            this.nudDelLine_TopLineFile.Size = new System.Drawing.Size(74, 25);
             this.nudDelLine_TopLineFile.TabIndex = 1;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(378, 32);
+            this.label9.Location = new System.Drawing.Point(523, 40);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 12);
+            this.label9.Size = new System.Drawing.Size(22, 15);
             this.label9.TabIndex = 13;
             this.label9.Text = "行";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(144, 16);
+            this.label2.Location = new System.Drawing.Point(199, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(17, 12);
+            this.label2.Size = new System.Drawing.Size(22, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "行";
             // 
             // nudDelLine_ContinueLast
             // 
-            this.nudDelLine_ContinueLast.Location = new System.Drawing.Point(332, 29);
+            this.nudDelLine_ContinueLast.Location = new System.Drawing.Point(443, 36);
+            this.nudDelLine_ContinueLast.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudDelLine_ContinueLast.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudDelLine_ContinueLast.Name = "nudDelLine_ContinueLast";
-            this.nudDelLine_ContinueLast.Size = new System.Drawing.Size(40, 21);
+            this.nudDelLine_ContinueLast.Size = new System.Drawing.Size(81, 25);
             this.nudDelLine_ContinueLast.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 51);
+            this.label4.Location = new System.Drawing.Point(28, 64);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 12);
+            this.label4.Size = new System.Drawing.Size(90, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "删除文件后:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(285, 32);
+            this.label7.Location = new System.Drawing.Point(380, 40);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.Size = new System.Drawing.Size(52, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "行到第";
             // 
             // nudDelLine_ContinueFirst
             // 
-            this.nudDelLine_ContinueFirst.Location = new System.Drawing.Point(239, 29);
+            this.nudDelLine_ContinueFirst.Location = new System.Drawing.Point(302, 36);
+            this.nudDelLine_ContinueFirst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudDelLine_ContinueFirst.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudDelLine_ContinueFirst.Name = "nudDelLine_ContinueFirst";
-            this.nudDelLine_ContinueFirst.Size = new System.Drawing.Size(40, 21);
+            this.nudDelLine_ContinueFirst.Size = new System.Drawing.Size(73, 25);
             this.nudDelLine_ContinueFirst.TabIndex = 9;
             // 
             // nudDelLine_LastLineFile
             // 
-            this.nudDelLine_LastLineFile.Location = new System.Drawing.Point(98, 49);
+            this.nudDelLine_LastLineFile.Location = new System.Drawing.Point(122, 61);
+            this.nudDelLine_LastLineFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudDelLine_LastLineFile.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudDelLine_LastLineFile.Name = "nudDelLine_LastLineFile";
-            this.nudDelLine_LastLineFile.Size = new System.Drawing.Size(40, 21);
+            this.nudDelLine_LastLineFile.Size = new System.Drawing.Size(74, 25);
             this.nudDelLine_LastLineFile.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(192, 32);
+            this.label8.Location = new System.Drawing.Point(251, 40);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 12);
+            this.label8.Size = new System.Drawing.Size(52, 15);
             this.label8.TabIndex = 8;
             this.label8.Text = "删除第";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(144, 51);
+            this.label3.Location = new System.Drawing.Point(200, 64);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 12);
+            this.label3.Size = new System.Drawing.Size(22, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "行";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(625, 19);
+            this.label11.Location = new System.Drawing.Point(833, 24);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 12);
+            this.label11.Size = new System.Drawing.Size(37, 15);
             this.label11.TabIndex = 16;
             this.label11.Text = "模式";
             // 
@@ -902,9 +966,10 @@
             "删除重复行",
             "删除特定行",
             "删除含有关键字的行"});
-            this.comboBoxDeleteLine.Location = new System.Drawing.Point(491, 13);
+            this.comboBoxDeleteLine.Location = new System.Drawing.Point(655, 16);
+            this.comboBoxDeleteLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxDeleteLine.Name = "comboBoxDeleteLine";
-            this.comboBoxDeleteLine.Size = new System.Drawing.Size(128, 22);
+            this.comboBoxDeleteLine.Size = new System.Drawing.Size(169, 25);
             this.comboBoxDeleteLine.TabIndex = 15;
             this.comboBoxDeleteLine.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDeleteLine_SelectionChangeCommitted);
             // 
@@ -914,10 +979,11 @@
             this.tpDeleteData.Controls.Add(this.label22);
             this.tpDeleteData.Controls.Add(this.comboBoxDeleteData);
             this.tpDeleteData.Controls.Add(this.panelDeleteReplaceData);
-            this.tpDeleteData.Location = new System.Drawing.Point(4, 22);
+            this.tpDeleteData.Location = new System.Drawing.Point(4, 25);
+            this.tpDeleteData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpDeleteData.Name = "tpDeleteData";
-            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDeleteData.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpDeleteData.Size = new System.Drawing.Size(900, 102);
             this.tpDeleteData.TabIndex = 1;
             this.tpDeleteData.Text = "批量删除文本";
             this.tpDeleteData.UseVisualStyleBackColor = true;
@@ -931,25 +997,28 @@
             this.panelDelData_FirstLastOfLine.Controls.Add(this.label24);
             this.panelDelData_FirstLastOfLine.Controls.Add(this.label23);
             this.panelDelData_FirstLastOfLine.Controls.Add(this.nudDelData_CountZiFu);
-            this.panelDelData_FirstLastOfLine.Location = new System.Drawing.Point(3, 3);
+            this.panelDelData_FirstLastOfLine.Location = new System.Drawing.Point(4, 4);
+            this.panelDelData_FirstLastOfLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDelData_FirstLastOfLine.Name = "panelDelData_FirstLastOfLine";
-            this.panelDelData_FirstLastOfLine.Size = new System.Drawing.Size(484, 73);
+            this.panelDelData_FirstLastOfLine.Size = new System.Drawing.Size(645, 91);
             this.panelDelData_FirstLastOfLine.TabIndex = 12;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(425, 38);
+            this.button1.Location = new System.Drawing.Point(567, 48);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 32);
+            this.button1.Size = new System.Drawing.Size(71, 40);
             this.button1.TabIndex = 10;
             this.button1.Text = "计算";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // txbCountZiFu
             // 
-            this.txbCountZiFu.Location = new System.Drawing.Point(177, 43);
+            this.txbCountZiFu.Location = new System.Drawing.Point(236, 54);
+            this.txbCountZiFu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbCountZiFu.Name = "txbCountZiFu";
-            this.txbCountZiFu.Size = new System.Drawing.Size(242, 21);
+            this.txbCountZiFu.Size = new System.Drawing.Size(321, 25);
             this.txbCountZiFu.TabIndex = 5;
             this.txbCountZiFu.Leave += new System.EventHandler(this.txbCountZiFu_Leave);
             // 
@@ -957,9 +1026,10 @@
             // 
             this.checkBoxDel_DataTopOfLine.AutoSize = true;
             this.checkBoxDel_DataTopOfLine.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBoxDel_DataTopOfLine.Location = new System.Drawing.Point(20, 45);
+            this.checkBoxDel_DataTopOfLine.Location = new System.Drawing.Point(27, 56);
+            this.checkBoxDel_DataTopOfLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxDel_DataTopOfLine.Name = "checkBoxDel_DataTopOfLine";
-            this.checkBoxDel_DataTopOfLine.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxDel_DataTopOfLine.Size = new System.Drawing.Size(149, 19);
             this.checkBoxDel_DataTopOfLine.TabIndex = 4;
             this.checkBoxDel_DataTopOfLine.Text = "不知道多少个字符";
             this.checkBoxDel_DataTopOfLine.UseVisualStyleBackColor = true;
@@ -968,43 +1038,48 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(168, 15);
+            this.label25.Location = new System.Drawing.Point(224, 19);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(233, 12);
+            this.label25.Size = new System.Drawing.Size(292, 15);
             this.label25.TabIndex = 3;
             this.label25.Text = "：一个字母一个数字一个汉字都是一个字符";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(133, 15);
+            this.label24.Location = new System.Drawing.Point(177, 19);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(29, 12);
+            this.label24.Size = new System.Drawing.Size(37, 15);
             this.label24.TabIndex = 2;
             this.label24.Text = "字符";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(18, 15);
+            this.label23.Location = new System.Drawing.Point(24, 19);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.Size = new System.Drawing.Size(67, 15);
             this.label23.TabIndex = 1;
             this.label23.Text = "删除行首";
             // 
             // nudDelData_CountZiFu
             // 
-            this.nudDelData_CountZiFu.Location = new System.Drawing.Point(77, 13);
+            this.nudDelData_CountZiFu.Location = new System.Drawing.Point(103, 16);
+            this.nudDelData_CountZiFu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudDelData_CountZiFu.Name = "nudDelData_CountZiFu";
-            this.nudDelData_CountZiFu.Size = new System.Drawing.Size(50, 21);
+            this.nudDelData_CountZiFu.Size = new System.Drawing.Size(67, 25);
             this.nudDelData_CountZiFu.TabIndex = 0;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(623, 11);
+            this.label22.Location = new System.Drawing.Point(831, 14);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 12);
+            this.label22.Size = new System.Drawing.Size(37, 15);
             this.label22.TabIndex = 23;
             this.label22.Text = "模式";
             // 
@@ -1019,9 +1094,10 @@
             "删除行首数字",
             "删除行首字符",
             "删除行尾字符"});
-            this.comboBoxDeleteData.Location = new System.Drawing.Point(496, 8);
+            this.comboBoxDeleteData.Location = new System.Drawing.Point(661, 10);
+            this.comboBoxDeleteData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxDeleteData.Name = "comboBoxDeleteData";
-            this.comboBoxDeleteData.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxDeleteData.Size = new System.Drawing.Size(160, 25);
             this.comboBoxDeleteData.TabIndex = 22;
             this.comboBoxDeleteData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDeleteData_SelectionChangeCommitted);
             // 
@@ -1031,41 +1107,46 @@
             this.panelDeleteReplaceData.Controls.Add(this.txbDelNewData);
             this.panelDeleteReplaceData.Controls.Add(this.txbDelOldData);
             this.panelDeleteReplaceData.Controls.Add(this.label10);
-            this.panelDeleteReplaceData.Location = new System.Drawing.Point(6, 3);
+            this.panelDeleteReplaceData.Location = new System.Drawing.Point(8, 4);
+            this.panelDeleteReplaceData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDeleteReplaceData.Name = "panelDeleteReplaceData";
-            this.panelDeleteReplaceData.Size = new System.Drawing.Size(484, 73);
+            this.panelDeleteReplaceData.Size = new System.Drawing.Size(645, 91);
             this.panelDeleteReplaceData.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 13);
+            this.label5.Location = new System.Drawing.Point(49, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 12);
+            this.label5.Size = new System.Drawing.Size(120, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "批量删除的文本:";
             // 
             // txbDelNewData
             // 
-            this.txbDelNewData.Location = new System.Drawing.Point(138, 37);
+            this.txbDelNewData.Location = new System.Drawing.Point(184, 46);
+            this.txbDelNewData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDelNewData.Name = "txbDelNewData";
-            this.txbDelNewData.Size = new System.Drawing.Size(341, 21);
+            this.txbDelNewData.Size = new System.Drawing.Size(453, 25);
             this.txbDelNewData.TabIndex = 3;
             // 
             // txbDelOldData
             // 
-            this.txbDelOldData.Location = new System.Drawing.Point(138, 10);
+            this.txbDelOldData.Location = new System.Drawing.Point(184, 12);
+            this.txbDelOldData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDelOldData.Name = "txbDelOldData";
-            this.txbDelOldData.Size = new System.Drawing.Size(341, 21);
+            this.txbDelOldData.Size = new System.Drawing.Size(453, 25);
             this.txbDelOldData.TabIndex = 1;
             this.txbDelOldData.Click += new System.EventHandler(this.txbDeleteText_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(49, 40);
+            this.label10.Location = new System.Drawing.Point(65, 50);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 12);
+            this.label10.Size = new System.Drawing.Size(105, 15);
             this.label10.TabIndex = 2;
             this.label10.Text = "替换的新文本:";
             // 
@@ -1078,9 +1159,10 @@
             this.tpMerge.Controls.Add(this.panelMerge_AddDataAmongFile);
             this.tpMerge.Controls.Add(this.btnDownMove);
             this.tpMerge.Controls.Add(this.btnUpMove);
-            this.tpMerge.Location = new System.Drawing.Point(4, 22);
+            this.tpMerge.Location = new System.Drawing.Point(4, 25);
+            this.tpMerge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpMerge.Name = "tpMerge";
-            this.tpMerge.Size = new System.Drawing.Size(673, 79);
+            this.tpMerge.Size = new System.Drawing.Size(900, 102);
             this.tpMerge.TabIndex = 3;
             this.tpMerge.Text = "合并";
             this.tpMerge.UseVisualStyleBackColor = true;
@@ -1090,17 +1172,19 @@
             this.panelMerge_LeftRight.Controls.Add(this.checkBoxMerge_LeftRightAddData);
             this.panelMerge_LeftRight.Controls.Add(this.label21);
             this.panelMerge_LeftRight.Controls.Add(this.txbMerge_LeftRightData);
-            this.panelMerge_LeftRight.Location = new System.Drawing.Point(3, 3);
+            this.panelMerge_LeftRight.Location = new System.Drawing.Point(4, 4);
+            this.panelMerge_LeftRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMerge_LeftRight.Name = "panelMerge_LeftRight";
-            this.panelMerge_LeftRight.Size = new System.Drawing.Size(484, 73);
+            this.panelMerge_LeftRight.Size = new System.Drawing.Size(645, 91);
             this.panelMerge_LeftRight.TabIndex = 13;
             // 
             // checkBoxMerge_LeftRightAddData
             // 
             this.checkBoxMerge_LeftRightAddData.AutoSize = true;
-            this.checkBoxMerge_LeftRightAddData.Location = new System.Drawing.Point(45, 18);
+            this.checkBoxMerge_LeftRightAddData.Location = new System.Drawing.Point(60, 22);
+            this.checkBoxMerge_LeftRightAddData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxMerge_LeftRightAddData.Name = "checkBoxMerge_LeftRightAddData";
-            this.checkBoxMerge_LeftRightAddData.Size = new System.Drawing.Size(72, 16);
+            this.checkBoxMerge_LeftRightAddData.Size = new System.Drawing.Size(89, 19);
             this.checkBoxMerge_LeftRightAddData.TabIndex = 2;
             this.checkBoxMerge_LeftRightAddData.Text = "添加数据";
             this.checkBoxMerge_LeftRightAddData.UseVisualStyleBackColor = true;
@@ -1109,32 +1193,36 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(25, 51);
+            this.label21.Location = new System.Drawing.Point(33, 64);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(107, 12);
+            this.label21.Size = new System.Drawing.Size(135, 15);
             this.label21.TabIndex = 1;
             this.label21.Text = "左右合并添加数据:";
             // 
             // txbMerge_LeftRightData
             // 
-            this.txbMerge_LeftRightData.Location = new System.Drawing.Point(138, 48);
+            this.txbMerge_LeftRightData.Location = new System.Drawing.Point(184, 60);
+            this.txbMerge_LeftRightData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbMerge_LeftRightData.Name = "txbMerge_LeftRightData";
-            this.txbMerge_LeftRightData.Size = new System.Drawing.Size(256, 21);
+            this.txbMerge_LeftRightData.Size = new System.Drawing.Size(340, 25);
             this.txbMerge_LeftRightData.TabIndex = 0;
             // 
             // panelMerge_GeHang
             // 
-            this.panelMerge_GeHang.Location = new System.Drawing.Point(3, 3);
+            this.panelMerge_GeHang.Location = new System.Drawing.Point(4, 4);
+            this.panelMerge_GeHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMerge_GeHang.Name = "panelMerge_GeHang";
-            this.panelMerge_GeHang.Size = new System.Drawing.Size(484, 73);
+            this.panelMerge_GeHang.Size = new System.Drawing.Size(645, 91);
             this.panelMerge_GeHang.TabIndex = 12;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(620, 14);
+            this.label20.Location = new System.Drawing.Point(827, 18);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 12);
+            this.label20.Size = new System.Drawing.Size(37, 15);
             this.label20.TabIndex = 22;
             this.label20.Text = "模式";
             // 
@@ -1148,9 +1236,10 @@
             "合并+数据",
             "隔行合并",
             "左右合并"});
-            this.comboBoxMerge.Location = new System.Drawing.Point(493, 11);
+            this.comboBoxMerge.Location = new System.Drawing.Point(657, 14);
+            this.comboBoxMerge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxMerge.Name = "comboBoxMerge";
-            this.comboBoxMerge.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxMerge.Size = new System.Drawing.Size(160, 25);
             this.comboBoxMerge.TabIndex = 21;
             this.comboBoxMerge.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeMerge_SelectionChangeCommitted);
             // 
@@ -1160,17 +1249,19 @@
             this.panelMerge_AddDataAmongFile.Controls.Add(this.txbMerge_AddDataAmongFiles);
             this.panelMerge_AddDataAmongFile.Controls.Add(this.label12);
             this.panelMerge_AddDataAmongFile.Controls.Add(this.checkBoxMerge_AddDataAmongFiles);
-            this.panelMerge_AddDataAmongFile.Location = new System.Drawing.Point(3, 3);
+            this.panelMerge_AddDataAmongFile.Location = new System.Drawing.Point(4, 4);
+            this.panelMerge_AddDataAmongFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMerge_AddDataAmongFile.Name = "panelMerge_AddDataAmongFile";
-            this.panelMerge_AddDataAmongFile.Size = new System.Drawing.Size(484, 73);
+            this.panelMerge_AddDataAmongFile.Size = new System.Drawing.Size(645, 91);
             this.panelMerge_AddDataAmongFile.TabIndex = 11;
             // 
             // checkBoxMerge_AddFileName
             // 
             this.checkBoxMerge_AddFileName.AutoSize = true;
-            this.checkBoxMerge_AddFileName.Location = new System.Drawing.Point(12, 40);
+            this.checkBoxMerge_AddFileName.Location = new System.Drawing.Point(16, 50);
+            this.checkBoxMerge_AddFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxMerge_AddFileName.Name = "checkBoxMerge_AddFileName";
-            this.checkBoxMerge_AddFileName.Size = new System.Drawing.Size(132, 16);
+            this.checkBoxMerge_AddFileName.Size = new System.Drawing.Size(164, 19);
             this.checkBoxMerge_AddFileName.TabIndex = 5;
             this.checkBoxMerge_AddFileName.Text = "文件之间添加文件名";
             this.checkBoxMerge_AddFileName.UseVisualStyleBackColor = true;
@@ -1178,27 +1269,30 @@
             // 
             // txbMerge_AddDataAmongFiles
             // 
-            this.txbMerge_AddDataAmongFiles.Location = new System.Drawing.Point(186, 12);
+            this.txbMerge_AddDataAmongFiles.Location = new System.Drawing.Point(248, 15);
+            this.txbMerge_AddDataAmongFiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbMerge_AddDataAmongFiles.Multiline = true;
             this.txbMerge_AddDataAmongFiles.Name = "txbMerge_AddDataAmongFiles";
-            this.txbMerge_AddDataAmongFiles.Size = new System.Drawing.Size(221, 44);
+            this.txbMerge_AddDataAmongFiles.Size = new System.Drawing.Size(293, 54);
             this.txbMerge_AddDataAmongFiles.TabIndex = 3;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(151, 33);
+            this.label12.Location = new System.Drawing.Point(201, 41);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 12);
+            this.label12.Size = new System.Drawing.Size(45, 15);
             this.label12.TabIndex = 4;
             this.label12.Text = "数据:";
             // 
             // checkBoxMerge_AddDataAmongFiles
             // 
             this.checkBoxMerge_AddDataAmongFiles.AutoSize = true;
-            this.checkBoxMerge_AddDataAmongFiles.Location = new System.Drawing.Point(12, 12);
+            this.checkBoxMerge_AddDataAmongFiles.Location = new System.Drawing.Point(16, 15);
+            this.checkBoxMerge_AddDataAmongFiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxMerge_AddDataAmongFiles.Name = "checkBoxMerge_AddDataAmongFiles";
-            this.checkBoxMerge_AddDataAmongFiles.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxMerge_AddDataAmongFiles.Size = new System.Drawing.Size(149, 19);
             this.checkBoxMerge_AddDataAmongFiles.TabIndex = 2;
             this.checkBoxMerge_AddDataAmongFiles.Text = "文件之间添加数据";
             this.checkBoxMerge_AddDataAmongFiles.UseVisualStyleBackColor = true;
@@ -1207,9 +1301,10 @@
             // btnDownMove
             // 
             this.btnDownMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnDownMove.Location = new System.Drawing.Point(622, 39);
+            this.btnDownMove.Location = new System.Drawing.Point(829, 49);
+            this.btnDownMove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDownMove.Name = "btnDownMove";
-            this.btnDownMove.Size = new System.Drawing.Size(27, 37);
+            this.btnDownMove.Size = new System.Drawing.Size(36, 46);
             this.btnDownMove.TabIndex = 1;
             this.btnDownMove.Text = "↓";
             this.btnDownMove.UseVisualStyleBackColor = true;
@@ -1218,9 +1313,10 @@
             // btnUpMove
             // 
             this.btnUpMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnUpMove.Location = new System.Drawing.Point(577, 39);
+            this.btnUpMove.Location = new System.Drawing.Point(769, 49);
+            this.btnUpMove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpMove.Name = "btnUpMove";
-            this.btnUpMove.Size = new System.Drawing.Size(27, 37);
+            this.btnUpMove.Size = new System.Drawing.Size(36, 46);
             this.btnUpMove.TabIndex = 0;
             this.btnUpMove.Text = "↑";
             this.btnUpMove.UseVisualStyleBackColor = true;
@@ -1236,49 +1332,54 @@
             this.tpSplit.Controls.Add(this.label14);
             this.tpSplit.Controls.Add(this.label13);
             this.tpSplit.Controls.Add(this.nudSplit_Count);
-            this.tpSplit.Location = new System.Drawing.Point(4, 22);
+            this.tpSplit.Location = new System.Drawing.Point(4, 25);
+            this.tpSplit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpSplit.Name = "tpSplit";
-            this.tpSplit.Size = new System.Drawing.Size(673, 79);
+            this.tpSplit.Size = new System.Drawing.Size(900, 102);
             this.tpSplit.TabIndex = 4;
             this.tpSplit.Text = "拆分";
             this.tpSplit.UseVisualStyleBackColor = true;
             // 
             // nudSplit_Line
             // 
-            this.nudSplit_Line.Location = new System.Drawing.Point(138, 44);
+            this.nudSplit_Line.Location = new System.Drawing.Point(184, 55);
+            this.nudSplit_Line.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudSplit_Line.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.nudSplit_Line.Name = "nudSplit_Line";
-            this.nudSplit_Line.Size = new System.Drawing.Size(58, 21);
+            this.nudSplit_Line.Size = new System.Drawing.Size(77, 25);
             this.nudSplit_Line.TabIndex = 22;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(399, 13);
+            this.label17.Location = new System.Drawing.Point(532, 16);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 12);
+            this.label17.Size = new System.Drawing.Size(45, 15);
             this.label17.TabIndex = 20;
             this.label17.Text = "模式:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(202, 48);
+            this.label15.Location = new System.Drawing.Point(269, 60);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 12);
+            this.label15.Size = new System.Drawing.Size(22, 15);
             this.label15.TabIndex = 19;
             this.label15.Text = "行";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(68, 48);
+            this.label16.Location = new System.Drawing.Point(91, 60);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 12);
+            this.label16.Size = new System.Drawing.Size(82, 15);
             this.label16.TabIndex = 18;
             this.label16.Text = "行数拆分：";
             // 
@@ -1292,35 +1393,39 @@
             "拆分固定行数",
             "含有特定字符",
             "拆分奇偶行"});
-            this.comboBoxSplit.Location = new System.Drawing.Point(434, 10);
+            this.comboBoxSplit.Location = new System.Drawing.Point(579, 12);
+            this.comboBoxSplit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxSplit.Name = "comboBoxSplit";
-            this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxSplit.Size = new System.Drawing.Size(160, 25);
             this.comboBoxSplit.TabIndex = 16;
             this.comboBoxSplit.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeSplit_SelectionChangeCommitted);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(189, 12);
+            this.label14.Location = new System.Drawing.Point(252, 15);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 12);
+            this.label14.Size = new System.Drawing.Size(22, 15);
             this.label14.TabIndex = 2;
             this.label14.Text = "个";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(68, 13);
+            this.label13.Location = new System.Drawing.Point(91, 16);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.Size = new System.Drawing.Size(82, 15);
             this.label13.TabIndex = 1;
             this.label13.Text = "个数拆分：";
             // 
             // nudSplit_Count
             // 
-            this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
+            this.nudSplit_Count.Location = new System.Drawing.Point(185, 12);
+            this.nudSplit_Count.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudSplit_Count.Name = "nudSplit_Count";
-            this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
+            this.nudSplit_Count.Size = new System.Drawing.Size(59, 25);
             this.nudSplit_Count.TabIndex = 0;
             // 
             // tpAddData
@@ -1330,9 +1435,10 @@
             this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfLine);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfFile);
-            this.tpAddData.Location = new System.Drawing.Point(4, 22);
+            this.tpAddData.Location = new System.Drawing.Point(4, 25);
+            this.tpAddData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpAddData.Name = "tpAddData";
-            this.tpAddData.Size = new System.Drawing.Size(673, 79);
+            this.tpAddData.Size = new System.Drawing.Size(900, 102);
             this.tpAddData.TabIndex = 6;
             this.tpAddData.Text = "添加数据";
             this.tpAddData.UseVisualStyleBackColor = true;
@@ -1340,9 +1446,10 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(637, 17);
+            this.label34.Location = new System.Drawing.Point(849, 21);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(29, 12);
+            this.label34.Size = new System.Drawing.Size(37, 15);
             this.label34.TabIndex = 22;
             this.label34.Text = "模式";
             // 
@@ -1355,9 +1462,10 @@
             "添加到文件的首尾",
             "添加到行的首尾",
             "添加文件名到文件"});
-            this.comboBoxAddData.Location = new System.Drawing.Point(493, 12);
+            this.comboBoxAddData.Location = new System.Drawing.Point(657, 15);
+            this.comboBoxAddData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxAddData.Name = "comboBoxAddData";
-            this.comboBoxAddData.Size = new System.Drawing.Size(138, 22);
+            this.comboBoxAddData.Size = new System.Drawing.Size(183, 25);
             this.comboBoxAddData.TabIndex = 21;
             this.comboBoxAddData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAddData_SelectionChangeCommitted);
             // 
@@ -1369,26 +1477,29 @@
             this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName2);
             this.panelAddData_FileName.Controls.Add(this.label36);
             this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName1);
-            this.panelAddData_FileName.Location = new System.Drawing.Point(3, 0);
+            this.panelAddData_FileName.Location = new System.Drawing.Point(4, 0);
+            this.panelAddData_FileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAddData_FileName.Name = "panelAddData_FileName";
-            this.panelAddData_FileName.Size = new System.Drawing.Size(484, 73);
+            this.panelAddData_FileName.Size = new System.Drawing.Size(645, 91);
             this.panelAddData_FileName.TabIndex = 16;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(253, 14);
+            this.label37.Location = new System.Drawing.Point(337, 18);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(101, 12);
+            this.label37.Size = new System.Drawing.Size(127, 15);
             this.label37.TabIndex = 13;
             this.label37.Text = "加入到文件的首行";
             // 
             // checkBoxAddData_ContainExtension
             // 
             this.checkBoxAddData_ContainExtension.AutoSize = true;
-            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(14, 36);
+            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(19, 45);
+            this.checkBoxAddData_ContainExtension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_ContainExtension.Name = "checkBoxAddData_ContainExtension";
-            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(149, 19);
             this.checkBoxAddData_ContainExtension.TabIndex = 12;
             this.checkBoxAddData_ContainExtension.Text = "文件名包含扩展名";
             this.checkBoxAddData_ContainExtension.UseVisualStyleBackColor = true;
@@ -1396,34 +1507,38 @@
             // checkBoxAddData_ContainDir
             // 
             this.checkBoxAddData_ContainDir.AutoSize = true;
-            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(14, 12);
+            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(19, 15);
+            this.checkBoxAddData_ContainDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_ContainDir.Name = "checkBoxAddData_ContainDir";
-            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(108, 16);
+            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(134, 19);
             this.checkBoxAddData_ContainDir.TabIndex = 11;
             this.checkBoxAddData_ContainDir.Text = "文件名包含路径";
             this.checkBoxAddData_ContainDir.UseVisualStyleBackColor = true;
             // 
             // txbAddData_FileName2
             // 
-            this.txbAddData_FileName2.Location = new System.Drawing.Point(327, 41);
+            this.txbAddData_FileName2.Location = new System.Drawing.Point(436, 51);
+            this.txbAddData_FileName2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbAddData_FileName2.Name = "txbAddData_FileName2";
-            this.txbAddData_FileName2.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName2.Size = new System.Drawing.Size(123, 25);
             this.txbAddData_FileName2.TabIndex = 10;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(268, 44);
+            this.label36.Location = new System.Drawing.Point(357, 55);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 12);
+            this.label36.Size = new System.Drawing.Size(68, 15);
             this.label36.TabIndex = 9;
             this.label36.Text = "+文件名+";
             // 
             // txbAddData_FileName1
             // 
-            this.txbAddData_FileName1.Location = new System.Drawing.Point(169, 41);
+            this.txbAddData_FileName1.Location = new System.Drawing.Point(225, 51);
+            this.txbAddData_FileName1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbAddData_FileName1.Name = "txbAddData_FileName1";
-            this.txbAddData_FileName1.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName1.Size = new System.Drawing.Size(123, 25);
             this.txbAddData_FileName1.TabIndex = 8;
             // 
             // panelAddData_TopEndOfLine
@@ -1435,24 +1550,27 @@
             this.panelAddData_TopEndOfLine.Controls.Add(this.checkBoxAddData_ContainNumber);
             this.panelAddData_TopEndOfLine.Controls.Add(this.txbAddData_TopLine);
             this.panelAddData_TopEndOfLine.Controls.Add(this.checkBoxAddData_TopLine);
-            this.panelAddData_TopEndOfLine.Location = new System.Drawing.Point(6, 3);
+            this.panelAddData_TopEndOfLine.Location = new System.Drawing.Point(8, 4);
+            this.panelAddData_TopEndOfLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAddData_TopEndOfLine.Name = "panelAddData_TopEndOfLine";
-            this.panelAddData_TopEndOfLine.Size = new System.Drawing.Size(484, 73);
+            this.panelAddData_TopEndOfLine.Size = new System.Drawing.Size(645, 91);
             this.panelAddData_TopEndOfLine.TabIndex = 15;
             // 
             // txbAddData_EndLine
             // 
-            this.txbAddData_EndLine.Location = new System.Drawing.Point(107, 43);
+            this.txbAddData_EndLine.Location = new System.Drawing.Point(143, 54);
+            this.txbAddData_EndLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbAddData_EndLine.Name = "txbAddData_EndLine";
-            this.txbAddData_EndLine.Size = new System.Drawing.Size(173, 21);
+            this.txbAddData_EndLine.Size = new System.Drawing.Size(229, 25);
             this.txbAddData_EndLine.TabIndex = 8;
             // 
             // checkBoxAddData_EndLine
             // 
             this.checkBoxAddData_EndLine.AutoSize = true;
-            this.checkBoxAddData_EndLine.Location = new System.Drawing.Point(17, 45);
+            this.checkBoxAddData_EndLine.Location = new System.Drawing.Point(23, 56);
+            this.checkBoxAddData_EndLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_EndLine.Name = "checkBoxAddData_EndLine";
-            this.checkBoxAddData_EndLine.Size = new System.Drawing.Size(84, 16);
+            this.checkBoxAddData_EndLine.Size = new System.Drawing.Size(104, 19);
             this.checkBoxAddData_EndLine.TabIndex = 7;
             this.checkBoxAddData_EndLine.Text = "添加到行尾";
             this.checkBoxAddData_EndLine.UseVisualStyleBackColor = true;
@@ -1461,22 +1579,24 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(325, 31);
+            this.label35.Location = new System.Drawing.Point(433, 39);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(89, 12);
+            this.label35.Size = new System.Drawing.Size(112, 15);
             this.label35.TabIndex = 6;
             this.label35.Text = "自定义首行数字";
             // 
             // nudAddData_TopLine
             // 
-            this.nudAddData_TopLine.Location = new System.Drawing.Point(377, 7);
+            this.nudAddData_TopLine.Location = new System.Drawing.Point(503, 9);
+            this.nudAddData_TopLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudAddData_TopLine.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nudAddData_TopLine.Name = "nudAddData_TopLine";
-            this.nudAddData_TopLine.Size = new System.Drawing.Size(37, 21);
+            this.nudAddData_TopLine.Size = new System.Drawing.Size(49, 25);
             this.nudAddData_TopLine.TabIndex = 5;
             this.nudAddData_TopLine.Value = new decimal(new int[] {
             1,
@@ -1487,9 +1607,10 @@
             // checkBoxAddData_ContainNumber
             // 
             this.checkBoxAddData_ContainNumber.AutoSize = true;
-            this.checkBoxAddData_ContainNumber.Location = new System.Drawing.Point(107, 12);
+            this.checkBoxAddData_ContainNumber.Location = new System.Drawing.Point(143, 15);
+            this.checkBoxAddData_ContainNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_ContainNumber.Name = "checkBoxAddData_ContainNumber";
-            this.checkBoxAddData_ContainNumber.Size = new System.Drawing.Size(78, 16);
+            this.checkBoxAddData_ContainNumber.Size = new System.Drawing.Size(97, 19);
             this.checkBoxAddData_ContainNumber.TabIndex = 4;
             this.checkBoxAddData_ContainNumber.Text = "递增数字+";
             this.checkBoxAddData_ContainNumber.UseVisualStyleBackColor = true;
@@ -1497,17 +1618,19 @@
             // 
             // txbAddData_TopLine
             // 
-            this.txbAddData_TopLine.Location = new System.Drawing.Point(191, 7);
+            this.txbAddData_TopLine.Location = new System.Drawing.Point(255, 9);
+            this.txbAddData_TopLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbAddData_TopLine.Name = "txbAddData_TopLine";
-            this.txbAddData_TopLine.Size = new System.Drawing.Size(160, 21);
+            this.txbAddData_TopLine.Size = new System.Drawing.Size(212, 25);
             this.txbAddData_TopLine.TabIndex = 3;
             // 
             // checkBoxAddData_TopLine
             // 
             this.checkBoxAddData_TopLine.AutoSize = true;
-            this.checkBoxAddData_TopLine.Location = new System.Drawing.Point(17, 12);
+            this.checkBoxAddData_TopLine.Location = new System.Drawing.Point(23, 15);
+            this.checkBoxAddData_TopLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_TopLine.Name = "checkBoxAddData_TopLine";
-            this.checkBoxAddData_TopLine.Size = new System.Drawing.Size(84, 16);
+            this.checkBoxAddData_TopLine.Size = new System.Drawing.Size(104, 19);
             this.checkBoxAddData_TopLine.TabIndex = 2;
             this.checkBoxAddData_TopLine.Text = "添加到行首";
             this.checkBoxAddData_TopLine.UseVisualStyleBackColor = true;
@@ -1519,17 +1642,19 @@
             this.panelAddData_TopEndOfFile.Controls.Add(this.checkBoxAddData_EndFile);
             this.panelAddData_TopEndOfFile.Controls.Add(this.checkBoxAddData_TopFile);
             this.panelAddData_TopEndOfFile.Controls.Add(this.txbAddData_TopEndOfFile);
-            this.panelAddData_TopEndOfFile.Location = new System.Drawing.Point(3, 6);
+            this.panelAddData_TopEndOfFile.Location = new System.Drawing.Point(4, 8);
+            this.panelAddData_TopEndOfFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAddData_TopEndOfFile.Name = "panelAddData_TopEndOfFile";
-            this.panelAddData_TopEndOfFile.Size = new System.Drawing.Size(484, 70);
+            this.panelAddData_TopEndOfFile.Size = new System.Drawing.Size(645, 88);
             this.panelAddData_TopEndOfFile.TabIndex = 14;
             // 
             // checkBoxAddData_OverWrite
             // 
             this.checkBoxAddData_OverWrite.AutoSize = true;
-            this.checkBoxAddData_OverWrite.Location = new System.Drawing.Point(17, 51);
+            this.checkBoxAddData_OverWrite.Location = new System.Drawing.Point(23, 64);
+            this.checkBoxAddData_OverWrite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_OverWrite.Name = "checkBoxAddData_OverWrite";
-            this.checkBoxAddData_OverWrite.Size = new System.Drawing.Size(162, 16);
+            this.checkBoxAddData_OverWrite.Size = new System.Drawing.Size(202, 19);
             this.checkBoxAddData_OverWrite.TabIndex = 3;
             this.checkBoxAddData_OverWrite.Text = "如果已经存在 则跳过添加";
             this.checkBoxAddData_OverWrite.UseVisualStyleBackColor = true;
@@ -1537,9 +1662,10 @@
             // checkBoxAddData_EndFile
             // 
             this.checkBoxAddData_EndFile.AutoSize = true;
-            this.checkBoxAddData_EndFile.Location = new System.Drawing.Point(17, 29);
+            this.checkBoxAddData_EndFile.Location = new System.Drawing.Point(23, 36);
+            this.checkBoxAddData_EndFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_EndFile.Name = "checkBoxAddData_EndFile";
-            this.checkBoxAddData_EndFile.Size = new System.Drawing.Size(96, 16);
+            this.checkBoxAddData_EndFile.Size = new System.Drawing.Size(119, 19);
             this.checkBoxAddData_EndFile.TabIndex = 2;
             this.checkBoxAddData_EndFile.Text = "添加到文件尾";
             this.checkBoxAddData_EndFile.UseVisualStyleBackColor = true;
@@ -1547,19 +1673,21 @@
             // checkBoxAddData_TopFile
             // 
             this.checkBoxAddData_TopFile.AutoSize = true;
-            this.checkBoxAddData_TopFile.Location = new System.Drawing.Point(17, 7);
+            this.checkBoxAddData_TopFile.Location = new System.Drawing.Point(23, 9);
+            this.checkBoxAddData_TopFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxAddData_TopFile.Name = "checkBoxAddData_TopFile";
-            this.checkBoxAddData_TopFile.Size = new System.Drawing.Size(96, 16);
+            this.checkBoxAddData_TopFile.Size = new System.Drawing.Size(119, 19);
             this.checkBoxAddData_TopFile.TabIndex = 1;
             this.checkBoxAddData_TopFile.Text = "添加到文件首";
             this.checkBoxAddData_TopFile.UseVisualStyleBackColor = true;
             // 
             // txbAddData_TopEndOfFile
             // 
-            this.txbAddData_TopEndOfFile.Location = new System.Drawing.Point(196, 9);
+            this.txbAddData_TopEndOfFile.Location = new System.Drawing.Point(261, 11);
+            this.txbAddData_TopEndOfFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbAddData_TopEndOfFile.Multiline = true;
             this.txbAddData_TopEndOfFile.Name = "txbAddData_TopEndOfFile";
-            this.txbAddData_TopEndOfFile.Size = new System.Drawing.Size(254, 58);
+            this.txbAddData_TopEndOfFile.Size = new System.Drawing.Size(337, 72);
             this.txbAddData_TopEndOfFile.TabIndex = 0;
             // 
             // tpDeleteLineFromFile
@@ -1572,9 +1700,10 @@
             this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.label18);
             this.tpDeleteLineFromFile.Controls.Add(this.txbFileDelete);
-            this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
+            this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 25);
+            this.tpDeleteLineFromFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
-            this.tpDeleteLineFromFile.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteLineFromFile.Size = new System.Drawing.Size(900, 102);
             this.tpDeleteLineFromFile.TabIndex = 5;
             this.tpDeleteLineFromFile.Text = "处理多行从文件";
             this.tpDeleteLineFromFile.UseVisualStyleBackColor = true;
@@ -1586,23 +1715,36 @@
             this.panel_dealMultiLine2.Controls.Add(this.nud_endLine);
             this.panel_dealMultiLine2.Controls.Add(this.label47);
             this.panel_dealMultiLine2.Controls.Add(this.nud_startLine);
-            this.panel_dealMultiLine2.Location = new System.Drawing.Point(6, 35);
+            this.panel_dealMultiLine2.Location = new System.Drawing.Point(8, 44);
+            this.panel_dealMultiLine2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_dealMultiLine2.Name = "panel_dealMultiLine2";
-            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 43);
+            this.panel_dealMultiLine2.Size = new System.Drawing.Size(879, 54);
             this.panel_dealMultiLine2.TabIndex = 12;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(415, 22);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(75, 15);
+            this.label46.TabIndex = 10;
+            this.label46.Text = "开始行数:";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(3, 3);
+            this.label48.Location = new System.Drawing.Point(4, 4);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(353, 36);
+            this.label48.Size = new System.Drawing.Size(443, 45);
             this.label48.TabIndex = 13;
             this.label48.Text = "1:将文件中开始行和结束行之间的内容替换为模板文件里面的内容\r\n2:开始行数为0是行首，3:结束行数为0是行尾。\r\n4:结束小于开始，表示插入到开始位置";
             // 
             // nud_endLine
             // 
-            this.nud_endLine.Location = new System.Drawing.Point(526, 14);
+            this.nud_endLine.Location = new System.Drawing.Point(701, 18);
+            this.nud_endLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nud_endLine.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -1614,37 +1756,30 @@
             0,
             -2147483648});
             this.nud_endLine.Name = "nud_endLine";
-            this.nud_endLine.Size = new System.Drawing.Size(71, 21);
+            this.nud_endLine.Size = new System.Drawing.Size(95, 25);
             this.nud_endLine.TabIndex = 12;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(458, 16);
+            this.label47.Location = new System.Drawing.Point(611, 20);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 12);
+            this.label47.Size = new System.Drawing.Size(75, 15);
             this.label47.TabIndex = 11;
             this.label47.Text = "结束行数:";
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(311, 18);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(59, 12);
-            this.label46.TabIndex = 10;
-            this.label46.Text = "开始行数:";
-            // 
             // nud_startLine
             // 
-            this.nud_startLine.Location = new System.Drawing.Point(376, 14);
+            this.nud_startLine.Location = new System.Drawing.Point(501, 18);
+            this.nud_startLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nud_startLine.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.nud_startLine.Name = "nud_startLine";
-            this.nud_startLine.Size = new System.Drawing.Size(73, 21);
+            this.nud_startLine.Size = new System.Drawing.Size(97, 25);
             this.nud_startLine.TabIndex = 9;
             // 
             // panel_DealMultiLine
@@ -1652,16 +1787,18 @@
             this.panel_DealMultiLine.Controls.Add(this.btnFile2DeleteBrower);
             this.panel_DealMultiLine.Controls.Add(this.label19);
             this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
-            this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
+            this.panel_DealMultiLine.Location = new System.Drawing.Point(4, 45);
+            this.panel_DealMultiLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_DealMultiLine.Name = "panel_DealMultiLine";
-            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 40);
+            this.panel_DealMultiLine.Size = new System.Drawing.Size(883, 50);
             this.panel_DealMultiLine.TabIndex = 12;
             // 
             // btnFile2DeleteBrower
             // 
-            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(414, 5);
+            this.btnFile2DeleteBrower.Location = new System.Drawing.Point(552, 6);
+            this.btnFile2DeleteBrower.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFile2DeleteBrower.Name = "btnFile2DeleteBrower";
-            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(50, 32);
+            this.btnFile2DeleteBrower.Size = new System.Drawing.Size(67, 40);
             this.btnFile2DeleteBrower.TabIndex = 14;
             this.btnFile2DeleteBrower.Text = "浏览";
             this.btnFile2DeleteBrower.UseVisualStyleBackColor = true;
@@ -1669,22 +1806,25 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 14);
+            this.label19.Location = new System.Drawing.Point(16, 18);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 12);
+            this.label19.Size = new System.Drawing.Size(75, 15);
             this.label19.TabIndex = 12;
             this.label19.Text = "筛选文件:";
             // 
             // txbFileShaiXuan
             // 
-            this.txbFileShaiXuan.Location = new System.Drawing.Point(82, 9);
+            this.txbFileShaiXuan.Location = new System.Drawing.Point(109, 11);
+            this.txbFileShaiXuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbFileShaiXuan.Name = "txbFileShaiXuan";
-            this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
+            this.txbFileShaiXuan.Size = new System.Drawing.Size(428, 25);
             this.txbFileShaiXuan.TabIndex = 10;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(571, 45);
+            this.numericUpDown2.Location = new System.Drawing.Point(761, 56);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -1696,23 +1836,25 @@
             0,
             -2147483648});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(61, 21);
+            this.numericUpDown2.Size = new System.Drawing.Size(81, 25);
             this.numericUpDown2.TabIndex = 6;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(636, 16);
+            this.label45.Location = new System.Drawing.Point(848, 20);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(29, 12);
+            this.label45.Size = new System.Drawing.Size(37, 15);
             this.label45.TabIndex = 25;
             this.label45.Text = "模式";
             // 
             // btnFile1DeleteBrowser
             // 
-            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
+            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(551, 1);
+            this.btnFile1DeleteBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
-            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
+            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(67, 40);
             this.btnFile1DeleteBrowser.TabIndex = 13;
             this.btnFile1DeleteBrowser.Text = "浏览";
             this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
@@ -1726,26 +1868,29 @@
             this.comboBox_DealMultiLine.Items.AddRange(new object[] {
             "替换指定行之间内容",
             "筛选文件"});
-            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(482, 11);
+            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(643, 14);
+            this.comboBox_DealMultiLine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
-            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
+            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(196, 25);
             this.comboBox_DealMultiLine.TabIndex = 24;
             this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 11);
+            this.label18.Location = new System.Drawing.Point(19, 14);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 12);
+            this.label18.Size = new System.Drawing.Size(75, 15);
             this.label18.TabIndex = 11;
             this.label18.Text = "模板文件:";
             // 
             // txbFileDelete
             // 
-            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
+            this.txbFileDelete.Location = new System.Drawing.Point(113, 10);
+            this.txbFileDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbFileDelete.Name = "txbFileDelete";
-            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
+            this.txbFileDelete.Size = new System.Drawing.Size(428, 25);
             this.txbFileDelete.TabIndex = 9;
             // 
             // tpOther
@@ -1757,9 +1902,10 @@
             this.tpOther.Controls.Add(this.panelOtherAddFolder);
             this.tpOther.Controls.Add(this.label38);
             this.tpOther.Controls.Add(this.comboBoxOtherType);
-            this.tpOther.Location = new System.Drawing.Point(4, 22);
+            this.tpOther.Location = new System.Drawing.Point(4, 25);
+            this.tpOther.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpOther.Name = "tpOther";
-            this.tpOther.Size = new System.Drawing.Size(673, 79);
+            this.tpOther.Size = new System.Drawing.Size(900, 102);
             this.tpOther.TabIndex = 2;
             this.tpOther.Text = "其他处理方式";
             this.tpOther.UseVisualStyleBackColor = true;
@@ -1769,16 +1915,18 @@
             this.panelOtherSort.Controls.Add(this.radioBtnSortDown);
             this.panelOtherSort.Controls.Add(this.radioBtnSortUp);
             this.panelOtherSort.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherSort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherSort.Name = "panelOtherSort";
-            this.panelOtherSort.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherSort.Size = new System.Drawing.Size(645, 91);
             this.panelOtherSort.TabIndex = 24;
             // 
             // radioBtnSortDown
             // 
             this.radioBtnSortDown.AutoSize = true;
-            this.radioBtnSortDown.Location = new System.Drawing.Point(142, 18);
+            this.radioBtnSortDown.Location = new System.Drawing.Point(189, 22);
+            this.radioBtnSortDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnSortDown.Name = "radioBtnSortDown";
-            this.radioBtnSortDown.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortDown.Size = new System.Drawing.Size(88, 19);
             this.radioBtnSortDown.TabIndex = 2;
             this.radioBtnSortDown.TabStop = true;
             this.radioBtnSortDown.Text = "字母降序";
@@ -1787,9 +1935,10 @@
             // radioBtnSortUp
             // 
             this.radioBtnSortUp.AutoSize = true;
-            this.radioBtnSortUp.Location = new System.Drawing.Point(39, 18);
+            this.radioBtnSortUp.Location = new System.Drawing.Point(52, 22);
+            this.radioBtnSortUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnSortUp.Name = "radioBtnSortUp";
-            this.radioBtnSortUp.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortUp.Size = new System.Drawing.Size(88, 19);
             this.radioBtnSortUp.TabIndex = 1;
             this.radioBtnSortUp.TabStop = true;
             this.radioBtnSortUp.Text = "字母升序";
@@ -1804,35 +1953,39 @@
             this.panelOtherChangeFileType.Controls.Add(this.radioBtnUnicode);
             this.panelOtherChangeFileType.Controls.Add(this.radioBtnANSI);
             this.panelOtherChangeFileType.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherChangeFileType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherChangeFileType.Name = "panelOtherChangeFileType";
-            this.panelOtherChangeFileType.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherChangeFileType.Size = new System.Drawing.Size(645, 91);
             this.panelOtherChangeFileType.TabIndex = 19;
             // 
             // label44
             // 
             this.label44.AutoSize = true;
             this.label44.ForeColor = System.Drawing.Color.Red;
-            this.label44.Location = new System.Drawing.Point(281, 52);
+            this.label44.Location = new System.Drawing.Point(375, 65);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(179, 12);
+            this.label44.Size = new System.Drawing.Size(231, 15);
             this.label44.TabIndex = 5;
             this.label44.Text = "新文件名 = 旧名 + type + 后缀";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(24, 52);
+            this.label43.Location = new System.Drawing.Point(32, 65);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(251, 12);
+            this.label43.Size = new System.Drawing.Size(318, 15);
             this.label43.TabIndex = 4;
             this.label43.Text = "四种编码类型Windows自带记事本都能正常打开";
             // 
             // radioBtnUTF_8
             // 
             this.radioBtnUTF_8.AutoSize = true;
-            this.radioBtnUTF_8.Location = new System.Drawing.Point(367, 18);
+            this.radioBtnUTF_8.Location = new System.Drawing.Point(489, 22);
+            this.radioBtnUTF_8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnUTF_8.Name = "radioBtnUTF_8";
-            this.radioBtnUTF_8.Size = new System.Drawing.Size(53, 16);
+            this.radioBtnUTF_8.Size = new System.Drawing.Size(68, 19);
             this.radioBtnUTF_8.TabIndex = 3;
             this.radioBtnUTF_8.TabStop = true;
             this.radioBtnUTF_8.Text = "UTF-8";
@@ -1841,9 +1994,10 @@
             // radioBtnUnicodeBigEndian
             // 
             this.radioBtnUnicodeBigEndian.AutoSize = true;
-            this.radioBtnUnicodeBigEndian.Location = new System.Drawing.Point(211, 18);
+            this.radioBtnUnicodeBigEndian.Location = new System.Drawing.Point(281, 22);
+            this.radioBtnUnicodeBigEndian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnUnicodeBigEndian.Name = "radioBtnUnicodeBigEndian";
-            this.radioBtnUnicodeBigEndian.Size = new System.Drawing.Size(131, 16);
+            this.radioBtnUnicodeBigEndian.Size = new System.Drawing.Size(172, 19);
             this.radioBtnUnicodeBigEndian.TabIndex = 2;
             this.radioBtnUnicodeBigEndian.TabStop = true;
             this.radioBtnUnicodeBigEndian.Text = "Unicode big endian";
@@ -1852,9 +2006,10 @@
             // radioBtnUnicode
             // 
             this.radioBtnUnicode.AutoSize = true;
-            this.radioBtnUnicode.Location = new System.Drawing.Point(122, 18);
+            this.radioBtnUnicode.Location = new System.Drawing.Point(163, 22);
+            this.radioBtnUnicode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnUnicode.Name = "radioBtnUnicode";
-            this.radioBtnUnicode.Size = new System.Drawing.Size(65, 16);
+            this.radioBtnUnicode.Size = new System.Drawing.Size(84, 19);
             this.radioBtnUnicode.TabIndex = 1;
             this.radioBtnUnicode.TabStop = true;
             this.radioBtnUnicode.Text = "Unicode";
@@ -1863,9 +2018,10 @@
             // radioBtnANSI
             // 
             this.radioBtnANSI.AutoSize = true;
-            this.radioBtnANSI.Location = new System.Drawing.Point(56, 18);
+            this.radioBtnANSI.Location = new System.Drawing.Point(75, 22);
+            this.radioBtnANSI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioBtnANSI.Name = "radioBtnANSI";
-            this.radioBtnANSI.Size = new System.Drawing.Size(47, 16);
+            this.radioBtnANSI.Size = new System.Drawing.Size(60, 19);
             this.radioBtnANSI.TabIndex = 0;
             this.radioBtnANSI.TabStop = true;
             this.radioBtnANSI.Text = "ANSI";
@@ -1876,24 +2032,27 @@
             this.panelOtherFind.Controls.Add(this.label42);
             this.panelOtherFind.Controls.Add(this.txbOtherFind);
             this.panelOtherFind.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherFind.Name = "panelOtherFind";
-            this.panelOtherFind.Size = new System.Drawing.Size(456, 73);
+            this.panelOtherFind.Size = new System.Drawing.Size(608, 91);
             this.panelOtherFind.TabIndex = 19;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(15, 22);
+            this.label42.Location = new System.Drawing.Point(20, 28);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(41, 12);
+            this.label42.Size = new System.Drawing.Size(52, 15);
             this.label42.TabIndex = 2;
             this.label42.Text = "查找：";
             // 
             // txbOtherFind
             // 
-            this.txbOtherFind.Location = new System.Drawing.Point(62, 19);
+            this.txbOtherFind.Location = new System.Drawing.Point(83, 24);
+            this.txbOtherFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbOtherFind.Name = "txbOtherFind";
-            this.txbOtherFind.Size = new System.Drawing.Size(213, 21);
+            this.txbOtherFind.Size = new System.Drawing.Size(283, 25);
             this.txbOtherFind.TabIndex = 0;
             // 
             // panelOtherRename
@@ -1902,26 +2061,29 @@
             this.panelOtherRename.Controls.Add(this.checkBoxOtherOldName);
             this.panelOtherRename.Controls.Add(this.label40);
             this.panelOtherRename.Controls.Add(this.label39);
-            this.panelOtherRename.Location = new System.Drawing.Point(6, 1);
+            this.panelOtherRename.Location = new System.Drawing.Point(8, 1);
+            this.panelOtherRename.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherRename.Name = "panelOtherRename";
-            this.panelOtherRename.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherRename.Size = new System.Drawing.Size(645, 91);
             this.panelOtherRename.TabIndex = 18;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(174, 40);
+            this.label41.Location = new System.Drawing.Point(232, 50);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(47, 12);
+            this.label41.Size = new System.Drawing.Size(60, 15);
             this.label41.TabIndex = 3;
             this.label41.Text = "+新名称";
             // 
             // checkBoxOtherOldName
             // 
             this.checkBoxOtherOldName.AutoSize = true;
-            this.checkBoxOtherOldName.Location = new System.Drawing.Point(96, 39);
+            this.checkBoxOtherOldName.Location = new System.Drawing.Point(128, 49);
+            this.checkBoxOtherOldName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxOtherOldName.Name = "checkBoxOtherOldName";
-            this.checkBoxOtherOldName.Size = new System.Drawing.Size(72, 16);
+            this.checkBoxOtherOldName.Size = new System.Drawing.Size(89, 19);
             this.checkBoxOtherOldName.TabIndex = 2;
             this.checkBoxOtherOldName.Text = "旧文件名";
             this.checkBoxOtherOldName.UseVisualStyleBackColor = true;
@@ -1929,18 +2091,20 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(24, 39);
+            this.label40.Location = new System.Drawing.Point(32, 49);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(65, 12);
+            this.label40.Size = new System.Drawing.Size(82, 15);
             this.label40.TabIndex = 1;
             this.label40.Text = "新文件名：";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 10);
+            this.label39.Location = new System.Drawing.Point(8, 12);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(401, 12);
+            this.label39.Size = new System.Drawing.Size(503, 15);
             this.label39.TabIndex = 0;
             this.label39.Text = "重命名：将文本文件的第一行作为新文件名. 如果第一行是空的读取第二行";
             // 
@@ -1949,33 +2113,37 @@
             this.panelOtherAddFolder.Controls.Add(this.txbOtherFilePath);
             this.panelOtherAddFolder.Controls.Add(this.label6);
             this.panelOtherAddFolder.Controls.Add(this.btnOtherAddDGV);
-            this.panelOtherAddFolder.Location = new System.Drawing.Point(3, 3);
+            this.panelOtherAddFolder.Location = new System.Drawing.Point(4, 4);
+            this.panelOtherAddFolder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelOtherAddFolder.Name = "panelOtherAddFolder";
-            this.panelOtherAddFolder.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherAddFolder.Size = new System.Drawing.Size(645, 91);
             this.panelOtherAddFolder.TabIndex = 17;
             // 
             // txbOtherFilePath
             // 
-            this.txbOtherFilePath.Location = new System.Drawing.Point(62, 12);
+            this.txbOtherFilePath.Location = new System.Drawing.Point(83, 15);
+            this.txbOtherFilePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbOtherFilePath.Name = "txbOtherFilePath";
-            this.txbOtherFilePath.Size = new System.Drawing.Size(393, 21);
+            this.txbOtherFilePath.Size = new System.Drawing.Size(523, 25);
             this.txbOtherFilePath.TabIndex = 2;
             this.txbOtherFilePath.Click += new System.EventHandler(this.txbFilePath_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 15);
+            this.label6.Location = new System.Drawing.Point(12, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 12);
+            this.label6.Size = new System.Drawing.Size(60, 15);
             this.label6.TabIndex = 3;
             this.label6.Text = "文件夹:";
             // 
             // btnOtherAddDGV
             // 
-            this.btnOtherAddDGV.Location = new System.Drawing.Point(370, 39);
+            this.btnOtherAddDGV.Location = new System.Drawing.Point(493, 49);
+            this.btnOtherAddDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOtherAddDGV.Name = "btnOtherAddDGV";
-            this.btnOtherAddDGV.Size = new System.Drawing.Size(73, 32);
+            this.btnOtherAddDGV.Size = new System.Drawing.Size(97, 40);
             this.btnOtherAddDGV.TabIndex = 4;
             this.btnOtherAddDGV.Text = "加入列表";
             this.btnOtherAddDGV.UseVisualStyleBackColor = true;
@@ -1984,9 +2152,10 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(637, 13);
+            this.label38.Location = new System.Drawing.Point(849, 16);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(29, 12);
+            this.label38.Size = new System.Drawing.Size(37, 15);
             this.label38.TabIndex = 23;
             this.label38.Text = "模式";
             // 
@@ -2002,9 +2171,10 @@
             "查找个数",
             "转换编码",
             "重新排序"});
-            this.comboBoxOtherType.Location = new System.Drawing.Point(510, 8);
+            this.comboBoxOtherType.Location = new System.Drawing.Point(680, 10);
+            this.comboBoxOtherType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxOtherType.Name = "comboBoxOtherType";
-            this.comboBoxOtherType.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxOtherType.Size = new System.Drawing.Size(160, 25);
             this.comboBoxOtherType.TabIndex = 22;
             this.comboBoxOtherType.SelectionChangeCommitted += new System.EventHandler(this.comboBoxOtherType_SelectionChangeCommitted);
             // 
@@ -2012,16 +2182,18 @@
             // 
             this.panelStart.Controls.Add(this.btnStart);
             this.panelStart.Controls.Add(this.checkBoxBak);
-            this.panelStart.Location = new System.Drawing.Point(6, 379);
+            this.panelStart.Location = new System.Drawing.Point(8, 474);
+            this.panelStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(682, 41);
+            this.panelStart.Size = new System.Drawing.Size(909, 51);
             this.panelStart.TabIndex = 10;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(436, 6);
+            this.btnStart.Location = new System.Drawing.Point(581, 8);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(134, 32);
+            this.btnStart.Size = new System.Drawing.Size(179, 40);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "开始删除";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -2030,9 +2202,10 @@
             // checkBoxBak
             // 
             this.checkBoxBak.AutoSize = true;
-            this.checkBoxBak.Location = new System.Drawing.Point(4, 13);
+            this.checkBoxBak.Location = new System.Drawing.Point(5, 16);
+            this.checkBoxBak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxBak.Name = "checkBoxBak";
-            this.checkBoxBak.Size = new System.Drawing.Size(96, 16);
+            this.checkBoxBak.Size = new System.Drawing.Size(119, 19);
             this.checkBoxBak.TabIndex = 4;
             this.checkBoxBak.Text = "生成备份文件";
             this.checkBoxBak.UseVisualStyleBackColor = true;
@@ -2044,14 +2217,15 @@
             // FormMain
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 452);
+            this.ClientSize = new System.Drawing.Size(927, 565);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menu1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

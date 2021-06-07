@@ -89,7 +89,7 @@ namespace DeleteFirstFewLine
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            checkBoxBak.Checked = true;
+            //checkBoxBak.Checked = true;
             //InitComboBoxDeleteLineItems();
             this.comboBoxDeleteLine.Text = "删除前后行";
             this.comboBoxSplit.Text = "拆分固定个数";
