@@ -40,10 +40,6 @@
             this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.捐赠ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.DGV = new System.Windows.Forms.DataGridView();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenu_DGV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.全部删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,6 +98,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.tpDeleteData = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBoxDeleteData = new System.Windows.Forms.ComboBox();
             this.panelDelData_FirstLastOfLine = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txbCountZiFu = new System.Windows.Forms.TextBox();
@@ -110,19 +108,12 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.nudDelData_CountZiFu = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBoxDeleteData = new System.Windows.Forms.ComboBox();
             this.panelDeleteReplaceData = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txbDelNewData = new System.Windows.Forms.TextBox();
             this.txbDelOldData = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tpMerge = new System.Windows.Forms.TabPage();
-            this.panelMerge_LeftRight = new System.Windows.Forms.Panel();
-            this.checkBoxMerge_LeftRightAddData = new System.Windows.Forms.CheckBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txbMerge_LeftRightData = new System.Windows.Forms.TextBox();
-            this.panelMerge_GeHang = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxMerge = new System.Windows.Forms.ComboBox();
             this.panelMerge_AddDataAmongFile = new System.Windows.Forms.Panel();
@@ -132,25 +123,14 @@
             this.checkBoxMerge_AddDataAmongFiles = new System.Windows.Forms.CheckBox();
             this.btnDownMove = new System.Windows.Forms.Button();
             this.btnUpMove = new System.Windows.Forms.Button();
-            this.tpSplit = new System.Windows.Forms.TabPage();
-            this.nudSplit_Line = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBoxSplit = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nudSplit_Count = new System.Windows.Forms.NumericUpDown();
+            this.panelMerge_LeftRight = new System.Windows.Forms.Panel();
+            this.checkBoxMerge_LeftRightAddData = new System.Windows.Forms.CheckBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txbMerge_LeftRightData = new System.Windows.Forms.TextBox();
+            this.panelMerge_GeHang = new System.Windows.Forms.Panel();
             this.tpAddData = new System.Windows.Forms.TabPage();
             this.label34 = new System.Windows.Forms.Label();
             this.comboBoxAddData = new System.Windows.Forms.ComboBox();
-            this.panelAddData_FileName = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.checkBoxAddData_ContainExtension = new System.Windows.Forms.CheckBox();
-            this.checkBoxAddData_ContainDir = new System.Windows.Forms.CheckBox();
-            this.txbAddData_FileName2 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.txbAddData_FileName1 = new System.Windows.Forms.TextBox();
             this.panelAddData_TopEndOfLine = new System.Windows.Forms.Panel();
             this.txbAddData_EndLine = new System.Windows.Forms.TextBox();
             this.checkBoxAddData_EndLine = new System.Windows.Forms.CheckBox();
@@ -164,7 +144,19 @@
             this.checkBoxAddData_EndFile = new System.Windows.Forms.CheckBox();
             this.checkBoxAddData_TopFile = new System.Windows.Forms.CheckBox();
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
+            this.panelAddData_FileName = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.checkBoxAddData_ContainExtension = new System.Windows.Forms.CheckBox();
+            this.checkBoxAddData_ContainDir = new System.Windows.Forms.CheckBox();
+            this.txbAddData_FileName2 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txbAddData_FileName1 = new System.Windows.Forms.TextBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
+            this.label45 = new System.Windows.Forms.Label();
+            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
+            this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txbFileDelete = new System.Windows.Forms.TextBox();
             this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -175,17 +167,11 @@
             this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label45 = new System.Windows.Forms.Label();
-            this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
-            this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txbFileDelete = new System.Windows.Forms.TextBox();
             this.tpOther = new System.Windows.Forms.TabPage();
-            this.panelOtherSort = new System.Windows.Forms.Panel();
-            this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
-            this.radioBtnSortUp = new System.Windows.Forms.RadioButton();
+            this.label38 = new System.Windows.Forms.Label();
+            this.comboBoxOtherType = new System.Windows.Forms.ComboBox();
             this.panelOtherChangeFileType = new System.Windows.Forms.Panel();
+            this.radioBtnUTF_8_bom = new System.Windows.Forms.RadioButton();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.radioBtnUTF_8 = new System.Windows.Forms.RadioButton();
@@ -204,17 +190,29 @@
             this.txbOtherFilePath = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnOtherAddDGV = new System.Windows.Forms.Button();
-            this.label38 = new System.Windows.Forms.Label();
-            this.comboBoxOtherType = new System.Windows.Forms.ComboBox();
+            this.panelOtherSort = new System.Windows.Forms.Panel();
+            this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
+            this.radioBtnSortUp = new System.Windows.Forms.RadioButton();
+            this.tpSplit = new System.Windows.Forms.TabPage();
+            this.nudSplit_Line = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBoxSplit = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nudSplit_Count = new System.Windows.Forms.NumericUpDown();
             this.panelStart = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.radioBtnUTF_8_bom = new System.Windows.Forms.RadioButton();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGV = new System.Windows.Forms.DataGridView();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.contextMenu_DGV.SuspendLayout();
             this.panelDGV_Deal.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -231,29 +229,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDelData_CountZiFu)).BeginInit();
             this.panelDeleteReplaceData.SuspendLayout();
             this.tpMerge.SuspendLayout();
-            this.panelMerge_LeftRight.SuspendLayout();
             this.panelMerge_AddDataAmongFile.SuspendLayout();
-            this.tpSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).BeginInit();
+            this.panelMerge_LeftRight.SuspendLayout();
             this.tpAddData.SuspendLayout();
-            this.panelAddData_FileName.SuspendLayout();
             this.panelAddData_TopEndOfLine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).BeginInit();
             this.panelAddData_TopEndOfFile.SuspendLayout();
+            this.panelAddData_FileName.SuspendLayout();
             this.tpDeleteLineFromFile.SuspendLayout();
             this.panel_dealMultiLine2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).BeginInit();
             this.panel_DealMultiLine.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tpOther.SuspendLayout();
-            this.panelOtherSort.SuspendLayout();
             this.panelOtherChangeFileType.SuspendLayout();
             this.panelOtherFind.SuspendLayout();
             this.panelOtherRename.SuspendLayout();
             this.panelOtherAddFolder.SuspendLayout();
+            this.panelOtherSort.SuspendLayout();
+            this.tpSplit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).BeginInit();
             this.panelStart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -264,7 +262,7 @@
             this.帮助HToolStripMenuItem});
             this.menu1.Location = new System.Drawing.Point(0, 0);
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(695, 25);
+            this.menu1.Size = new System.Drawing.Size(931, 25);
             this.menu1.TabIndex = 0;
             this.menu1.Text = "menuStrip1";
             // 
@@ -343,50 +341,8 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 25);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(695, 427);
+            this.panelMain.Size = new System.Drawing.Size(931, 615);
             this.panelMain.TabIndex = 1;
-            // 
-            // DGV
-            // 
-            this.DGV.AllowUserToAddRows = false;
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FilePath,
-            this.FileName,
-            this.State});
-            this.DGV.ContextMenuStrip = this.contextMenu_DGV;
-            this.DGV.Location = new System.Drawing.Point(7, 124);
-            this.DGV.Name = "DGV";
-            this.DGV.RowHeadersWidth = 51;
-            this.DGV.RowTemplate.Height = 23;
-            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(569, 249);
-            this.DGV.TabIndex = 1;
-            this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "路径";
-            this.FilePath.MinimumWidth = 6;
-            this.FilePath.Name = "FilePath";
-            this.FilePath.Visible = false;
-            this.FilePath.Width = 200;
-            // 
-            // FileName
-            // 
-            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FileName.HeaderText = "文件名称";
-            this.FileName.MinimumWidth = 6;
-            this.FileName.Name = "FileName";
-            this.FileName.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.HeaderText = "状态";
-            this.State.MinimumWidth = 6;
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            this.State.Width = 150;
             // 
             // contextMenu_DGV
             // 
@@ -555,9 +511,9 @@
             this.panelDGV_Deal.Controls.Add(this.btnAddFile);
             this.panelDGV_Deal.Controls.Add(this.btnDGV_ClearAll);
             this.panelDGV_Deal.Controls.Add(this.btnDGV_Delete);
-            this.panelDGV_Deal.Location = new System.Drawing.Point(575, 124);
+            this.panelDGV_Deal.Location = new System.Drawing.Point(816, 192);
             this.panelDGV_Deal.Name = "panelDGV_Deal";
-            this.panelDGV_Deal.Size = new System.Drawing.Size(112, 249);
+            this.panelDGV_Deal.Size = new System.Drawing.Size(112, 373);
             this.panelDGV_Deal.TabIndex = 11;
             // 
             // btnDGV_ClearState
@@ -625,14 +581,14 @@
             this.tabControl1.Controls.Add(this.tpDeleteLine);
             this.tabControl1.Controls.Add(this.tpDeleteData);
             this.tabControl1.Controls.Add(this.tpMerge);
+            this.tabControl1.Controls.Add(this.tpSplit);
             this.tabControl1.Controls.Add(this.tpAddData);
             this.tabControl1.Controls.Add(this.tpDeleteLineFromFile);
             this.tabControl1.Controls.Add(this.tpOther);
-            this.tabControl1.Controls.Add(this.tpSplit);
             this.tabControl1.Location = new System.Drawing.Point(7, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(681, 105);
+            this.tabControl1.Size = new System.Drawing.Size(803, 173);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -645,8 +601,8 @@
             this.tpDeleteLine.Controls.Add(this.panelDelLine_TeDing);
             this.tpDeleteLine.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLine.Name = "tpDeleteLine";
-            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpDeleteLine.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDeleteLine.Size = new System.Drawing.Size(795, 147);
             this.tpDeleteLine.TabIndex = 0;
             this.tpDeleteLine.Text = "批量删除行";
             this.tpDeleteLine.UseVisualStyleBackColor = true;
@@ -654,7 +610,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(625, 19);
+            this.label11.Location = new System.Drawing.Point(746, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 12);
             this.label11.TabIndex = 16;
@@ -674,7 +630,7 @@
             "删除重复行",
             "删除特定行",
             "删除含有关键字的行"});
-            this.comboBoxDeleteLine.Location = new System.Drawing.Point(491, 13);
+            this.comboBoxDeleteLine.Location = new System.Drawing.Point(612, 9);
             this.comboBoxDeleteLine.Name = "comboBoxDeleteLine";
             this.comboBoxDeleteLine.Size = new System.Drawing.Size(128, 22);
             this.comboBoxDeleteLine.TabIndex = 15;
@@ -695,7 +651,7 @@
             this.panelDelLine1.Controls.Add(this.label3);
             this.panelDelLine1.Location = new System.Drawing.Point(6, 3);
             this.panelDelLine1.Name = "panelDelLine1";
-            this.panelDelLine1.Size = new System.Drawing.Size(479, 73);
+            this.panelDelLine1.Size = new System.Drawing.Size(600, 138);
             this.panelDelLine1.TabIndex = 12;
             // 
             // nudDelLine_LastLineFile
@@ -818,7 +774,7 @@
             this.panelDelLine_KeyWords.Controls.Add(this.txbDelLine_TeDingData);
             this.panelDelLine_KeyWords.Location = new System.Drawing.Point(1, 3);
             this.panelDelLine_KeyWords.Name = "panelDelLine_KeyWords";
-            this.panelDelLine_KeyWords.Size = new System.Drawing.Size(473, 67);
+            this.panelDelLine_KeyWords.Size = new System.Drawing.Size(605, 135);
             this.panelDelLine_KeyWords.TabIndex = 15;
             // 
             // label33
@@ -877,7 +833,7 @@
             this.panelDelLine_TeDing.Controls.Add(this.label26);
             this.panelDelLine_TeDing.Location = new System.Drawing.Point(3, 3);
             this.panelDelLine_TeDing.Name = "panelDelLine_TeDing";
-            this.panelDelLine_TeDing.Size = new System.Drawing.Size(473, 67);
+            this.panelDelLine_TeDing.Size = new System.Drawing.Size(603, 138);
             this.panelDelLine_TeDing.TabIndex = 14;
             // 
             // label30
@@ -943,11 +899,37 @@
             this.tpDeleteData.Controls.Add(this.panelDeleteReplaceData);
             this.tpDeleteData.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteData.Name = "tpDeleteData";
-            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpDeleteData.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDeleteData.Size = new System.Drawing.Size(795, 147);
             this.tpDeleteData.TabIndex = 1;
             this.tpDeleteData.Text = "批量删除文本";
             this.tpDeleteData.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(755, 14);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(29, 12);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "模式";
+            // 
+            // comboBoxDeleteData
+            // 
+            this.comboBoxDeleteData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDeleteData.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBoxDeleteData.FormattingEnabled = true;
+            this.comboBoxDeleteData.Items.AddRange(new object[] {
+            "删除文本",
+            "替换文本",
+            "删除行首数字",
+            "删除行首字符",
+            "删除行尾字符"});
+            this.comboBoxDeleteData.Location = new System.Drawing.Point(628, 11);
+            this.comboBoxDeleteData.Name = "comboBoxDeleteData";
+            this.comboBoxDeleteData.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxDeleteData.TabIndex = 22;
+            this.comboBoxDeleteData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDeleteData_SelectionChangeCommitted);
             // 
             // panelDelData_FirstLastOfLine
             // 
@@ -960,7 +942,7 @@
             this.panelDelData_FirstLastOfLine.Controls.Add(this.nudDelData_CountZiFu);
             this.panelDelData_FirstLastOfLine.Location = new System.Drawing.Point(3, 3);
             this.panelDelData_FirstLastOfLine.Name = "panelDelData_FirstLastOfLine";
-            this.panelDelData_FirstLastOfLine.Size = new System.Drawing.Size(484, 73);
+            this.panelDelData_FirstLastOfLine.Size = new System.Drawing.Size(619, 141);
             this.panelDelData_FirstLastOfLine.TabIndex = 12;
             // 
             // button1
@@ -1031,32 +1013,6 @@
             this.nudDelData_CountZiFu.Size = new System.Drawing.Size(50, 21);
             this.nudDelData_CountZiFu.TabIndex = 0;
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(623, 11);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(29, 12);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "模式";
-            // 
-            // comboBoxDeleteData
-            // 
-            this.comboBoxDeleteData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDeleteData.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBoxDeleteData.FormattingEnabled = true;
-            this.comboBoxDeleteData.Items.AddRange(new object[] {
-            "删除文本",
-            "替换文本",
-            "删除行首数字",
-            "删除行首字符",
-            "删除行尾字符"});
-            this.comboBoxDeleteData.Location = new System.Drawing.Point(496, 8);
-            this.comboBoxDeleteData.Name = "comboBoxDeleteData";
-            this.comboBoxDeleteData.Size = new System.Drawing.Size(121, 22);
-            this.comboBoxDeleteData.TabIndex = 22;
-            this.comboBoxDeleteData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxDeleteData_SelectionChangeCommitted);
-            // 
             // panelDeleteReplaceData
             // 
             this.panelDeleteReplaceData.Controls.Add(this.label5);
@@ -1065,7 +1021,7 @@
             this.panelDeleteReplaceData.Controls.Add(this.label10);
             this.panelDeleteReplaceData.Location = new System.Drawing.Point(6, 3);
             this.panelDeleteReplaceData.Name = "panelDeleteReplaceData";
-            this.panelDeleteReplaceData.Size = new System.Drawing.Size(484, 73);
+            this.panelDeleteReplaceData.Size = new System.Drawing.Size(613, 138);
             this.panelDeleteReplaceData.TabIndex = 11;
             // 
             // label5
@@ -1105,66 +1061,22 @@
             // 
             this.tpMerge.Controls.Add(this.label20);
             this.tpMerge.Controls.Add(this.comboBoxMerge);
-            this.tpMerge.Controls.Add(this.panelMerge_AddDataAmongFile);
             this.tpMerge.Controls.Add(this.btnDownMove);
             this.tpMerge.Controls.Add(this.btnUpMove);
+            this.tpMerge.Controls.Add(this.panelMerge_AddDataAmongFile);
             this.tpMerge.Controls.Add(this.panelMerge_LeftRight);
             this.tpMerge.Controls.Add(this.panelMerge_GeHang);
             this.tpMerge.Location = new System.Drawing.Point(4, 22);
             this.tpMerge.Name = "tpMerge";
-            this.tpMerge.Size = new System.Drawing.Size(673, 79);
+            this.tpMerge.Size = new System.Drawing.Size(795, 147);
             this.tpMerge.TabIndex = 3;
             this.tpMerge.Text = "合并";
             this.tpMerge.UseVisualStyleBackColor = true;
             // 
-            // panelMerge_LeftRight
-            // 
-            this.panelMerge_LeftRight.Controls.Add(this.checkBoxMerge_LeftRightAddData);
-            this.panelMerge_LeftRight.Controls.Add(this.label21);
-            this.panelMerge_LeftRight.Controls.Add(this.txbMerge_LeftRightData);
-            this.panelMerge_LeftRight.Location = new System.Drawing.Point(3, 3);
-            this.panelMerge_LeftRight.Name = "panelMerge_LeftRight";
-            this.panelMerge_LeftRight.Size = new System.Drawing.Size(484, 73);
-            this.panelMerge_LeftRight.TabIndex = 13;
-            // 
-            // checkBoxMerge_LeftRightAddData
-            // 
-            this.checkBoxMerge_LeftRightAddData.AutoSize = true;
-            this.checkBoxMerge_LeftRightAddData.Location = new System.Drawing.Point(45, 18);
-            this.checkBoxMerge_LeftRightAddData.Name = "checkBoxMerge_LeftRightAddData";
-            this.checkBoxMerge_LeftRightAddData.Size = new System.Drawing.Size(72, 16);
-            this.checkBoxMerge_LeftRightAddData.TabIndex = 2;
-            this.checkBoxMerge_LeftRightAddData.Text = "添加数据";
-            this.checkBoxMerge_LeftRightAddData.UseVisualStyleBackColor = true;
-            this.checkBoxMerge_LeftRightAddData.Click += new System.EventHandler(this.checkBoxMergeLeftRightAddData_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(25, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(107, 12);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "左右合并添加数据:";
-            // 
-            // txbMerge_LeftRightData
-            // 
-            this.txbMerge_LeftRightData.Location = new System.Drawing.Point(138, 48);
-            this.txbMerge_LeftRightData.Name = "txbMerge_LeftRightData";
-            this.txbMerge_LeftRightData.Size = new System.Drawing.Size(256, 21);
-            this.txbMerge_LeftRightData.TabIndex = 0;
-            // 
-            // panelMerge_GeHang
-            // 
-            this.panelMerge_GeHang.Location = new System.Drawing.Point(3, 3);
-            this.panelMerge_GeHang.Name = "panelMerge_GeHang";
-            this.panelMerge_GeHang.Size = new System.Drawing.Size(484, 73);
-            this.panelMerge_GeHang.TabIndex = 12;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(620, 14);
+            this.label20.Location = new System.Drawing.Point(759, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(29, 12);
             this.label20.TabIndex = 22;
@@ -1180,7 +1092,7 @@
             "合并+数据",
             "隔行合并",
             "左右合并"});
-            this.comboBoxMerge.Location = new System.Drawing.Point(493, 11);
+            this.comboBoxMerge.Location = new System.Drawing.Point(632, 13);
             this.comboBoxMerge.Name = "comboBoxMerge";
             this.comboBoxMerge.Size = new System.Drawing.Size(121, 22);
             this.comboBoxMerge.TabIndex = 21;
@@ -1194,7 +1106,7 @@
             this.panelMerge_AddDataAmongFile.Controls.Add(this.checkBoxMerge_AddDataAmongFiles);
             this.panelMerge_AddDataAmongFile.Location = new System.Drawing.Point(3, 3);
             this.panelMerge_AddDataAmongFile.Name = "panelMerge_AddDataAmongFile";
-            this.panelMerge_AddDataAmongFile.Size = new System.Drawing.Size(484, 73);
+            this.panelMerge_AddDataAmongFile.Size = new System.Drawing.Size(623, 141);
             this.panelMerge_AddDataAmongFile.TabIndex = 11;
             // 
             // checkBoxMerge_AddFileName
@@ -1239,7 +1151,7 @@
             // btnDownMove
             // 
             this.btnDownMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnDownMove.Location = new System.Drawing.Point(622, 39);
+            this.btnDownMove.Location = new System.Drawing.Point(758, 43);
             this.btnDownMove.Name = "btnDownMove";
             this.btnDownMove.Size = new System.Drawing.Size(27, 37);
             this.btnDownMove.TabIndex = 1;
@@ -1250,7 +1162,7 @@
             // btnUpMove
             // 
             this.btnUpMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnUpMove.Location = new System.Drawing.Point(577, 39);
+            this.btnUpMove.Location = new System.Drawing.Point(713, 43);
             this.btnUpMove.Name = "btnUpMove";
             this.btnUpMove.Size = new System.Drawing.Size(27, 37);
             this.btnUpMove.TabIndex = 0;
@@ -1258,107 +1170,49 @@
             this.btnUpMove.UseVisualStyleBackColor = true;
             this.btnUpMove.Click += new System.EventHandler(this.btnUpMove_Click);
             // 
-            // tpSplit
+            // panelMerge_LeftRight
             // 
-            this.tpSplit.Controls.Add(this.nudSplit_Line);
-            this.tpSplit.Controls.Add(this.label17);
-            this.tpSplit.Controls.Add(this.label15);
-            this.tpSplit.Controls.Add(this.label16);
-            this.tpSplit.Controls.Add(this.comboBoxSplit);
-            this.tpSplit.Controls.Add(this.label14);
-            this.tpSplit.Controls.Add(this.label13);
-            this.tpSplit.Controls.Add(this.nudSplit_Count);
-            this.tpSplit.Location = new System.Drawing.Point(4, 22);
-            this.tpSplit.Name = "tpSplit";
-            this.tpSplit.Size = new System.Drawing.Size(673, 79);
-            this.tpSplit.TabIndex = 4;
-            this.tpSplit.Text = "拆分";
-            this.tpSplit.UseVisualStyleBackColor = true;
+            this.panelMerge_LeftRight.Controls.Add(this.checkBoxMerge_LeftRightAddData);
+            this.panelMerge_LeftRight.Controls.Add(this.label21);
+            this.panelMerge_LeftRight.Controls.Add(this.txbMerge_LeftRightData);
+            this.panelMerge_LeftRight.Location = new System.Drawing.Point(3, 3);
+            this.panelMerge_LeftRight.Name = "panelMerge_LeftRight";
+            this.panelMerge_LeftRight.Size = new System.Drawing.Size(623, 138);
+            this.panelMerge_LeftRight.TabIndex = 13;
             // 
-            // nudSplit_Line
+            // checkBoxMerge_LeftRightAddData
             // 
-            this.nudSplit_Line.Location = new System.Drawing.Point(138, 44);
-            this.nudSplit_Line.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nudSplit_Line.Name = "nudSplit_Line";
-            this.nudSplit_Line.Size = new System.Drawing.Size(58, 21);
-            this.nudSplit_Line.TabIndex = 22;
+            this.checkBoxMerge_LeftRightAddData.AutoSize = true;
+            this.checkBoxMerge_LeftRightAddData.Location = new System.Drawing.Point(45, 18);
+            this.checkBoxMerge_LeftRightAddData.Name = "checkBoxMerge_LeftRightAddData";
+            this.checkBoxMerge_LeftRightAddData.Size = new System.Drawing.Size(72, 16);
+            this.checkBoxMerge_LeftRightAddData.TabIndex = 2;
+            this.checkBoxMerge_LeftRightAddData.Text = "添加数据";
+            this.checkBoxMerge_LeftRightAddData.UseVisualStyleBackColor = true;
+            this.checkBoxMerge_LeftRightAddData.Click += new System.EventHandler(this.checkBoxMergeLeftRightAddData_Click);
             // 
-            // label17
+            // label21
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(399, 13);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 12);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "模式:";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(25, 51);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(107, 12);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "左右合并添加数据:";
             // 
-            // label15
+            // txbMerge_LeftRightData
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(202, 48);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 12);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "行";
+            this.txbMerge_LeftRightData.Location = new System.Drawing.Point(138, 48);
+            this.txbMerge_LeftRightData.Name = "txbMerge_LeftRightData";
+            this.txbMerge_LeftRightData.Size = new System.Drawing.Size(256, 21);
+            this.txbMerge_LeftRightData.TabIndex = 0;
             // 
-            // label16
+            // panelMerge_GeHang
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(68, 48);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 12);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "行数拆分：";
-            // 
-            // comboBoxSplit
-            // 
-            this.comboBoxSplit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSplit.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBoxSplit.FormattingEnabled = true;
-            this.comboBoxSplit.Items.AddRange(new object[] {
-            "拆分固定个数",
-            "拆分固定行数",
-            "含有特定字符",
-            "拆分奇偶行"});
-            this.comboBoxSplit.Location = new System.Drawing.Point(434, 10);
-            this.comboBoxSplit.Name = "comboBoxSplit";
-            this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
-            this.comboBoxSplit.TabIndex = 16;
-            this.comboBoxSplit.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeSplit_SelectionChangeCommitted);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(189, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 12);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "个";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(68, 13);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 12);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "个数拆分：";
-            // 
-            // nudSplit_Count
-            // 
-            this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
-            this.nudSplit_Count.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudSplit_Count.Name = "nudSplit_Count";
-            this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
-            this.nudSplit_Count.TabIndex = 0;
+            this.panelMerge_GeHang.Location = new System.Drawing.Point(3, 3);
+            this.panelMerge_GeHang.Name = "panelMerge_GeHang";
+            this.panelMerge_GeHang.Size = new System.Drawing.Size(623, 138);
+            this.panelMerge_GeHang.TabIndex = 12;
             // 
             // tpAddData
             // 
@@ -1369,7 +1223,7 @@
             this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Location = new System.Drawing.Point(4, 22);
             this.tpAddData.Name = "tpAddData";
-            this.tpAddData.Size = new System.Drawing.Size(673, 79);
+            this.tpAddData.Size = new System.Drawing.Size(795, 147);
             this.tpAddData.TabIndex = 6;
             this.tpAddData.Text = "添加数据";
             this.tpAddData.UseVisualStyleBackColor = true;
@@ -1377,7 +1231,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(637, 17);
+            this.label34.Location = new System.Drawing.Point(750, 16);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(29, 12);
             this.label34.TabIndex = 22;
@@ -1392,76 +1246,11 @@
             "添加到文件的首尾",
             "添加到行的首尾",
             "添加文件名到文件"});
-            this.comboBoxAddData.Location = new System.Drawing.Point(493, 12);
+            this.comboBoxAddData.Location = new System.Drawing.Point(606, 11);
             this.comboBoxAddData.Name = "comboBoxAddData";
             this.comboBoxAddData.Size = new System.Drawing.Size(138, 22);
             this.comboBoxAddData.TabIndex = 21;
             this.comboBoxAddData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAddData_SelectionChangeCommitted);
-            // 
-            // panelAddData_FileName
-            // 
-            this.panelAddData_FileName.Controls.Add(this.label37);
-            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainExtension);
-            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainDir);
-            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName2);
-            this.panelAddData_FileName.Controls.Add(this.label36);
-            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName1);
-            this.panelAddData_FileName.Location = new System.Drawing.Point(3, 0);
-            this.panelAddData_FileName.Name = "panelAddData_FileName";
-            this.panelAddData_FileName.Size = new System.Drawing.Size(484, 73);
-            this.panelAddData_FileName.TabIndex = 16;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(253, 14);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(101, 12);
-            this.label37.TabIndex = 13;
-            this.label37.Text = "加入到文件的首行";
-            // 
-            // checkBoxAddData_ContainExtension
-            // 
-            this.checkBoxAddData_ContainExtension.AutoSize = true;
-            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(14, 36);
-            this.checkBoxAddData_ContainExtension.Name = "checkBoxAddData_ContainExtension";
-            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(120, 16);
-            this.checkBoxAddData_ContainExtension.TabIndex = 12;
-            this.checkBoxAddData_ContainExtension.Text = "文件名包含扩展名";
-            this.checkBoxAddData_ContainExtension.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxAddData_ContainDir
-            // 
-            this.checkBoxAddData_ContainDir.AutoSize = true;
-            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(14, 12);
-            this.checkBoxAddData_ContainDir.Name = "checkBoxAddData_ContainDir";
-            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(108, 16);
-            this.checkBoxAddData_ContainDir.TabIndex = 11;
-            this.checkBoxAddData_ContainDir.Text = "文件名包含路径";
-            this.checkBoxAddData_ContainDir.UseVisualStyleBackColor = true;
-            // 
-            // txbAddData_FileName2
-            // 
-            this.txbAddData_FileName2.Location = new System.Drawing.Point(327, 41);
-            this.txbAddData_FileName2.Name = "txbAddData_FileName2";
-            this.txbAddData_FileName2.Size = new System.Drawing.Size(93, 21);
-            this.txbAddData_FileName2.TabIndex = 10;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(268, 44);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 12);
-            this.label36.TabIndex = 9;
-            this.label36.Text = "+文件名+";
-            // 
-            // txbAddData_FileName1
-            // 
-            this.txbAddData_FileName1.Location = new System.Drawing.Point(169, 41);
-            this.txbAddData_FileName1.Name = "txbAddData_FileName1";
-            this.txbAddData_FileName1.Size = new System.Drawing.Size(93, 21);
-            this.txbAddData_FileName1.TabIndex = 8;
             // 
             // panelAddData_TopEndOfLine
             // 
@@ -1474,7 +1263,7 @@
             this.panelAddData_TopEndOfLine.Controls.Add(this.checkBoxAddData_TopLine);
             this.panelAddData_TopEndOfLine.Location = new System.Drawing.Point(6, 3);
             this.panelAddData_TopEndOfLine.Name = "panelAddData_TopEndOfLine";
-            this.panelAddData_TopEndOfLine.Size = new System.Drawing.Size(484, 73);
+            this.panelAddData_TopEndOfLine.Size = new System.Drawing.Size(594, 141);
             this.panelAddData_TopEndOfLine.TabIndex = 15;
             // 
             // txbAddData_EndLine
@@ -1563,7 +1352,7 @@
             this.panelAddData_TopEndOfFile.Controls.Add(this.txbAddData_TopEndOfFile);
             this.panelAddData_TopEndOfFile.Location = new System.Drawing.Point(3, 6);
             this.panelAddData_TopEndOfFile.Name = "panelAddData_TopEndOfFile";
-            this.panelAddData_TopEndOfFile.Size = new System.Drawing.Size(484, 70);
+            this.panelAddData_TopEndOfFile.Size = new System.Drawing.Size(597, 141);
             this.panelAddData_TopEndOfFile.TabIndex = 14;
             // 
             // checkBoxAddData_OverWrite
@@ -1604,9 +1393,73 @@
             this.txbAddData_TopEndOfFile.Size = new System.Drawing.Size(254, 58);
             this.txbAddData_TopEndOfFile.TabIndex = 0;
             // 
+            // panelAddData_FileName
+            // 
+            this.panelAddData_FileName.Controls.Add(this.label37);
+            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainExtension);
+            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainDir);
+            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName2);
+            this.panelAddData_FileName.Controls.Add(this.label36);
+            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName1);
+            this.panelAddData_FileName.Location = new System.Drawing.Point(3, 0);
+            this.panelAddData_FileName.Name = "panelAddData_FileName";
+            this.panelAddData_FileName.Size = new System.Drawing.Size(597, 144);
+            this.panelAddData_FileName.TabIndex = 16;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(253, 14);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(101, 12);
+            this.label37.TabIndex = 13;
+            this.label37.Text = "加入到文件的首行";
+            // 
+            // checkBoxAddData_ContainExtension
+            // 
+            this.checkBoxAddData_ContainExtension.AutoSize = true;
+            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(14, 36);
+            this.checkBoxAddData_ContainExtension.Name = "checkBoxAddData_ContainExtension";
+            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxAddData_ContainExtension.TabIndex = 12;
+            this.checkBoxAddData_ContainExtension.Text = "文件名包含扩展名";
+            this.checkBoxAddData_ContainExtension.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAddData_ContainDir
+            // 
+            this.checkBoxAddData_ContainDir.AutoSize = true;
+            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(14, 12);
+            this.checkBoxAddData_ContainDir.Name = "checkBoxAddData_ContainDir";
+            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(108, 16);
+            this.checkBoxAddData_ContainDir.TabIndex = 11;
+            this.checkBoxAddData_ContainDir.Text = "文件名包含路径";
+            this.checkBoxAddData_ContainDir.UseVisualStyleBackColor = true;
+            // 
+            // txbAddData_FileName2
+            // 
+            this.txbAddData_FileName2.Location = new System.Drawing.Point(327, 41);
+            this.txbAddData_FileName2.Name = "txbAddData_FileName2";
+            this.txbAddData_FileName2.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName2.TabIndex = 10;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(268, 44);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(53, 12);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "+文件名+";
+            // 
+            // txbAddData_FileName1
+            // 
+            this.txbAddData_FileName1.Location = new System.Drawing.Point(169, 41);
+            this.txbAddData_FileName1.Name = "txbAddData_FileName1";
+            this.txbAddData_FileName1.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName1.TabIndex = 8;
+            // 
             // tpDeleteLineFromFile
             // 
-            this.tpDeleteLineFromFile.Controls.Add(this.numericUpDown2);
             this.tpDeleteLineFromFile.Controls.Add(this.label45);
             this.tpDeleteLineFromFile.Controls.Add(this.btnFile1DeleteBrowser);
             this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
@@ -1616,10 +1469,59 @@
             this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
             this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
-            this.tpDeleteLineFromFile.Size = new System.Drawing.Size(673, 79);
+            this.tpDeleteLineFromFile.Size = new System.Drawing.Size(795, 147);
             this.tpDeleteLineFromFile.TabIndex = 5;
             this.tpDeleteLineFromFile.Text = "处理多行从文件";
             this.tpDeleteLineFromFile.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(760, 12);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(29, 12);
+            this.label45.TabIndex = 25;
+            this.label45.Text = "模式";
+            // 
+            // btnFile1DeleteBrowser
+            // 
+            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
+            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
+            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
+            this.btnFile1DeleteBrowser.TabIndex = 13;
+            this.btnFile1DeleteBrowser.Text = "浏览";
+            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
+            this.btnFile1DeleteBrowser.Click += new System.EventHandler(this.btnFile1DeleteBrowser_Click);
+            // 
+            // comboBox_DealMultiLine
+            // 
+            this.comboBox_DealMultiLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_DealMultiLine.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBox_DealMultiLine.FormattingEnabled = true;
+            this.comboBox_DealMultiLine.Items.AddRange(new object[] {
+            "替换指定行之间内容",
+            "筛选文件"});
+            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(606, 7);
+            this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
+            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
+            this.comboBox_DealMultiLine.TabIndex = 24;
+            this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(14, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 12);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "模板文件:";
+            // 
+            // txbFileDelete
+            // 
+            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
+            this.txbFileDelete.Name = "txbFileDelete";
+            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
+            this.txbFileDelete.TabIndex = 9;
             // 
             // panel_dealMultiLine2
             // 
@@ -1630,7 +1532,7 @@
             this.panel_dealMultiLine2.Controls.Add(this.nud_startLine);
             this.panel_dealMultiLine2.Location = new System.Drawing.Point(6, 35);
             this.panel_dealMultiLine2.Name = "panel_dealMultiLine2";
-            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 43);
+            this.panel_dealMultiLine2.Size = new System.Drawing.Size(659, 109);
             this.panel_dealMultiLine2.TabIndex = 12;
             // 
             // label46
@@ -1696,7 +1598,7 @@
             this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
             this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
             this.panel_DealMultiLine.Name = "panel_DealMultiLine";
-            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 40);
+            this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 105);
             this.panel_DealMultiLine.TabIndex = 12;
             // 
             // btnFile2DeleteBrower
@@ -1724,72 +1626,6 @@
             this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
             this.txbFileShaiXuan.TabIndex = 10;
             // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(571, 45);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(61, 21);
-            this.numericUpDown2.TabIndex = 6;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(636, 16);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(29, 12);
-            this.label45.TabIndex = 25;
-            this.label45.Text = "模式";
-            // 
-            // btnFile1DeleteBrowser
-            // 
-            this.btnFile1DeleteBrowser.Location = new System.Drawing.Point(413, 1);
-            this.btnFile1DeleteBrowser.Name = "btnFile1DeleteBrowser";
-            this.btnFile1DeleteBrowser.Size = new System.Drawing.Size(50, 32);
-            this.btnFile1DeleteBrowser.TabIndex = 13;
-            this.btnFile1DeleteBrowser.Text = "浏览";
-            this.btnFile1DeleteBrowser.UseVisualStyleBackColor = true;
-            this.btnFile1DeleteBrowser.Click += new System.EventHandler(this.btnFile1DeleteBrowser_Click);
-            // 
-            // comboBox_DealMultiLine
-            // 
-            this.comboBox_DealMultiLine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_DealMultiLine.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBox_DealMultiLine.FormattingEnabled = true;
-            this.comboBox_DealMultiLine.Items.AddRange(new object[] {
-            "替换指定行之间内容",
-            "筛选文件"});
-            this.comboBox_DealMultiLine.Location = new System.Drawing.Point(482, 11);
-            this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
-            this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
-            this.comboBox_DealMultiLine.TabIndex = 24;
-            this.comboBox_DealMultiLine.SelectedIndexChanged += new System.EventHandler(this.comboBox_DealMultiLine_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 12);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "模板文件:";
-            // 
-            // txbFileDelete
-            // 
-            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
-            this.txbFileDelete.Name = "txbFileDelete";
-            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
-            this.txbFileDelete.TabIndex = 9;
-            // 
             // tpOther
             // 
             this.tpOther.Controls.Add(this.label38);
@@ -1801,41 +1637,37 @@
             this.tpOther.Controls.Add(this.panelOtherSort);
             this.tpOther.Location = new System.Drawing.Point(4, 22);
             this.tpOther.Name = "tpOther";
-            this.tpOther.Size = new System.Drawing.Size(673, 79);
+            this.tpOther.Size = new System.Drawing.Size(795, 147);
             this.tpOther.TabIndex = 2;
             this.tpOther.Text = "其他处理方式";
             this.tpOther.UseVisualStyleBackColor = true;
             // 
-            // panelOtherSort
+            // label38
             // 
-            this.panelOtherSort.Controls.Add(this.radioBtnSortDown);
-            this.panelOtherSort.Controls.Add(this.radioBtnSortUp);
-            this.panelOtherSort.Location = new System.Drawing.Point(0, 0);
-            this.panelOtherSort.Name = "panelOtherSort";
-            this.panelOtherSort.Size = new System.Drawing.Size(484, 73);
-            this.panelOtherSort.TabIndex = 24;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(759, 13);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(29, 12);
+            this.label38.TabIndex = 23;
+            this.label38.Text = "模式";
             // 
-            // radioBtnSortDown
+            // comboBoxOtherType
             // 
-            this.radioBtnSortDown.AutoSize = true;
-            this.radioBtnSortDown.Location = new System.Drawing.Point(142, 18);
-            this.radioBtnSortDown.Name = "radioBtnSortDown";
-            this.radioBtnSortDown.Size = new System.Drawing.Size(71, 16);
-            this.radioBtnSortDown.TabIndex = 2;
-            this.radioBtnSortDown.TabStop = true;
-            this.radioBtnSortDown.Text = "字母降序";
-            this.radioBtnSortDown.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnSortUp
-            // 
-            this.radioBtnSortUp.AutoSize = true;
-            this.radioBtnSortUp.Location = new System.Drawing.Point(39, 18);
-            this.radioBtnSortUp.Name = "radioBtnSortUp";
-            this.radioBtnSortUp.Size = new System.Drawing.Size(71, 16);
-            this.radioBtnSortUp.TabIndex = 1;
-            this.radioBtnSortUp.TabStop = true;
-            this.radioBtnSortUp.Text = "字母升序";
-            this.radioBtnSortUp.UseVisualStyleBackColor = true;
+            this.comboBoxOtherType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOtherType.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBoxOtherType.FormattingEnabled = true;
+            this.comboBoxOtherType.Items.AddRange(new object[] {
+            "添加文件夹",
+            "重命名",
+            "恢复备份文件",
+            "查找个数",
+            "转换编码",
+            "重新排序"});
+            this.comboBoxOtherType.Location = new System.Drawing.Point(632, 8);
+            this.comboBoxOtherType.Name = "comboBoxOtherType";
+            this.comboBoxOtherType.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxOtherType.TabIndex = 22;
+            this.comboBoxOtherType.SelectionChangeCommitted += new System.EventHandler(this.comboBoxOtherType_SelectionChangeCommitted);
             // 
             // panelOtherChangeFileType
             // 
@@ -1848,8 +1680,19 @@
             this.panelOtherChangeFileType.Controls.Add(this.radioBtnANSI);
             this.panelOtherChangeFileType.Location = new System.Drawing.Point(0, 0);
             this.panelOtherChangeFileType.Name = "panelOtherChangeFileType";
-            this.panelOtherChangeFileType.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherChangeFileType.Size = new System.Drawing.Size(626, 144);
             this.panelOtherChangeFileType.TabIndex = 19;
+            // 
+            // radioBtnUTF_8_bom
+            // 
+            this.radioBtnUTF_8_bom.AutoSize = true;
+            this.radioBtnUTF_8_bom.Location = new System.Drawing.Point(373, 18);
+            this.radioBtnUTF_8_bom.Name = "radioBtnUTF_8_bom";
+            this.radioBtnUTF_8_bom.Size = new System.Drawing.Size(77, 16);
+            this.radioBtnUTF_8_bom.TabIndex = 6;
+            this.radioBtnUTF_8_bom.TabStop = true;
+            this.radioBtnUTF_8_bom.Text = "UTF-8-bom";
+            this.radioBtnUTF_8_bom.UseVisualStyleBackColor = true;
             // 
             // label44
             // 
@@ -1920,7 +1763,7 @@
             this.panelOtherFind.Controls.Add(this.txbOtherFind);
             this.panelOtherFind.Location = new System.Drawing.Point(0, 0);
             this.panelOtherFind.Name = "panelOtherFind";
-            this.panelOtherFind.Size = new System.Drawing.Size(456, 73);
+            this.panelOtherFind.Size = new System.Drawing.Size(626, 144);
             this.panelOtherFind.TabIndex = 19;
             // 
             // label42
@@ -1947,7 +1790,7 @@
             this.panelOtherRename.Controls.Add(this.label39);
             this.panelOtherRename.Location = new System.Drawing.Point(6, 1);
             this.panelOtherRename.Name = "panelOtherRename";
-            this.panelOtherRename.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherRename.Size = new System.Drawing.Size(620, 140);
             this.panelOtherRename.TabIndex = 18;
             // 
             // label41
@@ -1994,7 +1837,7 @@
             this.panelOtherAddFolder.Controls.Add(this.btnOtherAddDGV);
             this.panelOtherAddFolder.Location = new System.Drawing.Point(3, 3);
             this.panelOtherAddFolder.Name = "panelOtherAddFolder";
-            this.panelOtherAddFolder.Size = new System.Drawing.Size(484, 73);
+            this.panelOtherAddFolder.Size = new System.Drawing.Size(623, 141);
             this.panelOtherAddFolder.TabIndex = 17;
             // 
             // txbOtherFilePath
@@ -2024,45 +1867,151 @@
             this.btnOtherAddDGV.UseVisualStyleBackColor = true;
             this.btnOtherAddDGV.Click += new System.EventHandler(this.btnBrowerAdd_Click);
             // 
-            // label38
+            // panelOtherSort
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(637, 13);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(29, 12);
-            this.label38.TabIndex = 23;
-            this.label38.Text = "模式";
+            this.panelOtherSort.Controls.Add(this.radioBtnSortDown);
+            this.panelOtherSort.Controls.Add(this.radioBtnSortUp);
+            this.panelOtherSort.Location = new System.Drawing.Point(0, 0);
+            this.panelOtherSort.Name = "panelOtherSort";
+            this.panelOtherSort.Size = new System.Drawing.Size(626, 141);
+            this.panelOtherSort.TabIndex = 24;
             // 
-            // comboBoxOtherType
+            // radioBtnSortDown
             // 
-            this.comboBoxOtherType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxOtherType.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBoxOtherType.FormattingEnabled = true;
-            this.comboBoxOtherType.Items.AddRange(new object[] {
-            "添加文件夹",
-            "重命名",
-            "恢复备份文件",
-            "查找个数",
-            "转换编码",
-            "重新排序"});
-            this.comboBoxOtherType.Location = new System.Drawing.Point(510, 8);
-            this.comboBoxOtherType.Name = "comboBoxOtherType";
-            this.comboBoxOtherType.Size = new System.Drawing.Size(121, 22);
-            this.comboBoxOtherType.TabIndex = 22;
-            this.comboBoxOtherType.SelectionChangeCommitted += new System.EventHandler(this.comboBoxOtherType_SelectionChangeCommitted);
+            this.radioBtnSortDown.AutoSize = true;
+            this.radioBtnSortDown.Location = new System.Drawing.Point(142, 18);
+            this.radioBtnSortDown.Name = "radioBtnSortDown";
+            this.radioBtnSortDown.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortDown.TabIndex = 2;
+            this.radioBtnSortDown.TabStop = true;
+            this.radioBtnSortDown.Text = "字母降序";
+            this.radioBtnSortDown.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnSortUp
+            // 
+            this.radioBtnSortUp.AutoSize = true;
+            this.radioBtnSortUp.Location = new System.Drawing.Point(39, 18);
+            this.radioBtnSortUp.Name = "radioBtnSortUp";
+            this.radioBtnSortUp.Size = new System.Drawing.Size(71, 16);
+            this.radioBtnSortUp.TabIndex = 1;
+            this.radioBtnSortUp.TabStop = true;
+            this.radioBtnSortUp.Text = "字母升序";
+            this.radioBtnSortUp.UseVisualStyleBackColor = true;
+            // 
+            // tpSplit
+            // 
+            this.tpSplit.Controls.Add(this.nudSplit_Line);
+            this.tpSplit.Controls.Add(this.label17);
+            this.tpSplit.Controls.Add(this.label15);
+            this.tpSplit.Controls.Add(this.label16);
+            this.tpSplit.Controls.Add(this.comboBoxSplit);
+            this.tpSplit.Controls.Add(this.label14);
+            this.tpSplit.Controls.Add(this.label13);
+            this.tpSplit.Controls.Add(this.nudSplit_Count);
+            this.tpSplit.Location = new System.Drawing.Point(4, 22);
+            this.tpSplit.Name = "tpSplit";
+            this.tpSplit.Size = new System.Drawing.Size(795, 147);
+            this.tpSplit.TabIndex = 4;
+            this.tpSplit.Text = "拆分";
+            this.tpSplit.UseVisualStyleBackColor = true;
+            // 
+            // nudSplit_Line
+            // 
+            this.nudSplit_Line.Location = new System.Drawing.Point(138, 44);
+            this.nudSplit_Line.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nudSplit_Line.Name = "nudSplit_Line";
+            this.nudSplit_Line.Size = new System.Drawing.Size(58, 21);
+            this.nudSplit_Line.TabIndex = 22;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(623, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 12);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "模式:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(202, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(17, 12);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "行";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(68, 48);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 12);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "行数拆分：";
+            // 
+            // comboBoxSplit
+            // 
+            this.comboBoxSplit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSplit.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBoxSplit.FormattingEnabled = true;
+            this.comboBoxSplit.Items.AddRange(new object[] {
+            "拆分固定个数",
+            "拆分固定行数",
+            "含有特定字符",
+            "拆分奇偶行"});
+            this.comboBoxSplit.Location = new System.Drawing.Point(658, 12);
+            this.comboBoxSplit.Name = "comboBoxSplit";
+            this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxSplit.TabIndex = 16;
+            this.comboBoxSplit.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeSplit_SelectionChangeCommitted);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(189, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 12);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "个";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(68, 13);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "个数拆分：";
+            // 
+            // nudSplit_Count
+            // 
+            this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
+            this.nudSplit_Count.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudSplit_Count.Name = "nudSplit_Count";
+            this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
+            this.nudSplit_Count.TabIndex = 0;
             // 
             // panelStart
             // 
             this.panelStart.Controls.Add(this.btnStart);
             this.panelStart.Controls.Add(this.checkBoxBak);
-            this.panelStart.Location = new System.Drawing.Point(6, 379);
+            this.panelStart.Location = new System.Drawing.Point(6, 571);
             this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(682, 41);
+            this.panelStart.Size = new System.Drawing.Size(922, 41);
             this.panelStart.TabIndex = 10;
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(436, 6);
+            this.btnStart.Location = new System.Drawing.Point(611, 6);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(134, 32);
             this.btnStart.TabIndex = 4;
@@ -2084,23 +2033,54 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // radioBtnUTF_8_bom
+            // State
             // 
-            this.radioBtnUTF_8_bom.AutoSize = true;
-            this.radioBtnUTF_8_bom.Location = new System.Drawing.Point(373, 18);
-            this.radioBtnUTF_8_bom.Name = "radioBtnUTF_8_bom";
-            this.radioBtnUTF_8_bom.Size = new System.Drawing.Size(77, 16);
-            this.radioBtnUTF_8_bom.TabIndex = 6;
-            this.radioBtnUTF_8_bom.TabStop = true;
-            this.radioBtnUTF_8_bom.Text = "UTF-8-bom";
-            this.radioBtnUTF_8_bom.UseVisualStyleBackColor = true;
+            this.State.HeaderText = "状态";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            this.State.Width = 150;
+            // 
+            // FileName
+            // 
+            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FileName.HeaderText = "文件名称";
+            this.FileName.MinimumWidth = 6;
+            this.FileName.Name = "FileName";
+            this.FileName.ReadOnly = true;
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "路径";
+            this.FilePath.MinimumWidth = 6;
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Visible = false;
+            this.FilePath.Width = 200;
+            // 
+            // DGV
+            // 
+            this.DGV.AllowUserToAddRows = false;
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FilePath,
+            this.FileName,
+            this.State});
+            this.DGV.ContextMenuStrip = this.contextMenu_DGV;
+            this.DGV.Location = new System.Drawing.Point(6, 192);
+            this.DGV.Name = "DGV";
+            this.DGV.RowHeadersWidth = 51;
+            this.DGV.RowTemplate.Height = 23;
+            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV.Size = new System.Drawing.Size(804, 373);
+            this.DGV.TabIndex = 1;
+            this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
             // 
             // FormMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 452);
+            this.ClientSize = new System.Drawing.Size(931, 640);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2109,7 +2089,7 @@
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "小波TXT文本批量处理 v1.3";
+            this.Text = "小波TXT文本批量处理 v2.1";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
@@ -2117,7 +2097,6 @@
             this.menu1.ResumeLayout(false);
             this.menu1.PerformLayout();
             this.panelMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.contextMenu_DGV.ResumeLayout(false);
             this.panelDGV_Deal.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -2142,23 +2121,19 @@
             this.panelDeleteReplaceData.PerformLayout();
             this.tpMerge.ResumeLayout(false);
             this.tpMerge.PerformLayout();
-            this.panelMerge_LeftRight.ResumeLayout(false);
-            this.panelMerge_LeftRight.PerformLayout();
             this.panelMerge_AddDataAmongFile.ResumeLayout(false);
             this.panelMerge_AddDataAmongFile.PerformLayout();
-            this.tpSplit.ResumeLayout(false);
-            this.tpSplit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).EndInit();
+            this.panelMerge_LeftRight.ResumeLayout(false);
+            this.panelMerge_LeftRight.PerformLayout();
             this.tpAddData.ResumeLayout(false);
             this.tpAddData.PerformLayout();
-            this.panelAddData_FileName.ResumeLayout(false);
-            this.panelAddData_FileName.PerformLayout();
             this.panelAddData_TopEndOfLine.ResumeLayout(false);
             this.panelAddData_TopEndOfLine.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).EndInit();
             this.panelAddData_TopEndOfFile.ResumeLayout(false);
             this.panelAddData_TopEndOfFile.PerformLayout();
+            this.panelAddData_FileName.ResumeLayout(false);
+            this.panelAddData_FileName.PerformLayout();
             this.tpDeleteLineFromFile.ResumeLayout(false);
             this.tpDeleteLineFromFile.PerformLayout();
             this.panel_dealMultiLine2.ResumeLayout(false);
@@ -2167,11 +2142,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_startLine)).EndInit();
             this.panel_DealMultiLine.ResumeLayout(false);
             this.panel_DealMultiLine.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tpOther.ResumeLayout(false);
             this.tpOther.PerformLayout();
-            this.panelOtherSort.ResumeLayout(false);
-            this.panelOtherSort.PerformLayout();
             this.panelOtherChangeFileType.ResumeLayout(false);
             this.panelOtherChangeFileType.PerformLayout();
             this.panelOtherFind.ResumeLayout(false);
@@ -2180,8 +2152,15 @@
             this.panelOtherRename.PerformLayout();
             this.panelOtherAddFolder.ResumeLayout(false);
             this.panelOtherAddFolder.PerformLayout();
+            this.panelOtherSort.ResumeLayout(false);
+            this.panelOtherSort.PerformLayout();
+            this.tpSplit.ResumeLayout(false);
+            this.tpSplit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).EndInit();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2200,7 +2179,6 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnDGV_Delete;
         private System.Windows.Forms.Button btnAddFile;
-        private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudDelLine_TopLineFile;
         private System.Windows.Forms.Label label1;
@@ -2328,9 +2306,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txbAddData_FileName1;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
         private System.Windows.Forms.Panel panelOtherAddFolder;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox comboBoxOtherType;
@@ -2364,13 +2339,16 @@
         private System.Windows.Forms.Button btnFile1DeleteBrowser;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txbFileDelete;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.NumericUpDown nud_endLine;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.NumericUpDown nud_startLine;
         private System.Windows.Forms.RadioButton radioBtnUTF_8_bom;
+        private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
     }
 }
 
