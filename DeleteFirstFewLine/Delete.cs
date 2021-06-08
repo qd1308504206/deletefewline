@@ -1059,6 +1059,17 @@ namespace DeleteFirstFewLine
 
         }
 
+        public static Encoding GetFileEncoding(string filePath)
+        {
+            try
+            {
+                Encoding en = FileEncoding.EncodingType.GetType(filePath);
+                return en;
+            }
+            catch
+            { return Encoding.ASCII; }
+
+        }
 
         public static bool ChangeTXTFileType(string filePath, string fileChangeType)
         {

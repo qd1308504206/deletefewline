@@ -207,10 +207,11 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGV = new System.Windows.Forms.DataGridView();
+            this.文件编码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.contextMenu_DGV.SuspendLayout();
@@ -360,13 +361,14 @@
             this.添加文件夹ToolStripMenuItem,
             this.toolStripSeparator2,
             this.文件信息ToolStripMenuItem,
+            this.文件编码ToolStripMenuItem,
             this.打开文件ToolStripMenuItem,
             this.打开文件夹ToolStripMenuItem1,
             this.toolStripSeparator3,
             this.统计行数ToolStripMenuItem,
             this.统计字数ToolStripMenuItem});
             this.contextMenu_DGV.Name = "contextMenuStrip1";
-            this.contextMenu_DGV.Size = new System.Drawing.Size(149, 314);
+            this.contextMenu_DGV.Size = new System.Drawing.Size(149, 336);
             // 
             // 删除ToolStripMenuItem
             // 
@@ -452,21 +454,21 @@
             // 复制文件路径ToolStripMenuItem
             // 
             this.复制文件路径ToolStripMenuItem.Name = "复制文件路径ToolStripMenuItem";
-            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.复制文件路径ToolStripMenuItem.Text = "复制文件路径";
             this.复制文件路径ToolStripMenuItem.Click += new System.EventHandler(this.复制文件路径ToolStripMenuItem_Click);
             // 
             // 复制文件名ToolStripMenuItem
             // 
             this.复制文件名ToolStripMenuItem.Name = "复制文件名ToolStripMenuItem";
-            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.复制文件名ToolStripMenuItem.Text = "复制文件名";
             this.复制文件名ToolStripMenuItem.Click += new System.EventHandler(this.复制文件名ToolStripMenuItem_Click);
             // 
             // 文件详细信息ToolStripMenuItem
             // 
             this.文件详细信息ToolStripMenuItem.Name = "文件详细信息ToolStripMenuItem";
-            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.文件详细信息ToolStripMenuItem.Text = "文件详细信息";
             this.文件详细信息ToolStripMenuItem.Click += new System.EventHandler(this.文件详细信息ToolStripMenuItem_Click);
             // 
@@ -2033,30 +2035,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // State
-            // 
-            this.State.HeaderText = "状态";
-            this.State.MinimumWidth = 6;
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            this.State.Width = 150;
-            // 
-            // FileName
-            // 
-            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FileName.HeaderText = "文件名称";
-            this.FileName.MinimumWidth = 6;
-            this.FileName.Name = "FileName";
-            this.FileName.ReadOnly = true;
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "路径";
-            this.FilePath.MinimumWidth = 6;
-            this.FilePath.Name = "FilePath";
-            this.FilePath.Visible = false;
-            this.FilePath.Width = 200;
-            // 
             // DGV
             // 
             this.DGV.AllowUserToAddRows = false;
@@ -2074,6 +2052,37 @@
             this.DGV.Size = new System.Drawing.Size(804, 373);
             this.DGV.TabIndex = 1;
             this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
+            // 
+            // 文件编码ToolStripMenuItem
+            // 
+            this.文件编码ToolStripMenuItem.Name = "文件编码ToolStripMenuItem";
+            this.文件编码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.文件编码ToolStripMenuItem.Text = "查询文件编码";
+            this.文件编码ToolStripMenuItem.Click += new System.EventHandler(this.文件编码ToolStripMenuItem_Click);
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "路径";
+            this.FilePath.MinimumWidth = 6;
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Visible = false;
+            this.FilePath.Width = 200;
+            // 
+            // FileName
+            // 
+            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FileName.HeaderText = "文件名称";
+            this.FileName.MinimumWidth = 6;
+            this.FileName.Name = "FileName";
+            this.FileName.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.HeaderText = "状态";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            this.State.Width = 200;
             // 
             // FormMain
             // 
@@ -2346,6 +2355,7 @@
         private System.Windows.Forms.NumericUpDown nud_startLine;
         private System.Windows.Forms.RadioButton radioBtnUTF_8_bom;
         private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.ToolStripMenuItem 文件编码ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn State;

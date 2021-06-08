@@ -623,7 +623,28 @@ namespace DeleteFirstFewLine
                             successState = "转换成功";
                             failedState = "失败";
                             break;
+                        case "OtherFindEncoding"://查询编码
+                            
+                            Encoding en = Delete.GetFileEncoding(filePath);
 
+                            string str = en.EncodingName;
+                            if (en.WindowsCodePage == 1200)
+                            {
+                                UTF8Encoding enu8 = en as UTF8Encoding;
+                                var info = enu8.GetType().GetField("emitUTF8Identifier",
+                                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+
+                                var t = info.GetValue(enu8);
+                                if (t.ToString() == "True")
+                                {
+                                    str += " Bom";
+                                }
+                            }
+                            
+
+                            successState = str;
+                            bl = true;
+                            break;
                         case "OtherSort":
                             bl = Delete.SortFile(filePath, this.radioBtnSortUp.Checked, this.radioBtnSortDown.Checked);
                             successState = "排序成功";
@@ -2246,6 +2267,14 @@ namespace DeleteFirstFewLine
                     this.btnStart.Text = "还没做";
                     break;
             }
+        }
+
+        private void 文件编码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DGV.Rows.Count == 0)
+                return;
+
+            DeleteLine("OtherFindEncoding");
         }
     }
 }
