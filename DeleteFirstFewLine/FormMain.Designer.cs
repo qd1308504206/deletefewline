@@ -625,10 +625,10 @@
             this.tabControl1.Controls.Add(this.tpDeleteLine);
             this.tabControl1.Controls.Add(this.tpDeleteData);
             this.tabControl1.Controls.Add(this.tpMerge);
-            this.tabControl1.Controls.Add(this.tpSplit);
             this.tabControl1.Controls.Add(this.tpAddData);
             this.tabControl1.Controls.Add(this.tpDeleteLineFromFile);
             this.tabControl1.Controls.Add(this.tpOther);
+            this.tabControl1.Controls.Add(this.tpSplit);
             this.tabControl1.Location = new System.Drawing.Point(7, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -702,7 +702,7 @@
             // 
             this.nudDelLine_LastLineFile.Location = new System.Drawing.Point(92, 49);
             this.nudDelLine_LastLineFile.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
@@ -714,7 +714,7 @@
             // 
             this.nudDelLine_TopLineFile.Location = new System.Drawing.Point(91, 14);
             this.nudDelLine_TopLineFile.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
@@ -753,7 +753,7 @@
             // 
             this.nudDelLine_ContinueLast.Location = new System.Drawing.Point(332, 29);
             this.nudDelLine_ContinueLast.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
@@ -783,7 +783,7 @@
             // 
             this.nudDelLine_ContinueFirst.Location = new System.Drawing.Point(226, 29);
             this.nudDelLine_ContinueFirst.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
@@ -937,9 +937,9 @@
             // 
             // tpDeleteData
             // 
-            this.tpDeleteData.Controls.Add(this.panelDelData_FirstLastOfLine);
             this.tpDeleteData.Controls.Add(this.label22);
             this.tpDeleteData.Controls.Add(this.comboBoxDeleteData);
+            this.tpDeleteData.Controls.Add(this.panelDelData_FirstLastOfLine);
             this.tpDeleteData.Controls.Add(this.panelDeleteReplaceData);
             this.tpDeleteData.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteData.Name = "tpDeleteData";
@@ -1022,6 +1022,11 @@
             // nudDelData_CountZiFu
             // 
             this.nudDelData_CountZiFu.Location = new System.Drawing.Point(77, 13);
+            this.nudDelData_CountZiFu.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nudDelData_CountZiFu.Name = "nudDelData_CountZiFu";
             this.nudDelData_CountZiFu.Size = new System.Drawing.Size(50, 21);
             this.nudDelData_CountZiFu.TabIndex = 0;
@@ -1098,13 +1103,13 @@
             // 
             // tpMerge
             // 
-            this.tpMerge.Controls.Add(this.panelMerge_LeftRight);
-            this.tpMerge.Controls.Add(this.panelMerge_GeHang);
             this.tpMerge.Controls.Add(this.label20);
             this.tpMerge.Controls.Add(this.comboBoxMerge);
             this.tpMerge.Controls.Add(this.panelMerge_AddDataAmongFile);
             this.tpMerge.Controls.Add(this.btnDownMove);
             this.tpMerge.Controls.Add(this.btnUpMove);
+            this.tpMerge.Controls.Add(this.panelMerge_LeftRight);
+            this.tpMerge.Controls.Add(this.panelMerge_GeHang);
             this.tpMerge.Location = new System.Drawing.Point(4, 22);
             this.tpMerge.Name = "tpMerge";
             this.tpMerge.Size = new System.Drawing.Size(673, 79);
@@ -1346,6 +1351,11 @@
             // nudSplit_Count
             // 
             this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
+            this.nudSplit_Count.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.nudSplit_Count.Name = "nudSplit_Count";
             this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
             this.nudSplit_Count.TabIndex = 0;
@@ -1354,9 +1364,9 @@
             // 
             this.tpAddData.Controls.Add(this.label34);
             this.tpAddData.Controls.Add(this.comboBoxAddData);
-            this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfLine);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfFile);
+            this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Location = new System.Drawing.Point(4, 22);
             this.tpAddData.Name = "tpAddData";
             this.tpAddData.Size = new System.Drawing.Size(673, 79);
@@ -1497,13 +1507,18 @@
             // nudAddData_TopLine
             // 
             this.nudAddData_TopLine.Location = new System.Drawing.Point(377, 7);
+            this.nudAddData_TopLine.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nudAddData_TopLine.Minimum = new decimal(new int[] {
-            100,
+            10000000,
             0,
             0,
             -2147483648});
             this.nudAddData_TopLine.Name = "nudAddData_TopLine";
-            this.nudAddData_TopLine.Size = new System.Drawing.Size(37, 21);
+            this.nudAddData_TopLine.Size = new System.Drawing.Size(70, 21);
             this.nudAddData_TopLine.TabIndex = 5;
             this.nudAddData_TopLine.Value = new decimal(new int[] {
             1,
@@ -1591,14 +1606,14 @@
             // 
             // tpDeleteLineFromFile
             // 
-            this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
-            this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.numericUpDown2);
             this.tpDeleteLineFromFile.Controls.Add(this.label45);
             this.tpDeleteLineFromFile.Controls.Add(this.btnFile1DeleteBrowser);
             this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.label18);
             this.tpDeleteLineFromFile.Controls.Add(this.txbFileDelete);
+            this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
+            this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
             this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
             this.tpDeleteLineFromFile.Size = new System.Drawing.Size(673, 79);
@@ -1777,12 +1792,12 @@
             // 
             // tpOther
             // 
+            this.tpOther.Controls.Add(this.label38);
+            this.tpOther.Controls.Add(this.comboBoxOtherType);
             this.tpOther.Controls.Add(this.panelOtherChangeFileType);
             this.tpOther.Controls.Add(this.panelOtherFind);
             this.tpOther.Controls.Add(this.panelOtherRename);
             this.tpOther.Controls.Add(this.panelOtherAddFolder);
-            this.tpOther.Controls.Add(this.label38);
-            this.tpOther.Controls.Add(this.comboBoxOtherType);
             this.tpOther.Controls.Add(this.panelOtherSort);
             this.tpOther.Location = new System.Drawing.Point(4, 22);
             this.tpOther.Name = "tpOther";
