@@ -599,21 +599,25 @@ namespace DeleteFirstFewLine
 
                         case "OtherChangeType":
                             string fileChangeType = "";
-                            if(radioBtnANSI.Checked)
+                            if (radioBtnANSI.Checked)
                             {
                                 fileChangeType = "ANSI";
                             }
-                            if(radioBtnUnicode.Checked)
+                            else if (radioBtnUnicode.Checked)
                             {
                                 fileChangeType = "Unicode";
                             }
-                            if(radioBtnUnicodeBigEndian.Checked)
+                            else if (radioBtnUnicodeBigEndian.Checked)
                             {
                                 fileChangeType = "UnicodeBigEndian";
                             }
-                            if(radioBtnUTF_8.Checked)
+                            else if (radioBtnUTF_8.Checked)
                             {
                                 fileChangeType = "UTF_8";
+                            }
+                            else if (radioBtnUTF_8_bom.Checked)
+                            {
+                                fileChangeType = "UTF_8_BOM";
                             }
                             bl = Delete.ChangeTXTFileType(filePath, fileChangeType);
                             successState = "转换成功";

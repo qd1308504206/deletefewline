@@ -1088,8 +1088,13 @@ namespace DeleteFirstFewLine
 
                     case "UTF_8":
                         fileNewName = MyString.GetNewFileName(filePath, "_UTF_8");
+                        enNew = new UTF8Encoding(false);
+                        break;
+                    case "UTF_8_BOM":
+                        fileNewName = MyString.GetNewFileName(filePath, "_UTF_8_BOM");
                         enNew = Encoding.UTF8;
                         break;
+                        
                     default:
                         break;
                 }
