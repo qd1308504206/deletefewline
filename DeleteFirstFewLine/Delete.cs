@@ -659,20 +659,21 @@ namespace DeleteFirstFewLine
                     File.WriteAllLines(filePath, lsModle.ToArray(), en);
                     return true;
                 }
-                
-                if ( startline > endline)//插入到指定位置
-                {
-                    ls.InsertRange(startline, lsModle);
-                    File.WriteAllLines(filePath, lsModle.ToArray(), en);
-                    return true;
-                }
                 if (endline <= 0 || endline > ls.Count())
                 {
                     endline = ls.Count();
                 }
+                if ( startline > endline)//插入到指定位置
+                {
+                    ls.InsertRange(startline, lsModle);
+                    File.WriteAllLines(filePath, ls.ToArray(), en);
+                    return true;
+                }
+
                 if (startline == 0)
-                    startline++; 
-                ls.RemoveRange(startline-1, endline - startline - 1);
+                    startline++;
+                
+                ls.RemoveRange(startline-1, endline - startline+1);
                 ls.InsertRange(startline-1, lsModle);
                 File.WriteAllLines(filePath, ls.ToArray(), en);
 

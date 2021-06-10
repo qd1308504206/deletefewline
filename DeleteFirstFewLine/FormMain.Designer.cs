@@ -1620,8 +1620,8 @@
             this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.label18);
             this.tpDeleteLineFromFile.Controls.Add(this.txbFileDelete);
-            this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
             this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
+            this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
             this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLineFromFile.Name = "tpDeleteLineFromFile";
             this.tpDeleteLineFromFile.Size = new System.Drawing.Size(795, 147);

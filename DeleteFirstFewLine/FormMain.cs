@@ -97,6 +97,7 @@ namespace DeleteFirstFewLine
             this.comboBoxDeleteData.Text = "删除文本";
             this.comboBoxAddData.Text = "添加到文件的首尾";
             this.comboBoxOtherType.Text = "添加文件夹";
+            this.comboBox_DealMultiLine.Text = "替换指定行之间内容";
             InitDeleteLine_ComboBox();
             InitDGV_ContextMenuStrip();
 
@@ -1391,6 +1392,14 @@ namespace DeleteFirstFewLine
                 return;
             }
 
+            if (e.TabPage == tpDeleteLineFromFile)
+            {
+                InitDeleteLineFromFile_ComboBox();
+                return;
+
+            }
+
+
         }
 
         private void InitAddData_ComboBox()
@@ -1423,6 +1432,26 @@ namespace DeleteFirstFewLine
             }
         }
 
+        
+        private void InitDeleteLineFromFile_ComboBox()
+        {
+            switch (this.comboBox_DealMultiLine.Text)
+            {
+                case "替换指定行之间内容":
+                    this.panel_dealMultiLine2.Show();
+                    this.panel_DealMultiLine.Hide();
+                    this.btnStart.Text = "开始替换指定行之间";
+                    break;
+                case "筛选文件":
+                    this.panel_DealMultiLine.Show();
+                    this.panel_dealMultiLine2.Hide();
+                    this.btnStart.Text = "开始筛选文件";
+                    break;
+                default:
+                    this.btnStart.Text = "还没做";
+                    break;
+            }
+        }
         private void InitPanelFirstLastOfLine()
         {
             if (checkBoxDel_DataTopOfLine.Checked)
