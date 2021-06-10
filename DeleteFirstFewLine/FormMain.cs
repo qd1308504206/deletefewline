@@ -232,7 +232,10 @@ namespace DeleteFirstFewLine
                     break;
 
                 case "开始替换数据":
-                    ReplaceDeleteMulData(this.txbDelNewData.Text);
+                    if (!checkBox_isRegex.Checked)
+                        ReplaceDeleteMulData(this.txbDelNewData.Text);
+                    else
+                        ReplaceDeleteMulData_regex(txbDelOldData.Text, this.txbDelNewData.Text);
                     //ReplaceMulData();
                     break;
 
@@ -1260,7 +1263,7 @@ namespace DeleteFirstFewLine
         }
 
         //开始删除数据
-        private void ReplaceDeleteMulData(string newString)
+        private void ReplaceDeleteMulData( string newString)
         {
             if (txbDelOldData.Text == "")
             {
@@ -1298,7 +1301,39 @@ namespace DeleteFirstFewLine
             }
         }
 
-        
+
+        //开始删除数据
+        private void ReplaceDeleteMulData_regex(string sourceString, string newString)
+        {
+            for (int i = 0; i < DGV.Rows.Count; i++)
+            {
+                try
+                {
+                    string filePath = DGV.Rows[i].Cells["FilePath"].Value.ToString();
+                    if (Common.IsNullTXT(DGV.Rows[i].Cells["FilePath"].Value.ToString()))
+                    {
+                        DGV.Rows[i].Cells["State"].Value = "失败";
+                        continue;
+                    }
+                    //int count = Delete.DeleteMulti(DGV.Rows[i].Cells["FilePath"].Value.ToString(), sourceString, checkBoxBak.Checked);
+                    int count = Delete.ReplaceDeleteMulti_regex(filePath, sourceString, newString, checkBoxBak.Checked);
+                    DGV.Rows[i].Cells["State"].Value = count.ToString() + "个";
+                    if (count == -1)
+                    {
+                        DGV.Rows[i].Cells["State"].Style.ForeColor = Color.Blue;
+                    }
+                    else if (count != 0)
+                    {
+                        DGV.Rows[i].Cells["State"].Style.ForeColor = Color.Red;
+                    }
+                }
+                catch
+                {
+                    DGV.Rows[i].Cells["State"].Value = "失败";
+                }
+            }
+        }
+
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
 

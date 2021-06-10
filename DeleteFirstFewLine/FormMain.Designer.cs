@@ -40,6 +40,10 @@
             this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.捐赠ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenu_DGV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.全部删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +60,7 @@
             this.复制文件路径ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.复制文件名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文件详细信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文件编码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开文件夹ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -116,18 +121,27 @@
             this.tpMerge = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
             this.comboBoxMerge = new System.Windows.Forms.ComboBox();
+            this.btnDownMove = new System.Windows.Forms.Button();
+            this.btnUpMove = new System.Windows.Forms.Button();
             this.panelMerge_AddDataAmongFile = new System.Windows.Forms.Panel();
             this.checkBoxMerge_AddFileName = new System.Windows.Forms.CheckBox();
             this.txbMerge_AddDataAmongFiles = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.checkBoxMerge_AddDataAmongFiles = new System.Windows.Forms.CheckBox();
-            this.btnDownMove = new System.Windows.Forms.Button();
-            this.btnUpMove = new System.Windows.Forms.Button();
             this.panelMerge_LeftRight = new System.Windows.Forms.Panel();
             this.checkBoxMerge_LeftRightAddData = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txbMerge_LeftRightData = new System.Windows.Forms.TextBox();
             this.panelMerge_GeHang = new System.Windows.Forms.Panel();
+            this.tpSplit = new System.Windows.Forms.TabPage();
+            this.nudSplit_Line = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.comboBoxSplit = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nudSplit_Count = new System.Windows.Forms.NumericUpDown();
             this.tpAddData = new System.Windows.Forms.TabPage();
             this.label34 = new System.Windows.Forms.Label();
             this.comboBoxAddData = new System.Windows.Forms.ComboBox();
@@ -193,27 +207,15 @@
             this.panelOtherSort = new System.Windows.Forms.Panel();
             this.radioBtnSortDown = new System.Windows.Forms.RadioButton();
             this.radioBtnSortUp = new System.Windows.Forms.RadioButton();
-            this.tpSplit = new System.Windows.Forms.TabPage();
-            this.nudSplit_Line = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBoxSplit = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nudSplit_Count = new System.Windows.Forms.NumericUpDown();
             this.panelStart = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.DGV = new System.Windows.Forms.DataGridView();
-            this.文件编码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox_isRegex = new System.Windows.Forms.CheckBox();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.contextMenu_DGV.SuspendLayout();
             this.panelDGV_Deal.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -232,6 +234,9 @@
             this.tpMerge.SuspendLayout();
             this.panelMerge_AddDataAmongFile.SuspendLayout();
             this.panelMerge_LeftRight.SuspendLayout();
+            this.tpSplit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).BeginInit();
             this.tpAddData.SuspendLayout();
             this.panelAddData_TopEndOfLine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).BeginInit();
@@ -248,11 +253,7 @@
             this.panelOtherRename.SuspendLayout();
             this.panelOtherAddFolder.SuspendLayout();
             this.panelOtherSort.SuspendLayout();
-            this.tpSplit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).BeginInit();
             this.panelStart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // menu1
@@ -344,6 +345,48 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(931, 615);
             this.panelMain.TabIndex = 1;
+            // 
+            // DGV
+            // 
+            this.DGV.AllowUserToAddRows = false;
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FilePath,
+            this.FileName,
+            this.State});
+            this.DGV.ContextMenuStrip = this.contextMenu_DGV;
+            this.DGV.Location = new System.Drawing.Point(6, 192);
+            this.DGV.Name = "DGV";
+            this.DGV.RowHeadersWidth = 51;
+            this.DGV.RowTemplate.Height = 23;
+            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV.Size = new System.Drawing.Size(804, 373);
+            this.DGV.TabIndex = 1;
+            this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
+            // 
+            // FilePath
+            // 
+            this.FilePath.HeaderText = "路径";
+            this.FilePath.MinimumWidth = 6;
+            this.FilePath.Name = "FilePath";
+            this.FilePath.Visible = false;
+            this.FilePath.Width = 200;
+            // 
+            // FileName
+            // 
+            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FileName.HeaderText = "文件名称";
+            this.FileName.MinimumWidth = 6;
+            this.FileName.Name = "FileName";
+            this.FileName.ReadOnly = true;
+            // 
+            // State
+            // 
+            this.State.HeaderText = "状态";
+            this.State.MinimumWidth = 6;
+            this.State.Name = "State";
+            this.State.ReadOnly = true;
+            this.State.Width = 200;
             // 
             // contextMenu_DGV
             // 
@@ -454,23 +497,30 @@
             // 复制文件路径ToolStripMenuItem
             // 
             this.复制文件路径ToolStripMenuItem.Name = "复制文件路径ToolStripMenuItem";
-            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制文件路径ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.复制文件路径ToolStripMenuItem.Text = "复制文件路径";
             this.复制文件路径ToolStripMenuItem.Click += new System.EventHandler(this.复制文件路径ToolStripMenuItem_Click);
             // 
             // 复制文件名ToolStripMenuItem
             // 
             this.复制文件名ToolStripMenuItem.Name = "复制文件名ToolStripMenuItem";
-            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制文件名ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.复制文件名ToolStripMenuItem.Text = "复制文件名";
             this.复制文件名ToolStripMenuItem.Click += new System.EventHandler(this.复制文件名ToolStripMenuItem_Click);
             // 
             // 文件详细信息ToolStripMenuItem
             // 
             this.文件详细信息ToolStripMenuItem.Name = "文件详细信息ToolStripMenuItem";
-            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.文件详细信息ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.文件详细信息ToolStripMenuItem.Text = "文件详细信息";
             this.文件详细信息ToolStripMenuItem.Click += new System.EventHandler(this.文件详细信息ToolStripMenuItem_Click);
+            // 
+            // 文件编码ToolStripMenuItem
+            // 
+            this.文件编码ToolStripMenuItem.Name = "文件编码ToolStripMenuItem";
+            this.文件编码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.文件编码ToolStripMenuItem.Text = "查询文件编码";
+            this.文件编码ToolStripMenuItem.Click += new System.EventHandler(this.文件编码ToolStripMenuItem_Click);
             // 
             // 打开文件ToolStripMenuItem
             // 
@@ -897,8 +947,8 @@
             // 
             this.tpDeleteData.Controls.Add(this.label22);
             this.tpDeleteData.Controls.Add(this.comboBoxDeleteData);
-            this.tpDeleteData.Controls.Add(this.panelDelData_FirstLastOfLine);
             this.tpDeleteData.Controls.Add(this.panelDeleteReplaceData);
+            this.tpDeleteData.Controls.Add(this.panelDelData_FirstLastOfLine);
             this.tpDeleteData.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteData.Name = "tpDeleteData";
             this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3);
@@ -1017,6 +1067,7 @@
             // 
             // panelDeleteReplaceData
             // 
+            this.panelDeleteReplaceData.Controls.Add(this.checkBox_isRegex);
             this.panelDeleteReplaceData.Controls.Add(this.label5);
             this.panelDeleteReplaceData.Controls.Add(this.txbDelNewData);
             this.panelDeleteReplaceData.Controls.Add(this.txbDelOldData);
@@ -1100,6 +1151,28 @@
             this.comboBoxMerge.TabIndex = 21;
             this.comboBoxMerge.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeMerge_SelectionChangeCommitted);
             // 
+            // btnDownMove
+            // 
+            this.btnDownMove.Font = new System.Drawing.Font("宋体", 15F);
+            this.btnDownMove.Location = new System.Drawing.Point(758, 43);
+            this.btnDownMove.Name = "btnDownMove";
+            this.btnDownMove.Size = new System.Drawing.Size(27, 37);
+            this.btnDownMove.TabIndex = 1;
+            this.btnDownMove.Text = "↓";
+            this.btnDownMove.UseVisualStyleBackColor = true;
+            this.btnDownMove.Click += new System.EventHandler(this.btnDownMove_Click);
+            // 
+            // btnUpMove
+            // 
+            this.btnUpMove.Font = new System.Drawing.Font("宋体", 15F);
+            this.btnUpMove.Location = new System.Drawing.Point(713, 43);
+            this.btnUpMove.Name = "btnUpMove";
+            this.btnUpMove.Size = new System.Drawing.Size(27, 37);
+            this.btnUpMove.TabIndex = 0;
+            this.btnUpMove.Text = "↑";
+            this.btnUpMove.UseVisualStyleBackColor = true;
+            this.btnUpMove.Click += new System.EventHandler(this.btnUpMove_Click);
+            // 
             // panelMerge_AddDataAmongFile
             // 
             this.panelMerge_AddDataAmongFile.Controls.Add(this.checkBoxMerge_AddFileName);
@@ -1150,28 +1223,6 @@
             this.checkBoxMerge_AddDataAmongFiles.UseVisualStyleBackColor = true;
             this.checkBoxMerge_AddDataAmongFiles.Click += new System.EventHandler(this.checkBoxAddDataAmongFiles_Click);
             // 
-            // btnDownMove
-            // 
-            this.btnDownMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnDownMove.Location = new System.Drawing.Point(758, 43);
-            this.btnDownMove.Name = "btnDownMove";
-            this.btnDownMove.Size = new System.Drawing.Size(27, 37);
-            this.btnDownMove.TabIndex = 1;
-            this.btnDownMove.Text = "↓";
-            this.btnDownMove.UseVisualStyleBackColor = true;
-            this.btnDownMove.Click += new System.EventHandler(this.btnDownMove_Click);
-            // 
-            // btnUpMove
-            // 
-            this.btnUpMove.Font = new System.Drawing.Font("宋体", 15F);
-            this.btnUpMove.Location = new System.Drawing.Point(713, 43);
-            this.btnUpMove.Name = "btnUpMove";
-            this.btnUpMove.Size = new System.Drawing.Size(27, 37);
-            this.btnUpMove.TabIndex = 0;
-            this.btnUpMove.Text = "↑";
-            this.btnUpMove.UseVisualStyleBackColor = true;
-            this.btnUpMove.Click += new System.EventHandler(this.btnUpMove_Click);
-            // 
             // panelMerge_LeftRight
             // 
             this.panelMerge_LeftRight.Controls.Add(this.checkBoxMerge_LeftRightAddData);
@@ -1215,6 +1266,108 @@
             this.panelMerge_GeHang.Name = "panelMerge_GeHang";
             this.panelMerge_GeHang.Size = new System.Drawing.Size(623, 138);
             this.panelMerge_GeHang.TabIndex = 12;
+            // 
+            // tpSplit
+            // 
+            this.tpSplit.Controls.Add(this.nudSplit_Line);
+            this.tpSplit.Controls.Add(this.label17);
+            this.tpSplit.Controls.Add(this.label15);
+            this.tpSplit.Controls.Add(this.label16);
+            this.tpSplit.Controls.Add(this.comboBoxSplit);
+            this.tpSplit.Controls.Add(this.label14);
+            this.tpSplit.Controls.Add(this.label13);
+            this.tpSplit.Controls.Add(this.nudSplit_Count);
+            this.tpSplit.Location = new System.Drawing.Point(4, 22);
+            this.tpSplit.Name = "tpSplit";
+            this.tpSplit.Size = new System.Drawing.Size(795, 147);
+            this.tpSplit.TabIndex = 4;
+            this.tpSplit.Text = "拆分";
+            this.tpSplit.UseVisualStyleBackColor = true;
+            // 
+            // nudSplit_Line
+            // 
+            this.nudSplit_Line.Location = new System.Drawing.Point(138, 44);
+            this.nudSplit_Line.Maximum = new decimal(new int[] {
+            32767,
+            0,
+            0,
+            0});
+            this.nudSplit_Line.Name = "nudSplit_Line";
+            this.nudSplit_Line.Size = new System.Drawing.Size(58, 21);
+            this.nudSplit_Line.TabIndex = 22;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(623, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 12);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "模式:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(202, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(17, 12);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "行";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(68, 48);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 12);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "行数拆分：";
+            // 
+            // comboBoxSplit
+            // 
+            this.comboBoxSplit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSplit.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.comboBoxSplit.FormattingEnabled = true;
+            this.comboBoxSplit.Items.AddRange(new object[] {
+            "拆分固定个数",
+            "拆分固定行数",
+            "含有特定字符",
+            "拆分奇偶行"});
+            this.comboBoxSplit.Location = new System.Drawing.Point(658, 12);
+            this.comboBoxSplit.Name = "comboBoxSplit";
+            this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
+            this.comboBoxSplit.TabIndex = 16;
+            this.comboBoxSplit.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeSplit_SelectionChangeCommitted);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(189, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 12);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "个";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(68, 13);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "个数拆分：";
+            // 
+            // nudSplit_Count
+            // 
+            this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
+            this.nudSplit_Count.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudSplit_Count.Name = "nudSplit_Count";
+            this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
+            this.nudSplit_Count.TabIndex = 0;
             // 
             // tpAddData
             // 
@@ -1900,108 +2053,6 @@
             this.radioBtnSortUp.Text = "字母升序";
             this.radioBtnSortUp.UseVisualStyleBackColor = true;
             // 
-            // tpSplit
-            // 
-            this.tpSplit.Controls.Add(this.nudSplit_Line);
-            this.tpSplit.Controls.Add(this.label17);
-            this.tpSplit.Controls.Add(this.label15);
-            this.tpSplit.Controls.Add(this.label16);
-            this.tpSplit.Controls.Add(this.comboBoxSplit);
-            this.tpSplit.Controls.Add(this.label14);
-            this.tpSplit.Controls.Add(this.label13);
-            this.tpSplit.Controls.Add(this.nudSplit_Count);
-            this.tpSplit.Location = new System.Drawing.Point(4, 22);
-            this.tpSplit.Name = "tpSplit";
-            this.tpSplit.Size = new System.Drawing.Size(795, 147);
-            this.tpSplit.TabIndex = 4;
-            this.tpSplit.Text = "拆分";
-            this.tpSplit.UseVisualStyleBackColor = true;
-            // 
-            // nudSplit_Line
-            // 
-            this.nudSplit_Line.Location = new System.Drawing.Point(138, 44);
-            this.nudSplit_Line.Maximum = new decimal(new int[] {
-            32767,
-            0,
-            0,
-            0});
-            this.nudSplit_Line.Name = "nudSplit_Line";
-            this.nudSplit_Line.Size = new System.Drawing.Size(58, 21);
-            this.nudSplit_Line.TabIndex = 22;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(623, 15);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 12);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "模式:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(202, 48);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 12);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "行";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(68, 48);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 12);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "行数拆分：";
-            // 
-            // comboBoxSplit
-            // 
-            this.comboBoxSplit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSplit.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.comboBoxSplit.FormattingEnabled = true;
-            this.comboBoxSplit.Items.AddRange(new object[] {
-            "拆分固定个数",
-            "拆分固定行数",
-            "含有特定字符",
-            "拆分奇偶行"});
-            this.comboBoxSplit.Location = new System.Drawing.Point(658, 12);
-            this.comboBoxSplit.Name = "comboBoxSplit";
-            this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
-            this.comboBoxSplit.TabIndex = 16;
-            this.comboBoxSplit.SelectionChangeCommitted += new System.EventHandler(this.comboBoxModeSplit_SelectionChangeCommitted);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(189, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 12);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "个";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(68, 13);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 12);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "个数拆分：";
-            // 
-            // nudSplit_Count
-            // 
-            this.nudSplit_Count.Location = new System.Drawing.Point(139, 10);
-            this.nudSplit_Count.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudSplit_Count.Name = "nudSplit_Count";
-            this.nudSplit_Count.Size = new System.Drawing.Size(44, 21);
-            this.nudSplit_Count.TabIndex = 0;
-            // 
             // panelStart
             // 
             this.panelStart.Controls.Add(this.btnStart);
@@ -2035,54 +2086,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // DGV
+            // checkBox_isRegex
             // 
-            this.DGV.AllowUserToAddRows = false;
-            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FilePath,
-            this.FileName,
-            this.State});
-            this.DGV.ContextMenuStrip = this.contextMenu_DGV;
-            this.DGV.Location = new System.Drawing.Point(6, 192);
-            this.DGV.Name = "DGV";
-            this.DGV.RowHeadersWidth = 51;
-            this.DGV.RowTemplate.Height = 23;
-            this.DGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV.Size = new System.Drawing.Size(804, 373);
-            this.DGV.TabIndex = 1;
-            this.DGV.SelectionChanged += new System.EventHandler(this.DGV_SelectionChanged);
-            // 
-            // 文件编码ToolStripMenuItem
-            // 
-            this.文件编码ToolStripMenuItem.Name = "文件编码ToolStripMenuItem";
-            this.文件编码ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.文件编码ToolStripMenuItem.Text = "查询文件编码";
-            this.文件编码ToolStripMenuItem.Click += new System.EventHandler(this.文件编码ToolStripMenuItem_Click);
-            // 
-            // FilePath
-            // 
-            this.FilePath.HeaderText = "路径";
-            this.FilePath.MinimumWidth = 6;
-            this.FilePath.Name = "FilePath";
-            this.FilePath.Visible = false;
-            this.FilePath.Width = 200;
-            // 
-            // FileName
-            // 
-            this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FileName.HeaderText = "文件名称";
-            this.FileName.MinimumWidth = 6;
-            this.FileName.Name = "FileName";
-            this.FileName.ReadOnly = true;
-            // 
-            // State
-            // 
-            this.State.HeaderText = "状态";
-            this.State.MinimumWidth = 6;
-            this.State.Name = "State";
-            this.State.ReadOnly = true;
-            this.State.Width = 200;
+            this.checkBox_isRegex.AutoSize = true;
+            this.checkBox_isRegex.Location = new System.Drawing.Point(39, 87);
+            this.checkBox_isRegex.Name = "checkBox_isRegex";
+            this.checkBox_isRegex.Size = new System.Drawing.Size(72, 16);
+            this.checkBox_isRegex.TabIndex = 4;
+            this.checkBox_isRegex.Text = "正则替换";
+            this.checkBox_isRegex.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -2106,6 +2118,7 @@
             this.menu1.ResumeLayout(false);
             this.menu1.PerformLayout();
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.contextMenu_DGV.ResumeLayout(false);
             this.panelDGV_Deal.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -2134,6 +2147,10 @@
             this.panelMerge_AddDataAmongFile.PerformLayout();
             this.panelMerge_LeftRight.ResumeLayout(false);
             this.panelMerge_LeftRight.PerformLayout();
+            this.tpSplit.ResumeLayout(false);
+            this.tpSplit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).EndInit();
             this.tpAddData.ResumeLayout(false);
             this.tpAddData.PerformLayout();
             this.panelAddData_TopEndOfLine.ResumeLayout(false);
@@ -2163,13 +2180,8 @@
             this.panelOtherAddFolder.PerformLayout();
             this.panelOtherSort.ResumeLayout(false);
             this.panelOtherSort.PerformLayout();
-            this.tpSplit.ResumeLayout(false);
-            this.tpSplit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).EndInit();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2359,6 +2371,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.CheckBox checkBox_isRegex;
     }
 }
 

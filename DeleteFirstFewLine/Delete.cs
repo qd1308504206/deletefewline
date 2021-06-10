@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DeleteFirstFewLine
 {
@@ -109,6 +110,42 @@ namespace DeleteFirstFewLine
                 }
             }
             File.WriteAllLines(filePath, ls.ToArray(),en);
+
+            return count;
+
+        }
+
+        /// <summary>
+        /// 替换多个字符串，或者删除多个字符串。
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="stringSource"></param>
+        /// <param name="newString">新字符串 如果为""，则为删除</param>
+        /// <param name="ckk">是否需要备份</param>
+        /// <returns></returns>
+        public static int ReplaceDeleteMulti_regex(string filePath, string stringSource, string newString, bool ckk)
+        {
+
+            if (ckk == true)
+            {
+                bool bak = DoBak(filePath);
+                if (bak == false)
+                { return -1; }
+            }
+            int count = 0;
+            Encoding en = FileEncoding.EncodingType.GetType(filePath);
+            List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
+
+            for (int i = 0; i < ls.Count; i++)
+            {
+                string pattern = stringSource;
+                var v = Regex.Replace(ls[i], pattern, newString);
+                if(v == ls[i])
+                    count++;
+                else
+                   ls[i] = v;
+            }
+            File.WriteAllLines(filePath, ls.ToArray(), en);
 
             return count;
 
@@ -633,10 +670,11 @@ namespace DeleteFirstFewLine
                 {
                     endline = ls.Count();
                 }
-
-                ls.RemoveRange(startline, endline - startline);
-                ls.InsertRange(startline, lsModle);
-                File.WriteAllLines(filePath, lsModle.ToArray(), en);
+                if (startline == 0)
+                    startline++; 
+                ls.RemoveRange(startline-1, endline - startline);
+                ls.InsertRange(startline-1, lsModle);
+                File.WriteAllLines(filePath, ls.ToArray(), en);
 
                 return true;
             }
