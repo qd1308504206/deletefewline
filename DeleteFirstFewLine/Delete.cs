@@ -672,7 +672,7 @@ namespace DeleteFirstFewLine
                 }
                 if (startline == 0)
                     startline++; 
-                ls.RemoveRange(startline-1, endline - startline);
+                ls.RemoveRange(startline-1, endline - startline - 1);
                 ls.InsertRange(startline-1, lsModle);
                 File.WriteAllLines(filePath, ls.ToArray(), en);
 
