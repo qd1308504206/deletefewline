@@ -683,6 +683,42 @@ namespace DeleteFirstFewLine
             { return false; }
 
         }
+
+
+        public static int DeleteExtractByKeyWord(string filePath, string outputFilePath, string strModlePath)
+        {
+            try
+            {
+                if (!File.Exists(outputFilePath))
+                    File.Create(outputFilePath);
+                Encoding en = FileEncoding.EncodingType.GetType(outputFilePath);
+                List<string> lsOLd = new List<string>(File.ReadAllLines(outputFilePath));
+                List<string> ls = new List<string>(File.ReadAllLines(filePath));
+                List<string> lsModle = new List<string>(File.ReadAllLines(strModlePath));
+                List<string> lsOutput = new List<string>();
+                int ret = 0;
+                for (int i = 0; i < ls.Count; i++)
+                {
+                    foreach (var str in lsModle)
+                    {
+                        if (str == null)
+                            continue;
+                        if (ls[i].Contains(str))
+                        {
+                            lsOutput.Add(ls[i]);
+                            ret++;
+                        }
+                    }
+                }
+                lsOLd = lsOLd.Concat(lsOutput).ToList<string>();
+                File.WriteAllLines(outputFilePath, lsOLd.ToArray(), en);
+
+                return ret;
+            }
+            catch
+            { return -1; }
+
+        }
         public static bool DeleteFileEvenOdd(string filePath, bool ckedBak, bool evenOdd)
         {
             if (ckedBak == true)

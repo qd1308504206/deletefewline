@@ -246,6 +246,12 @@ namespace DeleteFirstFewLine
 
                     break;
 
+                case "开始提取模板文件关键字行":
+
+                    DeleteLine("DealExtractByKeyWord");
+
+                    break;
+
                 case "开始删除行首数字":
                     DeleteLine("DeleteTopNumberOfLine");
                     break;
@@ -547,11 +553,20 @@ namespace DeleteFirstFewLine
                         case "DealReplaceMultiLine":
                             int nStart = Convert.ToInt32(nud_startLine.Value);
                             int nEnd = Convert.ToInt32(nud_endLine.Value);
-                            string strModlePath = txbFileDelete.Text;
+                            string strModlePath = txbModleFilePath.Text;
                             bl = Delete.DeleteReplaceMultiLine(filePath, false,nStart,nEnd, strModlePath);
 
                             successState = "替换成功";
                             failedState = "替换失败";
+                            break;
+                        case "DealExtractByKeyWord":
+                            strModlePath = txbModleFilePath.Text;
+                            string strOutPut = txbFileOutPut.Text;
+                            int nret = Delete.DeleteExtractByKeyWord(filePath, strOutPut, strModlePath);
+                            bl = nret <= 0 ? false : true;
+
+                            successState = "提取" + nret.ToString();
+                            failedState = "提取" + nret.ToString();
                             break;
 
                         case "AddDataTopEndFile"://开始添加到文件的首尾
@@ -1442,10 +1457,10 @@ namespace DeleteFirstFewLine
                     this.panel_DealMultiLine.Hide();
                     this.btnStart.Text = "开始替换指定行之间";
                     break;
-                case "筛选文件":
+                case "提取模板文件中关键字的行":
                     this.panel_DealMultiLine.Show();
                     this.panel_dealMultiLine2.Hide();
-                    this.btnStart.Text = "开始筛选文件";
+                    this.btnStart.Text = "开始提取模板文件关键字行";
                     break;
                 default:
                     this.btnStart.Text = "还没做";
@@ -1786,7 +1801,7 @@ namespace DeleteFirstFewLine
 
         private void btnFile1DeleteBrowser_Click(object sender, EventArgs e)
         {
-            this.txbFileDelete.Text = MyDir.OpenFileOne();
+            this.txbModleFilePath.Text = MyDir.OpenFileOne();
         }
 
         //private string OpenFileOne()
@@ -1807,7 +1822,7 @@ namespace DeleteFirstFewLine
 
         private void btnFile2DeleteBrower_Click(object sender, EventArgs e)
         {
-            this.txbFileShaiXuan.Text = MyDir.OpenFileOne();
+            this.txbFileOutPut.Text = MyDir.OpenFileOne();
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -1816,10 +1831,10 @@ namespace DeleteFirstFewLine
             Encoding enFilter = Encoding.Default;
             try
             {
-                enSource = FileEncoding.EncodingType.GetType(txbFileDelete.Text);
-                enFilter = FileEncoding.EncodingType.GetType(txbFileShaiXuan.Text);
-                List<string> lsFileSource = new List<string>(File.ReadAllLines(txbFileDelete.Text, enSource));
-                List<string> lsFileFilter = new List<string>(File.ReadAllLines(txbFileShaiXuan.Text, enFilter));
+                enSource = FileEncoding.EncodingType.GetType(txbModleFilePath.Text);
+                enFilter = FileEncoding.EncodingType.GetType(txbFileOutPut.Text);
+                List<string> lsFileSource = new List<string>(File.ReadAllLines(txbModleFilePath.Text, enSource));
+                List<string> lsFileFilter = new List<string>(File.ReadAllLines(txbFileOutPut.Text, enFilter));
                 for (int i = 0; i < lsFileSource.Count; i++)
                 {
                     if (ListContain(lsFileSource.ElementAt(i), ref lsFileFilter))
@@ -1829,8 +1844,8 @@ namespace DeleteFirstFewLine
                     }
                 }
 
-                File.WriteAllLines(txbFileDelete.Text + ".bak", lsFileSource.ToArray(), enSource);
-                File.WriteAllLines(txbFileShaiXuan.Text + ".bak", lsFileFilter.ToArray(), enFilter);
+                File.WriteAllLines(txbModleFilePath.Text + ".bak", lsFileSource.ToArray(), enSource);
+                File.WriteAllLines(txbFileOutPut.Text + ".bak", lsFileFilter.ToArray(), enFilter);
             }
             catch (Exception ex)
             {
@@ -2321,8 +2336,8 @@ namespace DeleteFirstFewLine
                     this.panel_DealMultiLine.Hide();
                     break;
 
-                case "筛选文件":
-                    this.btnStart.Text = "开始筛选文件";
+                case "提取模板文件中关键字的行":
+                    this.btnStart.Text = "开始提取模板文件关键字行";
                     this.panel_DealMultiLine.Show();
                     this.panel_dealMultiLine2.Hide();
                     break;
@@ -2343,7 +2358,7 @@ namespace DeleteFirstFewLine
 
         private void btnFile2DeleteBrower_Click_1(object sender, EventArgs e)
         {
-            this.txbFileShaiXuan.Text = MyDir.OpenFileOne();
+            this.txbFileOutPut.Text = MyDir.OpenFileOne();
         }
     }
 }

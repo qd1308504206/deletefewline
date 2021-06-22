@@ -106,6 +106,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.comboBoxDeleteData = new System.Windows.Forms.ComboBox();
             this.panelDeleteReplaceData = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
             this.checkBox_isRegex = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbDelNewData = new System.Windows.Forms.TextBox();
@@ -171,11 +172,11 @@
             this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
             this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txbFileDelete = new System.Windows.Forms.TextBox();
+            this.txbModleFilePath = new System.Windows.Forms.TextBox();
             this.panel_DealMultiLine = new System.Windows.Forms.Panel();
             this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.txbFileShaiXuan = new System.Windows.Forms.TextBox();
+            this.txbFileOutPut = new System.Windows.Forms.TextBox();
             this.panel_dealMultiLine2 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -213,7 +214,7 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -997,6 +998,15 @@
             this.panelDeleteReplaceData.Size = new System.Drawing.Size(613, 138);
             this.panelDeleteReplaceData.TabIndex = 11;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(136, 91);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(173, 12);
+            this.label49.TabIndex = 5;
+            this.label49.Text = "正则替换捕获的获取使用 $1 $2";
+            // 
             // checkBox_isRegex
             // 
             this.checkBox_isRegex.AutoSize = true;
@@ -1631,7 +1641,7 @@
             this.tpDeleteLineFromFile.Controls.Add(this.btnFile1DeleteBrowser);
             this.tpDeleteLineFromFile.Controls.Add(this.comboBox_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.label18);
-            this.tpDeleteLineFromFile.Controls.Add(this.txbFileDelete);
+            this.tpDeleteLineFromFile.Controls.Add(this.txbModleFilePath);
             this.tpDeleteLineFromFile.Controls.Add(this.panel_DealMultiLine);
             this.tpDeleteLineFromFile.Controls.Add(this.panel_dealMultiLine2);
             this.tpDeleteLineFromFile.Location = new System.Drawing.Point(4, 22);
@@ -1667,7 +1677,7 @@
             this.comboBox_DealMultiLine.FormattingEnabled = true;
             this.comboBox_DealMultiLine.Items.AddRange(new object[] {
             "替换指定行之间内容",
-            "筛选文件"});
+            "提取模板文件中关键字的行"});
             this.comboBox_DealMultiLine.Location = new System.Drawing.Point(606, 7);
             this.comboBox_DealMultiLine.Name = "comboBox_DealMultiLine";
             this.comboBox_DealMultiLine.Size = new System.Drawing.Size(148, 22);
@@ -1683,18 +1693,19 @@
             this.label18.TabIndex = 11;
             this.label18.Text = "模板文件:";
             // 
-            // txbFileDelete
+            // txbModleFilePath
             // 
-            this.txbFileDelete.Location = new System.Drawing.Point(85, 8);
-            this.txbFileDelete.Name = "txbFileDelete";
-            this.txbFileDelete.Size = new System.Drawing.Size(322, 21);
-            this.txbFileDelete.TabIndex = 9;
+            this.txbModleFilePath.Location = new System.Drawing.Point(85, 8);
+            this.txbModleFilePath.Name = "txbModleFilePath";
+            this.txbModleFilePath.Size = new System.Drawing.Size(322, 21);
+            this.txbModleFilePath.TabIndex = 9;
             // 
             // panel_DealMultiLine
             // 
+            this.panel_DealMultiLine.Controls.Add(this.label50);
             this.panel_DealMultiLine.Controls.Add(this.btnFile2DeleteBrower);
             this.panel_DealMultiLine.Controls.Add(this.label19);
-            this.panel_DealMultiLine.Controls.Add(this.txbFileShaiXuan);
+            this.panel_DealMultiLine.Controls.Add(this.txbFileOutPut);
             this.panel_DealMultiLine.Location = new System.Drawing.Point(3, 36);
             this.panel_DealMultiLine.Name = "panel_DealMultiLine";
             this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 105);
@@ -1719,12 +1730,12 @@
             this.label19.TabIndex = 12;
             this.label19.Text = "输出结果到:";
             // 
-            // txbFileShaiXuan
+            // txbFileOutPut
             // 
-            this.txbFileShaiXuan.Location = new System.Drawing.Point(89, 17);
-            this.txbFileShaiXuan.Name = "txbFileShaiXuan";
-            this.txbFileShaiXuan.Size = new System.Drawing.Size(322, 21);
-            this.txbFileShaiXuan.TabIndex = 10;
+            this.txbFileOutPut.Location = new System.Drawing.Point(89, 17);
+            this.txbFileOutPut.Name = "txbFileOutPut";
+            this.txbFileOutPut.Size = new System.Drawing.Size(322, 21);
+            this.txbFileOutPut.TabIndex = 10;
             // 
             // panel_dealMultiLine2
             // 
@@ -2099,14 +2110,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label49
+            // label50
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(136, 91);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(173, 12);
-            this.label49.TabIndex = 5;
-            this.label49.Text = "正则替换捕获的获取使用 $1 $2";
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(20, 61);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(281, 12);
+            this.label50.TabIndex = 15;
+            this.label50.Text = "提取模板文件中关键字的行，模板中关键字一行一个";
             // 
             // FormMain
             // 
@@ -2367,11 +2378,11 @@
         private System.Windows.Forms.Panel panel_DealMultiLine;
         private System.Windows.Forms.Button btnFile2DeleteBrower;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txbFileShaiXuan;
+        private System.Windows.Forms.TextBox txbFileOutPut;
         private System.Windows.Forms.Panel panel_dealMultiLine2;
         private System.Windows.Forms.Button btnFile1DeleteBrowser;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txbFileDelete;
+        private System.Windows.Forms.TextBox txbModleFilePath;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.NumericUpDown nud_endLine;
         private System.Windows.Forms.Label label47;
@@ -2385,6 +2396,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn State;
         private System.Windows.Forms.CheckBox checkBox_isRegex;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
     }
 }
 
