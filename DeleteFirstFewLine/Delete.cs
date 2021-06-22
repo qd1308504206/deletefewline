@@ -781,6 +781,121 @@ namespace DeleteFirstFewLine
             catch
             { return false; }
         }
+
+        /// <summary>
+        /// ls.Add(cBox_mail.Checked);
+        /// ls.Add(cBox_qqNum.Checked);
+        /// ls.Add(cBox_PhoneNum.Checked);
+        /// ls.Add(cBox_idNum.Checked);
+        /// ls.Add(cBox_link.Checked);
+        /// ls.Add(cBox_word.Checked);
+        /// ls.Add(cBox_Regex.Checked);
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="ls"></param>
+        /// <param name="text">正则式子</param>
+        /// <returns></returns>
+        public static int ExtractText(string filePath, List<bool> lsBool, string text, string outputFilePath)
+        {
+            try
+            {
+
+                Encoding en = FileEncoding.EncodingType.GetType(outputFilePath);
+                List<string> lsOLd = new List<string>(File.ReadAllLines(outputFilePath));
+                string content = File.ReadAllText(filePath);
+                List<string> lsOutput = new List<string>();
+                int ret = 0;
+
+                if(lsBool[0]) // 邮箱
+                {
+                    MatchCollection matche = Regex.Matches(content, @"[a-zA-Z0-9_.]+@([a-zA-Z0-9]+(\.[a-zA-Z0-9]+){1,})");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+                if (lsBool[1]) // QQ号
+                {
+                    MatchCollection matche = Regex.Matches(content, @"\b[1-9][0-9]{4,9}\b");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+                if (lsBool[2]) // 手机号
+                {
+                    MatchCollection matche = Regex.Matches(content, @"\b1[0-9]{10}\b");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+                if (lsBool[3]) // 身份证号
+                {
+                    MatchCollection matche = Regex.Matches(content, @"\b\d{17}[0-9xX]\b");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+                if (lsBool[4]) // 超链接网址
+                {
+                    MatchCollection matche = Regex.Matches(content, @"[a-zA-z]+://[^\s]*");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+
+                if (lsBool[5]) // 单词
+                {
+                    MatchCollection matche = Regex.Matches(content, @"\b[a-zA-Z]\b");
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+                if (lsBool[6]) // 正则式子
+                {
+                    MatchCollection matche = Regex.Matches(content, text);
+
+                    foreach (Match item in matche)
+                    {
+                        Console.WriteLine(item.Value + "==========" + item.Groups[1].Value);
+                        lsOutput.Add(item.Value);
+                        ret++;
+                    }
+                }
+
+
+
+                lsOLd = lsOLd.Concat(lsOutput).ToList<string>();
+                File.WriteAllLines(outputFilePath, lsOLd.ToArray(), en);
+
+                return ret;
+            }
+            catch
+            { return -1; }
+        }
+
         public static bool DeleteFileFrotLast(int nFirst, int nLast, string filePath, bool ckedBak)
         {
             if (ckedBak == true)

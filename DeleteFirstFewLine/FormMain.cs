@@ -322,6 +322,10 @@ namespace DeleteFirstFewLine
                 case "开始添加文件名到文件":
                     DeleteLine("AddDataFileName");
                     break;
+
+                case "开始提取文本":
+                    DeleteLine("ExtractText");
+                    break;
                 case "开始重命名":
                     DeleteLine("OtherRename");
                     break;
@@ -598,6 +602,38 @@ namespace DeleteFirstFewLine
 
                             successState = "添加成功";
                             failedState = "添加失败";
+                            break;
+                        case "ExtractText":
+                            List<Boolean> ls = new List<Boolean>();
+                            ls.Add(cBox_mail.Checked);
+                            ls.Add(cBox_qqNum.Checked);
+                            ls.Add(cBox_PhoneNum.Checked);
+                            ls.Add(cBox_idNum.Checked);
+                            ls.Add(cBox_link.Checked);
+                            ls.Add(cBox_word.Checked);
+                            ls.Add(cBox_Regex.Checked);
+
+                            if (txb_outputExtract.Text != null)
+                            {
+                                if (!File.Exists(txb_outputExtract.Text))
+                                    File.Create(txb_outputExtract.Text);
+                                else
+                                    File.WriteAllText(txb_outputExtract.Text, "");
+
+                                int retnum = Delete.ExtractText(filePath, ls, txb_tiqu正则表达式.Text, txb_outputExtract.Text);
+                                bl = retnum > 0;
+                                successState = "提取 " + retnum.ToString();
+                                failedState = successState;
+                            }
+                            else
+                            {
+                                failedState = "请添加输出文件。";
+                                bl = false;
+                            }
+                                
+
+
+
                             break;
                         case "OtherRename":
                             bl = Delete.RenameAddTopLine(filePath, blCheck, checkBoxOtherOldName.Checked);
@@ -1425,12 +1461,14 @@ namespace DeleteFirstFewLine
                     this.panelAddData_TopEndOfFile.Show();
                     this.panelAddData_TopEndOfLine.Hide();
                     this.panelAddData_FileName.Hide();
+                    this.panelAddData_extract.Hide();
                     this.btnStart.Text = "开始添加到文件的首尾";
                     break;
                 case "添加到行的首尾":
                     this.panelAddData_TopEndOfFile.Hide();
                     this.panelAddData_TopEndOfLine.Show();
                     this.panelAddData_FileName.Hide();
+                    this.panelAddData_extract.Hide();
                     InitCheckBoxAddDataTopLine();
                     InitCheckBoxAddDataEndLine();
                     this.btnStart.Text = "开始添加到行的首尾";
@@ -1438,8 +1476,16 @@ namespace DeleteFirstFewLine
                 case "添加文件名到文件":
                     this.panelAddData_TopEndOfFile.Hide();
                     this.panelAddData_TopEndOfLine.Hide();
+                    this.panelAddData_extract.Hide();
                     this.panelAddData_FileName.Show();
                     this.btnStart.Text = "开始添加文件名到文件";
+                    break;
+                case "提取文本":
+                    this.panelAddData_TopEndOfFile.Hide();
+                    this.panelAddData_TopEndOfLine.Hide();
+                    this.panelAddData_FileName.Hide();
+                    this.panelAddData_extract.Show();
+                    this.btnStart.Text = "开始提取文本";
                     break;
                 default:
                     this.btnStart.Text = "还没做";
@@ -2359,6 +2405,12 @@ namespace DeleteFirstFewLine
         private void btnFile2DeleteBrower_Click_1(object sender, EventArgs e)
         {
             this.txbFileOutPut.Text = MyDir.OpenFileOne();
+        }
+
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            txb_outputExtract.Text = MyDir.OpenFileOne();
         }
     }
 }

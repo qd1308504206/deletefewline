@@ -147,6 +147,13 @@
             this.tpAddData = new System.Windows.Forms.TabPage();
             this.label34 = new System.Windows.Forms.Label();
             this.comboBoxAddData = new System.Windows.Forms.ComboBox();
+            this.panelAddData_FileName = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.checkBoxAddData_ContainExtension = new System.Windows.Forms.CheckBox();
+            this.checkBoxAddData_ContainDir = new System.Windows.Forms.CheckBox();
+            this.txbAddData_FileName2 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txbAddData_FileName1 = new System.Windows.Forms.TextBox();
             this.panelAddData_TopEndOfLine = new System.Windows.Forms.Panel();
             this.txbAddData_EndLine = new System.Windows.Forms.TextBox();
             this.checkBoxAddData_EndLine = new System.Windows.Forms.CheckBox();
@@ -160,13 +167,18 @@
             this.checkBoxAddData_EndFile = new System.Windows.Forms.CheckBox();
             this.checkBoxAddData_TopFile = new System.Windows.Forms.CheckBox();
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
-            this.panelAddData_FileName = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.checkBoxAddData_ContainExtension = new System.Windows.Forms.CheckBox();
-            this.checkBoxAddData_ContainDir = new System.Windows.Forms.CheckBox();
-            this.txbAddData_FileName2 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.txbAddData_FileName1 = new System.Windows.Forms.TextBox();
+            this.panelAddData_extract = new System.Windows.Forms.Panel();
+            this.txb_tiqu正则表达式 = new System.Windows.Forms.TextBox();
+            this.cBox_Regex = new System.Windows.Forms.CheckBox();
+            this.cBox_word = new System.Windows.Forms.CheckBox();
+            this.cBox_link = new System.Windows.Forms.CheckBox();
+            this.cBox_idNum = new System.Windows.Forms.CheckBox();
+            this.cBox_PhoneNum = new System.Windows.Forms.CheckBox();
+            this.cBox_qqNum = new System.Windows.Forms.CheckBox();
+            this.cBox_mail = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txb_outputExtract = new System.Windows.Forms.TextBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
             this.label45 = new System.Windows.Forms.Label();
             this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
@@ -174,6 +186,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txbModleFilePath = new System.Windows.Forms.TextBox();
             this.panel_DealMultiLine = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
             this.btnFile2DeleteBrower = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.txbFileOutPut = new System.Windows.Forms.TextBox();
@@ -214,7 +227,6 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.label50 = new System.Windows.Forms.Label();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -240,10 +252,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Line)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).BeginInit();
             this.tpAddData.SuspendLayout();
+            this.panelAddData_FileName.SuspendLayout();
             this.panelAddData_TopEndOfLine.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).BeginInit();
             this.panelAddData_TopEndOfFile.SuspendLayout();
-            this.panelAddData_FileName.SuspendLayout();
+            this.panelAddData_extract.SuspendLayout();
             this.tpDeleteLineFromFile.SuspendLayout();
             this.panel_DealMultiLine.SuspendLayout();
             this.panel_dealMultiLine2.SuspendLayout();
@@ -1395,14 +1408,15 @@
             // 
             this.tpAddData.Controls.Add(this.label34);
             this.tpAddData.Controls.Add(this.comboBoxAddData);
+            this.tpAddData.Controls.Add(this.panelAddData_extract);
+            this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfLine);
             this.tpAddData.Controls.Add(this.panelAddData_TopEndOfFile);
-            this.tpAddData.Controls.Add(this.panelAddData_FileName);
             this.tpAddData.Location = new System.Drawing.Point(4, 22);
             this.tpAddData.Name = "tpAddData";
             this.tpAddData.Size = new System.Drawing.Size(795, 147);
             this.tpAddData.TabIndex = 6;
-            this.tpAddData.Text = "添加数据";
+            this.tpAddData.Text = "添加提取";
             this.tpAddData.UseVisualStyleBackColor = true;
             // 
             // label34
@@ -1422,12 +1436,78 @@
             this.comboBoxAddData.Items.AddRange(new object[] {
             "添加到文件的首尾",
             "添加到行的首尾",
-            "添加文件名到文件"});
+            "添加文件名到文件",
+            "提取文本"});
             this.comboBoxAddData.Location = new System.Drawing.Point(606, 11);
             this.comboBoxAddData.Name = "comboBoxAddData";
             this.comboBoxAddData.Size = new System.Drawing.Size(138, 22);
             this.comboBoxAddData.TabIndex = 21;
             this.comboBoxAddData.SelectionChangeCommitted += new System.EventHandler(this.comboBoxAddData_SelectionChangeCommitted);
+            // 
+            // panelAddData_FileName
+            // 
+            this.panelAddData_FileName.Controls.Add(this.label37);
+            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainExtension);
+            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainDir);
+            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName2);
+            this.panelAddData_FileName.Controls.Add(this.label36);
+            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName1);
+            this.panelAddData_FileName.Location = new System.Drawing.Point(3, 0);
+            this.panelAddData_FileName.Name = "panelAddData_FileName";
+            this.panelAddData_FileName.Size = new System.Drawing.Size(597, 144);
+            this.panelAddData_FileName.TabIndex = 16;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(253, 14);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(101, 12);
+            this.label37.TabIndex = 13;
+            this.label37.Text = "加入到文件的首行";
+            // 
+            // checkBoxAddData_ContainExtension
+            // 
+            this.checkBoxAddData_ContainExtension.AutoSize = true;
+            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(14, 36);
+            this.checkBoxAddData_ContainExtension.Name = "checkBoxAddData_ContainExtension";
+            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(120, 16);
+            this.checkBoxAddData_ContainExtension.TabIndex = 12;
+            this.checkBoxAddData_ContainExtension.Text = "文件名包含扩展名";
+            this.checkBoxAddData_ContainExtension.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAddData_ContainDir
+            // 
+            this.checkBoxAddData_ContainDir.AutoSize = true;
+            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(14, 12);
+            this.checkBoxAddData_ContainDir.Name = "checkBoxAddData_ContainDir";
+            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(108, 16);
+            this.checkBoxAddData_ContainDir.TabIndex = 11;
+            this.checkBoxAddData_ContainDir.Text = "文件名包含路径";
+            this.checkBoxAddData_ContainDir.UseVisualStyleBackColor = true;
+            // 
+            // txbAddData_FileName2
+            // 
+            this.txbAddData_FileName2.Location = new System.Drawing.Point(327, 41);
+            this.txbAddData_FileName2.Name = "txbAddData_FileName2";
+            this.txbAddData_FileName2.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName2.TabIndex = 10;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(268, 44);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(53, 12);
+            this.label36.TabIndex = 9;
+            this.label36.Text = "+文件名+";
+            // 
+            // txbAddData_FileName1
+            // 
+            this.txbAddData_FileName1.Location = new System.Drawing.Point(169, 41);
+            this.txbAddData_FileName1.Name = "txbAddData_FileName1";
+            this.txbAddData_FileName1.Size = new System.Drawing.Size(93, 21);
+            this.txbAddData_FileName1.TabIndex = 8;
             // 
             // panelAddData_TopEndOfLine
             // 
@@ -1570,70 +1650,126 @@
             this.txbAddData_TopEndOfFile.Size = new System.Drawing.Size(254, 58);
             this.txbAddData_TopEndOfFile.TabIndex = 0;
             // 
-            // panelAddData_FileName
+            // panelAddData_extract
             // 
-            this.panelAddData_FileName.Controls.Add(this.label37);
-            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainExtension);
-            this.panelAddData_FileName.Controls.Add(this.checkBoxAddData_ContainDir);
-            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName2);
-            this.panelAddData_FileName.Controls.Add(this.label36);
-            this.panelAddData_FileName.Controls.Add(this.txbAddData_FileName1);
-            this.panelAddData_FileName.Location = new System.Drawing.Point(3, 0);
-            this.panelAddData_FileName.Name = "panelAddData_FileName";
-            this.panelAddData_FileName.Size = new System.Drawing.Size(597, 144);
-            this.panelAddData_FileName.TabIndex = 16;
+            this.panelAddData_extract.Controls.Add(this.txb_tiqu正则表达式);
+            this.panelAddData_extract.Controls.Add(this.cBox_Regex);
+            this.panelAddData_extract.Controls.Add(this.cBox_word);
+            this.panelAddData_extract.Controls.Add(this.cBox_link);
+            this.panelAddData_extract.Controls.Add(this.cBox_idNum);
+            this.panelAddData_extract.Controls.Add(this.cBox_PhoneNum);
+            this.panelAddData_extract.Controls.Add(this.cBox_qqNum);
+            this.panelAddData_extract.Controls.Add(this.cBox_mail);
+            this.panelAddData_extract.Controls.Add(this.button2);
+            this.panelAddData_extract.Controls.Add(this.label52);
+            this.panelAddData_extract.Controls.Add(this.txb_outputExtract);
+            this.panelAddData_extract.Location = new System.Drawing.Point(0, 6);
+            this.panelAddData_extract.Name = "panelAddData_extract";
+            this.panelAddData_extract.Size = new System.Drawing.Size(598, 138);
+            this.panelAddData_extract.TabIndex = 24;
             // 
-            // label37
+            // txb_tiqu正则表达式
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(253, 14);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(101, 12);
-            this.label37.TabIndex = 13;
-            this.label37.Text = "加入到文件的首行";
+            this.txb_tiqu正则表达式.Location = new System.Drawing.Point(404, 31);
+            this.txb_tiqu正则表达式.Name = "txb_tiqu正则表达式";
+            this.txb_tiqu正则表达式.Size = new System.Drawing.Size(167, 21);
+            this.txb_tiqu正则表达式.TabIndex = 22;
             // 
-            // checkBoxAddData_ContainExtension
+            // cBox_Regex
             // 
-            this.checkBoxAddData_ContainExtension.AutoSize = true;
-            this.checkBoxAddData_ContainExtension.Location = new System.Drawing.Point(14, 36);
-            this.checkBoxAddData_ContainExtension.Name = "checkBoxAddData_ContainExtension";
-            this.checkBoxAddData_ContainExtension.Size = new System.Drawing.Size(120, 16);
-            this.checkBoxAddData_ContainExtension.TabIndex = 12;
-            this.checkBoxAddData_ContainExtension.Text = "文件名包含扩展名";
-            this.checkBoxAddData_ContainExtension.UseVisualStyleBackColor = true;
+            this.cBox_Regex.AutoSize = true;
+            this.cBox_Regex.Location = new System.Drawing.Point(404, 9);
+            this.cBox_Regex.Name = "cBox_Regex";
+            this.cBox_Regex.Size = new System.Drawing.Size(72, 16);
+            this.cBox_Regex.TabIndex = 21;
+            this.cBox_Regex.Text = "正则提取";
+            this.cBox_Regex.UseVisualStyleBackColor = true;
             // 
-            // checkBoxAddData_ContainDir
+            // cBox_word
             // 
-            this.checkBoxAddData_ContainDir.AutoSize = true;
-            this.checkBoxAddData_ContainDir.Location = new System.Drawing.Point(14, 12);
-            this.checkBoxAddData_ContainDir.Name = "checkBoxAddData_ContainDir";
-            this.checkBoxAddData_ContainDir.Size = new System.Drawing.Size(108, 16);
-            this.checkBoxAddData_ContainDir.TabIndex = 11;
-            this.checkBoxAddData_ContainDir.Text = "文件名包含路径";
-            this.checkBoxAddData_ContainDir.UseVisualStyleBackColor = true;
+            this.cBox_word.AutoSize = true;
+            this.cBox_word.Location = new System.Drawing.Point(96, 64);
+            this.cBox_word.Name = "cBox_word";
+            this.cBox_word.Size = new System.Drawing.Size(72, 16);
+            this.cBox_word.TabIndex = 20;
+            this.cBox_word.Text = "提取单词";
+            this.cBox_word.UseVisualStyleBackColor = true;
             // 
-            // txbAddData_FileName2
+            // cBox_link
             // 
-            this.txbAddData_FileName2.Location = new System.Drawing.Point(327, 41);
-            this.txbAddData_FileName2.Name = "txbAddData_FileName2";
-            this.txbAddData_FileName2.Size = new System.Drawing.Size(93, 21);
-            this.txbAddData_FileName2.TabIndex = 10;
+            this.cBox_link.AutoSize = true;
+            this.cBox_link.Location = new System.Drawing.Point(97, 35);
+            this.cBox_link.Name = "cBox_link";
+            this.cBox_link.Size = new System.Drawing.Size(84, 16);
+            this.cBox_link.TabIndex = 19;
+            this.cBox_link.Text = "提取超链接";
+            this.cBox_link.UseVisualStyleBackColor = true;
             // 
-            // label36
+            // cBox_idNum
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(268, 44);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 12);
-            this.label36.TabIndex = 9;
-            this.label36.Text = "+文件名+";
+            this.cBox_idNum.AutoSize = true;
+            this.cBox_idNum.Location = new System.Drawing.Point(96, 7);
+            this.cBox_idNum.Name = "cBox_idNum";
+            this.cBox_idNum.Size = new System.Drawing.Size(96, 16);
+            this.cBox_idNum.TabIndex = 18;
+            this.cBox_idNum.Text = "提取身份证号";
+            this.cBox_idNum.UseVisualStyleBackColor = true;
             // 
-            // txbAddData_FileName1
+            // cBox_PhoneNum
             // 
-            this.txbAddData_FileName1.Location = new System.Drawing.Point(169, 41);
-            this.txbAddData_FileName1.Name = "txbAddData_FileName1";
-            this.txbAddData_FileName1.Size = new System.Drawing.Size(93, 21);
-            this.txbAddData_FileName1.TabIndex = 8;
+            this.cBox_PhoneNum.AutoSize = true;
+            this.cBox_PhoneNum.Location = new System.Drawing.Point(7, 64);
+            this.cBox_PhoneNum.Name = "cBox_PhoneNum";
+            this.cBox_PhoneNum.Size = new System.Drawing.Size(84, 16);
+            this.cBox_PhoneNum.TabIndex = 17;
+            this.cBox_PhoneNum.Text = "提取手机号";
+            this.cBox_PhoneNum.UseVisualStyleBackColor = true;
+            // 
+            // cBox_qqNum
+            // 
+            this.cBox_qqNum.AutoSize = true;
+            this.cBox_qqNum.Location = new System.Drawing.Point(8, 37);
+            this.cBox_qqNum.Name = "cBox_qqNum";
+            this.cBox_qqNum.Size = new System.Drawing.Size(72, 16);
+            this.cBox_qqNum.TabIndex = 16;
+            this.cBox_qqNum.Text = "提取QQ号";
+            this.cBox_qqNum.UseVisualStyleBackColor = true;
+            // 
+            // cBox_mail
+            // 
+            this.cBox_mail.AutoSize = true;
+            this.cBox_mail.Location = new System.Drawing.Point(10, 6);
+            this.cBox_mail.Name = "cBox_mail";
+            this.cBox_mail.Size = new System.Drawing.Size(72, 16);
+            this.cBox_mail.TabIndex = 15;
+            this.cBox_mail.Text = "提取邮箱";
+            this.cBox_mail.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(421, 100);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 32);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "浏览";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(11, 107);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(71, 12);
+            this.label52.TabIndex = 12;
+            this.label52.Text = "输出结果到:";
+            // 
+            // txb_outputExtract
+            // 
+            this.txb_outputExtract.Location = new System.Drawing.Point(89, 104);
+            this.txb_outputExtract.Name = "txb_outputExtract";
+            this.txb_outputExtract.Size = new System.Drawing.Size(322, 21);
+            this.txb_outputExtract.TabIndex = 10;
             // 
             // tpDeleteLineFromFile
             // 
@@ -1710,6 +1846,15 @@
             this.panel_DealMultiLine.Name = "panel_DealMultiLine";
             this.panel_DealMultiLine.Size = new System.Drawing.Size(662, 105);
             this.panel_DealMultiLine.TabIndex = 12;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(20, 61);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(281, 12);
+            this.label50.TabIndex = 15;
+            this.label50.Text = "提取模板文件中关键字的行，模板中关键字一行一个";
             // 
             // btnFile2DeleteBrower
             // 
@@ -2110,15 +2255,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(20, 61);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(281, 12);
-            this.label50.TabIndex = 15;
-            this.label50.Text = "提取模板文件中关键字的行，模板中关键字一行一个";
-            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -2176,13 +2312,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSplit_Count)).EndInit();
             this.tpAddData.ResumeLayout(false);
             this.tpAddData.PerformLayout();
+            this.panelAddData_FileName.ResumeLayout(false);
+            this.panelAddData_FileName.PerformLayout();
             this.panelAddData_TopEndOfLine.ResumeLayout(false);
             this.panelAddData_TopEndOfLine.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).EndInit();
             this.panelAddData_TopEndOfFile.ResumeLayout(false);
             this.panelAddData_TopEndOfFile.PerformLayout();
-            this.panelAddData_FileName.ResumeLayout(false);
-            this.panelAddData_FileName.PerformLayout();
+            this.panelAddData_extract.ResumeLayout(false);
+            this.panelAddData_extract.PerformLayout();
             this.tpDeleteLineFromFile.ResumeLayout(false);
             this.tpDeleteLineFromFile.PerformLayout();
             this.panel_DealMultiLine.ResumeLayout(false);
@@ -2216,96 +2354,22 @@
         private System.Windows.Forms.ToolStripMenuItem 文件FToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
         private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpDeleteLine;
-        private System.Windows.Forms.TabPage tpDeleteData;
         private System.Windows.Forms.Button btnDGV_ClearAll;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnDGV_Delete;
         private System.Windows.Forms.Button btnAddFile;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nudDelLine_TopLineFile;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxBak;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nudDelLine_LastLineFile;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem 默认设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.Button btnDGV_DeleteSuccess;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 打开文件夹ToolStripMenuItem;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.TextBox txbDelOldData;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelStart;
-        private System.Windows.Forms.TabPage tpOther;
-        private System.Windows.Forms.Button btnOtherAddDGV;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbOtherFilePath;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown nudDelLine_ContinueLast;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown nudDelLine_ContinueFirst;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbDelNewData;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBoxDeleteLine;
-        private System.Windows.Forms.TabPage tpMerge;
-        private System.Windows.Forms.Button btnDownMove;
-        private System.Windows.Forms.Button btnUpMove;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txbMerge_AddDataAmongFiles;
-        private System.Windows.Forms.CheckBox checkBoxMerge_AddDataAmongFiles;
-        private System.Windows.Forms.TabPage tpSplit;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown nudSplit_Count;
-        private System.Windows.Forms.ComboBox comboBoxSplit;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TabPage tpDeleteLineFromFile;
-        private System.Windows.Forms.NumericUpDown nudSplit_Line;
-        private System.Windows.Forms.CheckBox checkBoxMerge_AddFileName;
-        private System.Windows.Forms.Panel panelMerge_AddDataAmongFile;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBoxMerge;
-        private System.Windows.Forms.Panel panelMerge_GeHang;
-        private System.Windows.Forms.Panel panelMerge_LeftRight;
-        private System.Windows.Forms.CheckBox checkBoxMerge_LeftRightAddData;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txbMerge_LeftRightData;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBoxDeleteData;
-        private System.Windows.Forms.Panel panelDeleteReplaceData;
-        private System.Windows.Forms.Panel panelDelData_FirstLastOfLine;
-        private System.Windows.Forms.TextBox txbCountZiFu;
-        private System.Windows.Forms.CheckBox checkBoxDel_DataTopOfLine;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown nudDelData_CountZiFu;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelDGV_Deal;
         private System.Windows.Forms.Button btnDGV_ClearState;
         private System.Windows.Forms.Button btnAddFolder;
-        private System.Windows.Forms.Panel panelDelLine1;
-        private System.Windows.Forms.Panel panelDelLine_TeDing;
-        private System.Windows.Forms.TextBox txbDelLine_TeDing;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Panel panelDelLine_KeyWords;
-        private System.Windows.Forms.CheckBox checkBoxDelLine_KeyWord;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txbDelLine_TeDingData;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ContextMenuStrip contextMenu_DGV;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 全部删除ToolStripMenuItem;
@@ -2327,14 +2391,87 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem 整理列表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 文件详细信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 捐赠ToolStripMenuItem;
+        private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.ToolStripMenuItem 文件编码ToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn State;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tpDeleteLine;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxDeleteLine;
+        private System.Windows.Forms.Panel panelDelLine1;
+        private System.Windows.Forms.NumericUpDown nudDelLine_LastLineFile;
+        private System.Windows.Forms.NumericUpDown nudDelLine_TopLineFile;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nudDelLine_ContinueLast;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nudDelLine_ContinueFirst;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelDelLine_KeyWords;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.CheckBox checkBoxDelLine_KeyWord;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txbDelLine_TeDingData;
+        private System.Windows.Forms.Panel panelDelLine_TeDing;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txbDelLine_TeDing;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TabPage tpDeleteData;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBoxDeleteData;
+        private System.Windows.Forms.Panel panelDeleteReplaceData;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.CheckBox checkBox_isRegex;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txbDelNewData;
+        private System.Windows.Forms.TextBox txbDelOldData;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panelDelData_FirstLastOfLine;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbCountZiFu;
+        private System.Windows.Forms.CheckBox checkBoxDel_DataTopOfLine;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown nudDelData_CountZiFu;
+        private System.Windows.Forms.TabPage tpMerge;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBoxMerge;
+        private System.Windows.Forms.Button btnDownMove;
+        private System.Windows.Forms.Button btnUpMove;
+        private System.Windows.Forms.Panel panelMerge_AddDataAmongFile;
+        private System.Windows.Forms.CheckBox checkBoxMerge_AddFileName;
+        private System.Windows.Forms.TextBox txbMerge_AddDataAmongFiles;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox checkBoxMerge_AddDataAmongFiles;
+        private System.Windows.Forms.Panel panelMerge_LeftRight;
+        private System.Windows.Forms.CheckBox checkBoxMerge_LeftRightAddData;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txbMerge_LeftRightData;
+        private System.Windows.Forms.Panel panelMerge_GeHang;
+        private System.Windows.Forms.TabPage tpSplit;
+        private System.Windows.Forms.NumericUpDown nudSplit_Line;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBoxSplit;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown nudSplit_Count;
         private System.Windows.Forms.TabPage tpAddData;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox comboBoxAddData;
-        private System.Windows.Forms.Panel panelAddData_TopEndOfFile;
-        private System.Windows.Forms.CheckBox checkBoxAddData_EndFile;
-        private System.Windows.Forms.CheckBox checkBoxAddData_TopFile;
-        private System.Windows.Forms.TextBox txbAddData_TopEndOfFile;
-        private System.Windows.Forms.CheckBox checkBoxAddData_OverWrite;
         private System.Windows.Forms.Panel panelAddData_TopEndOfLine;
         private System.Windows.Forms.TextBox txbAddData_EndLine;
         private System.Windows.Forms.CheckBox checkBoxAddData_EndLine;
@@ -2343,60 +2480,73 @@
         private System.Windows.Forms.CheckBox checkBoxAddData_ContainNumber;
         private System.Windows.Forms.TextBox txbAddData_TopLine;
         private System.Windows.Forms.CheckBox checkBoxAddData_TopLine;
+        private System.Windows.Forms.Panel panelAddData_TopEndOfFile;
+        private System.Windows.Forms.CheckBox checkBoxAddData_OverWrite;
+        private System.Windows.Forms.CheckBox checkBoxAddData_EndFile;
+        private System.Windows.Forms.CheckBox checkBoxAddData_TopFile;
+        private System.Windows.Forms.TextBox txbAddData_TopEndOfFile;
         private System.Windows.Forms.Panel panelAddData_FileName;
+        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.CheckBox checkBoxAddData_ContainExtension;
         private System.Windows.Forms.CheckBox checkBoxAddData_ContainDir;
         private System.Windows.Forms.TextBox txbAddData_FileName2;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txbAddData_FileName1;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Panel panelOtherAddFolder;
+        private System.Windows.Forms.TabPage tpDeleteLineFromFile;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Button btnFile1DeleteBrowser;
+        private System.Windows.Forms.ComboBox comboBox_DealMultiLine;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txbModleFilePath;
+        private System.Windows.Forms.Panel panel_DealMultiLine;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Button btnFile2DeleteBrower;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txbFileOutPut;
+        private System.Windows.Forms.Panel panel_dealMultiLine2;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.NumericUpDown nud_endLine;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.NumericUpDown nud_startLine;
+        private System.Windows.Forms.TabPage tpOther;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox comboBoxOtherType;
+        private System.Windows.Forms.Panel panelOtherChangeFileType;
+        private System.Windows.Forms.RadioButton radioBtnUTF_8_bom;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.RadioButton radioBtnUTF_8;
+        private System.Windows.Forms.RadioButton radioBtnUnicodeBigEndian;
+        private System.Windows.Forms.RadioButton radioBtnUnicode;
+        private System.Windows.Forms.RadioButton radioBtnANSI;
+        private System.Windows.Forms.Panel panelOtherFind;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txbOtherFind;
         private System.Windows.Forms.Panel panelOtherRename;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.CheckBox checkBoxOtherOldName;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Panel panelOtherFind;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox txbOtherFind;
-        private System.Windows.Forms.Panel panelOtherChangeFileType;
-        private System.Windows.Forms.RadioButton radioBtnANSI;
-        private System.Windows.Forms.RadioButton radioBtnUnicode;
-        private System.Windows.Forms.RadioButton radioBtnUTF_8;
-        private System.Windows.Forms.RadioButton radioBtnUnicodeBigEndian;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Panel panelOtherAddFolder;
+        private System.Windows.Forms.TextBox txbOtherFilePath;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnOtherAddDGV;
         private System.Windows.Forms.Panel panelOtherSort;
         private System.Windows.Forms.RadioButton radioBtnSortDown;
         private System.Windows.Forms.RadioButton radioBtnSortUp;
-        private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 捐赠ToolStripMenuItem;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.ComboBox comboBox_DealMultiLine;
-        private System.Windows.Forms.Panel panel_DealMultiLine;
-        private System.Windows.Forms.Button btnFile2DeleteBrower;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txbFileOutPut;
-        private System.Windows.Forms.Panel panel_dealMultiLine2;
-        private System.Windows.Forms.Button btnFile1DeleteBrowser;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txbModleFilePath;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.NumericUpDown nud_endLine;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.NumericUpDown nud_startLine;
-        private System.Windows.Forms.RadioButton radioBtnUTF_8_bom;
-        private System.Windows.Forms.DataGridView DGV;
-        private System.Windows.Forms.ToolStripMenuItem 文件编码ToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
-        private System.Windows.Forms.CheckBox checkBox_isRegex;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Panel panelAddData_extract;
+        private System.Windows.Forms.TextBox txb_tiqu正则表达式;
+        private System.Windows.Forms.CheckBox cBox_Regex;
+        private System.Windows.Forms.CheckBox cBox_word;
+        private System.Windows.Forms.CheckBox cBox_link;
+        private System.Windows.Forms.CheckBox cBox_idNum;
+        private System.Windows.Forms.CheckBox cBox_PhoneNum;
+        private System.Windows.Forms.CheckBox cBox_qqNum;
+        private System.Windows.Forms.CheckBox cBox_mail;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txb_outputExtract;
     }
 }
 
