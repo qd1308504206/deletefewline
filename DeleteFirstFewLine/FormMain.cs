@@ -1613,7 +1613,7 @@ namespace DeleteFirstFewLine
 
         private void txbDeleteText_Click(object sender, EventArgs e)
         {
-            txbDelOldData.Text = Clipboard.GetText();
+            //txbDelOldData.Text = Clipboard.GetText();
         }
 
 
@@ -2339,6 +2339,11 @@ namespace DeleteFirstFewLine
                 return;
 
             DeleteLine("OtherFindEncoding");
+        }
+
+        private void btnFile2DeleteBrower_Click_1(object sender, EventArgs e)
+        {
+            this.txbFileShaiXuan.Text = MyDir.OpenFileOne();
         }
     }
 }
