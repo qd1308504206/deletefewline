@@ -685,38 +685,45 @@ namespace DeleteFirstFewLine
         }
 
 
-        public static int DeleteExtractByKeyWord(string filePath, string outputFilePath, string strModlePath)
+        public static int DeleteExtractByKeyWord(string filePath, string outputFilePath, string strModlePath, ref string abc)
         {
             try
             {
                 if (!File.Exists(outputFilePath))
                     File.Create(outputFilePath);
+                
                 Encoding en = FileEncoding.EncodingType.GetType(outputFilePath);
                 List<string> lsOLd = new List<string>(File.ReadAllLines(outputFilePath));
                 List<string> ls = new List<string>(File.ReadAllLines(filePath));
                 List<string> lsModle = new List<string>(File.ReadAllLines(strModlePath));
                 List<string> lsOutput = new List<string>();
-                int ret = 0;
+                StreamWriter fs = new StreamWriter(outputFilePath, true);
+                    int ret = 0;
                 for (int i = 0; i < ls.Count; i++)
                 {
-                    foreach (var str in lsModle)
+                    for (int j =0; j < lsModle.Count; j++)
                     {
-                        if (str == null)
+                        if (lsModle[j] == null || lsModle[j] == "")
                             continue;
-                        if (ls[i].Contains(str))
+                        if (ls[i].Contains(lsModle[j]))
                         {
-                            lsOutput.Add(ls[i]);
+                            //lsOutput.Add(ls[i]);
+                         {
+                             fs.WriteLine(ls[i]);
+                         }
                             ret++;
                         }
                     }
                 }
-                lsOLd = lsOLd.Concat(lsOutput).ToList<string>();
-                File.WriteAllLines(outputFilePath, lsOLd.ToArray(), en);
+                //lsOLd = lsOLd.Concat(lsOutput).ToList<string>();
+                //File.WriteAllLines(outputFilePath, lsOLd.ToArray(), en);
 
                 return ret;
             }
-            catch
-            { return -1; }
+            catch(Exception e)
+            {
+                abc = e.Message;
+                return -1; }
 
         }
         public static bool DeleteFileEvenOdd(string filePath, bool ckedBak, bool evenOdd)
@@ -819,7 +826,8 @@ namespace DeleteFirstFewLine
                 }
                 if (lsBool[1]) // QQ号
                 {
-                    MatchCollection matche = Regex.Matches(content, @"\b[1-9][0-9]{4,9}\b");
+                    MatchCollection matche 
+                        = Regex.Matches(content, @"\b[1-9][0-9]{4,9}\b");
 
                     foreach (Match item in matche)
                     {
@@ -892,7 +900,7 @@ namespace DeleteFirstFewLine
 
                 return ret;
             }
-            catch
+            catch(Exception e)
             { return -1; }
         }
 
@@ -1265,34 +1273,36 @@ namespace DeleteFirstFewLine
         {
             try
             {
-                Encoding en = FileEncoding.EncodingType.GetType(filePath);
-                List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
+                Encoding en = FileEncoding.EncodingType.GetType(filePath); 
+                string strContent = File.ReadAllText(filePath, en);
                 string fileNewName = "";
 
                 Encoding enNew = Encoding.Default;
+                fileNewName = MyString.GetNewFileName(filePath, "");
                 switch (fileChangeType)
                 {
                     case "ANSI":
-                        fileNewName = MyString.GetNewFileName(filePath, "_ANSI");
+                        //fileNewName = MyString.GetNewFileName(filePath, "_ANSI");
                         enNew = Encoding.Default;
                         break;
 
                     case "Unicode":
-                        fileNewName = MyString.GetNewFileName(filePath, "_Unicode");
+                        //fileNewName = MyString.GetNewFileName(filePath, "_Unicode");
                         enNew = Encoding.Unicode;
                         break;
 
                     case "UnicodeBigEndian":
-                        fileNewName = MyString.GetNewFileName(filePath, "_UnicodeBigEndian");
+                        //fileNewName = MyString.GetNewFileName(filePath, "_UnicodeBigEndian");
                         enNew = Encoding.BigEndianUnicode;
                         break;
 
                     case "UTF_8":
-                        fileNewName = MyString.GetNewFileName(filePath, "_UTF_8");
+                        //fileNewName = MyString.GetNewFileName(filePath, "_UTF_8");
                         enNew = new UTF8Encoding(false);
                         break;
                     case "UTF_8_BOM":
-                        fileNewName = MyString.GetNewFileName(filePath, "_UTF_8_BOM");
+                        //fileNewName = MyString.GetNewFileName(filePath, "_UTF_8_BOM");
+                        
                         enNew = Encoding.UTF8;
                         break;
                         
@@ -1300,7 +1310,9 @@ namespace DeleteFirstFewLine
                         break;
                 }
 
-                File.WriteAllLines(fileNewName, ls.ToArray(), enNew);
+                File.WriteAllText(fileNewName, strContent, enNew);
+                
+                File.Delete(fileNewName + ".bak");
                 return true;
             }
             catch

@@ -566,8 +566,11 @@ namespace DeleteFirstFewLine
                         case "DealExtractByKeyWord":
                             strModlePath = txbModleFilePath.Text;
                             string strOutPut = txbFileOutPut.Text;
-                            int nret = Delete.DeleteExtractByKeyWord(filePath, strOutPut, strModlePath);
+                            string abc = "";
+                            int nret = Delete.DeleteExtractByKeyWord(filePath, strOutPut, strModlePath, ref abc);
                             bl = nret <= 0 ? false : true;
+                            if (!bl)
+                                MessageBox.Show(abc);
 
                             successState = "提取" + nret.ToString();
                             failedState = "提取" + nret.ToString();
@@ -615,11 +618,12 @@ namespace DeleteFirstFewLine
 
                             if (txb_outputExtract.Text != null)
                             {
-                                if (!File.Exists(txb_outputExtract.Text))
-                                    File.Create(txb_outputExtract.Text);
-                                else
-                                    File.WriteAllText(txb_outputExtract.Text, "");
-
+                                {
+                                    if (!File.Exists(txb_outputExtract.Text))
+                                        File.Create(txb_outputExtract.Text);
+                                    else
+                                        File.WriteAllText(txb_outputExtract.Text, "");
+                                }
                                 int retnum = Delete.ExtractText(filePath, ls, txb_tiqu正则表达式.Text, txb_outputExtract.Text);
                                 bl = retnum > 0;
                                 successState = "提取 " + retnum.ToString();
@@ -1260,6 +1264,8 @@ namespace DeleteFirstFewLine
                 DirectoryInfo dir = new DirectoryInfo(sFolder);
 
                 FileInfo[] files = dir.GetFiles("*.*");
+                
+
 
                 List<string> lsFile = new List<string>();
                 foreach (FileInfo fi in files)
@@ -1269,6 +1275,11 @@ namespace DeleteFirstFewLine
 
                 List<string> ls = new List<string>();
                 AddMemberInDGV(lsFile);
+                DirectoryInfo[] dirarr = dir.GetDirectories();
+                foreach (DirectoryInfo info in dirarr)
+                {
+                    AddFileFromFolder(info.FullName);
+                }
             }
             catch(Exception e)
             {
@@ -1411,7 +1422,7 @@ namespace DeleteFirstFewLine
                 if (!radioBtnANSI.Checked && !radioBtnUnicode.Checked &&
                     !radioBtnUnicodeBigEndian.Checked && !radioBtnUTF_8.Checked)
                 {
-                    this.radioBtnANSI.Checked = true;
+                    this.radioBtnUTF_8_bom.Checked = true;
                 }
 
                 if(!radioBtnSortUp.Checked && !radioBtnSortDown.Checked)

@@ -40,6 +40,10 @@ namespace FileEncoding
             BinaryReader r = new BinaryReader(fs, System.Text.Encoding.Default);
             int i;
             int.TryParse(fs.Length.ToString(), out i);
+            if (i == 0)
+            {
+                return new UTF8Encoding(false);
+            }
             byte[] ss = r.ReadBytes(i);
             if (ss[0] == 0xEF && ss[1] == 0xBB && ss[2] == 0xBF)
             {
