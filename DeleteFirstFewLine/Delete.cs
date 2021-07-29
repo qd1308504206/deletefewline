@@ -1222,7 +1222,7 @@ namespace DeleteFirstFewLine
                 {
                     fileDir = System.IO.Path.GetDirectoryName(filePath) + "\\";
                 }
-                string newFileFullName = fileDir + newFileName;
+                string newFileFullName = fileDir + newFileName + extension;
 
                 if (File.Exists(newFileFullName))
                 {
