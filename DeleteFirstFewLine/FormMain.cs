@@ -640,7 +640,9 @@ namespace DeleteFirstFewLine
 
                             break;
                         case "OtherRename":
-                            bl = Delete.RenameAddTopLine(filePath, blCheck, checkBoxOtherOldName.Checked);
+
+
+                            bl = Delete.RenameAddTopLine(filePath, blCheck, checkBoxOtherOldName.Checked, cBox_限制新名称的长度.Checked, (int)nud_限制新名称的长度.Value);
                             successState = "重命名成功";
                             failedState = "重命名失败";
                             break;

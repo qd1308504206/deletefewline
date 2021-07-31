@@ -1196,7 +1196,7 @@ namespace DeleteFirstFewLine
             { return false; }
         }
 
-        public static bool RenameAddTopLine(string filePath, bool ckedBak, bool isIncludeOldName)
+        public static bool RenameAddTopLine(string filePath, bool ckedBak, bool isIncludeOldName, bool limitLen = false, int count = 256)
         {
             if (ckedBak == true)
             {
@@ -1222,6 +1222,13 @@ namespace DeleteFirstFewLine
                 {
                     fileDir = System.IO.Path.GetDirectoryName(filePath) + "\\";
                 }
+
+                if (limitLen == true)
+                {
+                    
+                    newFileName = newFileName.Substring(0, count);
+                }
+
                 string newFileFullName = fileDir + newFileName + extension;
 
                 if (File.Exists(newFileFullName))
