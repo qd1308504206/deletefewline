@@ -726,6 +726,76 @@ namespace DeleteFirstFewLine
                 return -1; }
 
         }
+
+        private static void infoappend2file(string filepath, List<string> info)
+        {
+
+            string []ls = File.ReadAllLines (filepath);
+            Encoding en = FileEncoding.EncodingType.GetType(filepath);
+            List<string> lsls = new List<string> ();
+            lsls.AddRange(info);
+            lsls.AddRange(ls);
+
+            File.WriteAllLines(filepath,lsls, en);
+
+        }
+
+        public static int DeleteExtractByKeyWord2file(string filePath, string strModlePath, ref string abc, string keyword1, string keyword2)
+        {
+            try
+            {
+                if (!File.Exists(filePath))
+                    File.Create(filePath);
+
+                string filename = System.IO.Path.GetFileName(filePath);
+                filename = filename.Split('.')[0];
+
+                string []ls = File.ReadAllLines(strModlePath);
+                int startpos = -1;
+                int endpos = -1;
+                for (int i = ls.Length-1; i >= 0; i--)
+                {
+                    string str = ls[i];
+                    if (str.ToUpper().Contains(filename.ToUpper())  && str.ToUpper().Contains(keyword1) )
+                    {
+                        endpos = i;
+                        break;
+                    }
+                }
+
+
+                if (endpos == -1)
+                {
+                    abc = "not found";
+                    return 0;
+                }
+                for (int i = endpos; i >=0 ; i--)
+                {
+                    if (ls[i].ToUpper().Contains(keyword2))
+                    {
+                        abc = ls[i];
+                        startpos = i;
+                        break;
+                    }
+                }
+
+                List<string> list = new List<string>();
+                for (int i = startpos; i < endpos; i++)
+                {
+                    list.Add(ls[i]);
+                }
+
+                infoappend2file(filePath, list);
+
+                return 0;
+            }
+            catch (Exception e)
+            {
+                abc = e.Message;
+                return -1;
+            }
+
+        }
         public static bool DeleteFileEvenOdd(string filePath, bool ckedBak, bool evenOdd)
         {
             if (ckedBak == true)

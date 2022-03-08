@@ -249,6 +249,11 @@ namespace DeleteFirstFewLine
                 case "开始提取模板文件关键字行":
 
                     DeleteLine("DealExtractByKeyWord");
+                    break;
+
+                case "开始自定义提取内容0":
+
+                    DeleteLine("DealExtractByKeyWord2file");
 
                     break;
 
@@ -576,6 +581,18 @@ namespace DeleteFirstFewLine
                             failedState = "提取" + nret.ToString();
                             break;
 
+                        case "DealExtractByKeyWord2file":
+                            strModlePath = txbModleFilePath.Text;
+                            //string abc = "";
+                            abc = "0";
+                            string keyword1 = this.textBox_call0模板文件中内容提取到多个文件中.Text;
+                            string keyword2 = this.textBox_trans0模板文件中内容提取到多个文件中.Text;
+                            nret = Delete.DeleteExtractByKeyWord2file(filePath, strModlePath,ref abc, keyword1,keyword2);
+
+
+                            successState = abc;
+                            failedState = abc;
+                            break;
                         case "AddDataTopEndFile"://开始添加到文件的首尾
 
                             bl = Delete.AddDataTopEndFile(filePath, blCheck,txbAddData_TopEndOfFile.Text,
@@ -2393,14 +2410,21 @@ namespace DeleteFirstFewLine
                     this.btnStart.Text = "开始替换指定行之间";
                     this.panel_dealMultiLine2.Show();
                     this.panel_DealMultiLine.Hide();
+                    this.panel_0模板文件中内容提取到多个文件中.Hide();
                     break;
 
                 case "提取模板文件中关键字的行":
                     this.btnStart.Text = "开始提取模板文件关键字行";
                     this.panel_DealMultiLine.Show();
                     this.panel_dealMultiLine2.Hide();
+                    this.panel_0模板文件中内容提取到多个文件中.Hide();
                     break;
-
+                case "[0]模板文件中内容提取到多个文件中":
+                    this.btnStart.Text = "开始自定义提取内容0";
+                    this.panel_DealMultiLine.Hide();
+                    this.panel_dealMultiLine2.Hide();
+                    this.panel_0模板文件中内容提取到多个文件中.Show();
+                    break;
                 default:
                     this.btnStart.Text = "还没做";
                     break;
