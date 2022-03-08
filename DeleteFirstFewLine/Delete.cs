@@ -752,39 +752,52 @@ namespace DeleteFirstFewLine
                 filename = filename.Split('.')[0];
 
                 string []ls = File.ReadAllLines(strModlePath);
-                int startpos = -1;
-                int endpos = -1;
-                for (int i = ls.Length-1; i >= 0; i--)
-                {
-                    string str = ls[i];
-                    if (str.ToUpper().Contains(filename.ToUpper())  && str.ToUpper().Contains(keyword1) )
-                    {
-                        endpos = i;
-                        break;
-                    }
-                }
-
-
-                if (endpos == -1)
-                {
-                    abc = "not found";
-                    return 0;
-                }
-                for (int i = endpos; i >=0 ; i--)
-                {
-                    if (ls[i].ToUpper().Contains(keyword2))
-                    {
-                        abc = ls[i];
-                        startpos = i;
-                        break;
-                    }
-                }
 
                 List<string> list = new List<string>();
-                for (int i = startpos; i < endpos; i++)
+
+                int startpos = 0;
+                int endpos = ls.Length-1;
+
+                while (startpos < endpos)
                 {
-                    list.Add(ls[i]);
+                    bool find = false;
+                    for (int i = endpos; i >= 0; i--)
+                    {
+                        string str = ls[i];
+                        if (str.ToUpper().Contains(filename.ToUpper()) && str.ToUpper().Contains(keyword1))
+                        {
+                            endpos = i;
+                            find = true;
+                            break;
+                        }
+                    }
+                    if (!find)
+                    {
+                        break;
+                    }
+
+                    find = false;
+                    for (int i = endpos; i >= 0; i--)
+                    {
+                        if (ls[i].ToUpper().Contains(keyword2))
+                        {
+                            abc = ls[i];
+                            startpos = i;
+                            find = true;
+                            break;
+                        }
+                    }
+                    if (!find)
+                        break;
+                    int k = 0;
+                    for (int i = startpos; i < endpos; i++)
+                    {
+                        list.Insert(k++, ls[i]);
+                    }
+                    endpos = startpos-1;
+                    startpos = 0;
                 }
+
 
                 infoappend2file(filePath, list);
 
