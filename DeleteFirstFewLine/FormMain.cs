@@ -574,11 +574,10 @@ namespace DeleteFirstFewLine
                             string abc = "";
                             int nret = Delete.DeleteExtractByKeyWord(filePath, strOutPut, strModlePath, ref abc);
                             bl = nret <= 0 ? false : true;
-                            if (!bl)
-                                MessageBox.Show(abc);
 
-                            successState = "提取" + nret.ToString();
-                            failedState = "提取" + nret.ToString();
+
+                            successState = "提取" + nret.ToString() + "--" + abc;
+                            failedState = "提取" + nret.ToString() + "--" + abc;
                             break;
 
                         case "DealExtractByKeyWord2file":

@@ -715,6 +715,7 @@ namespace DeleteFirstFewLine
                         }
                     }
                 }
+                fs.Close();
                 //lsOLd = lsOLd.Concat(lsOutput).ToList<string>();
                 //File.WriteAllLines(outputFilePath, lsOLd.ToArray(), en);
 
