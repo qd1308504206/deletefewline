@@ -471,6 +471,105 @@ namespace DeleteFirstFewLine
                 return false;
             }
         }
+        private static string GetLongestLineSpace(ref List<string> lsContent)
+        {
+            string ret = "";
+            int maxlen = 0;
+            foreach (var item in lsContent)
+            {
+                if(item.Length > maxlen)
+                    maxlen = item.Length;
+            }
+
+            for (int i = 0; i < maxlen; i++)
+            {
+                ret = ret + " ";
+            }
+
+            return ret;
+        }
+
+        public static bool MergeFileLeftRight_Multi(List<string> lsFile, string data)
+        {
+            try
+            {
+                if(lsFile.Count() <=1)
+                    return false;
+
+                string fileName = lsFile[0];
+                Encoding en = FileEncoding.EncodingType.GetType(fileName);
+
+                string newFileName = MyString.GetNewFileName(fileName, "_左右合并_结果");
+
+                List<List<string>> fileContents = new List<List<string>>();
+                int maxLines = 0;
+                foreach (string file in lsFile)
+                {
+                    List<string> ls = MyString.GetListStrFromFile(file);
+                    fileContents.Add(ls);
+                    if(ls.Count() > maxLines)
+                        maxLines = ls.Count();
+                }
+
+                bool hasDifferent = false;
+                for (int i = 0; i < fileContents.Count(); i++)
+                {
+                    if (fileContents[i].Count() != maxLines)
+                    {
+                        hasDifferent = true;
+                        break;
+                    }
+                }
+                if (hasDifferent)
+                {
+                    for (int i = 0; i < fileContents.Count(); i++)
+                    {
+                        string ret = "";
+                        int maxlen = 0;
+                        foreach (var item in fileContents[i])
+                        {
+                            if (item.Length > maxlen)
+                                maxlen = item.Length;
+                        }
+
+                        for (int ik = 0; ik < maxlen; ik++)
+                        {
+                            ret = ret + " ";
+                        }
+
+                        int count = fileContents.Count();
+                        for (int j = 0; j < maxLines - count; j++)
+                        {
+                            fileContents[i].Add(ret);
+                        }
+
+                    }
+                }
+
+
+                List<string> lsResult = new List<string>();
+                for (int j = 0; j < maxLines; j++)
+                {
+                    string strret = "";
+                    for (int i = 0; i < fileContents.Count(); i++)
+                    {
+                        if (i != fileContents.Count() - 1)
+                            strret = strret + fileContents[i][j] + data;
+                        else
+                            strret = strret + fileContents[i][j];
+                    }
+                    lsResult.Add(strret);
+
+                }
+
+                File.WriteAllLines(newFileName, lsResult.ToArray(), en);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// 拆分文件

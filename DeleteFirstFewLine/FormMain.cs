@@ -390,13 +390,13 @@ namespace DeleteFirstFewLine
                     bl = Delete.MergeFileGeHang(lsFilePath);
                     break;
                 case "MergeFileLeftRight":
-                    if (lsFilePath.Count != 2)
-                    {
-                        MessageBox.Show("左右合并因为需求不高，目前仅支持2个文件左右合并");
-                        return;
-                    }
+                    //if (lsFilePath.Count != 2)
+                    //{
+                    //    MessageBox.Show("左右合并因为需求不高，目前仅支持2个文件左右合并");
+                    //    return;
+                    //}
                     string mergeDataLeftRight = this.txbMerge_LeftRightData.Text;
-                    bl = Delete.MergeFileLeftRight(lsFilePath, mergeDataLeftRight);
+                    bl = Delete.MergeFileLeftRight_Multi(lsFilePath, mergeDataLeftRight);
                     break;
                 default:
                     MessageBox.Show("出错了");
