@@ -180,6 +180,11 @@
             this.checkBoxAddData_TopFile = new System.Windows.Forms.CheckBox();
             this.txbAddData_TopEndOfFile = new System.Windows.Forms.TextBox();
             this.tpDeleteLineFromFile = new System.Windows.Forms.TabPage();
+            this.panel_0模板文件中内容提取到多个文件中 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.textBox_trans0模板文件中内容提取到多个文件中 = new System.Windows.Forms.TextBox();
+            this.textBox_call0模板文件中内容提取到多个文件中 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.btnFile1DeleteBrowser = new System.Windows.Forms.Button();
             this.comboBox_DealMultiLine = new System.Windows.Forms.ComboBox();
@@ -229,11 +234,8 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.panel_0模板文件中内容提取到多个文件中 = new System.Windows.Forms.Panel();
-            this.textBox_call0模板文件中内容提取到多个文件中 = new System.Windows.Forms.TextBox();
-            this.textBox_trans0模板文件中内容提取到多个文件中 = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
+            this.textBox_竖向拆分分隔符 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -265,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAddData_TopLine)).BeginInit();
             this.panelAddData_TopEndOfFile.SuspendLayout();
             this.tpDeleteLineFromFile.SuspendLayout();
+            this.panel_0模板文件中内容提取到多个文件中.SuspendLayout();
             this.panel_DealMultiLine.SuspendLayout();
             this.panel_dealMultiLine2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_endLine)).BeginInit();
@@ -277,7 +280,6 @@
             this.panelOtherChangeFileType.SuspendLayout();
             this.panelOtherFind.SuspendLayout();
             this.panelStart.SuspendLayout();
-            this.panel_0模板文件中内容提取到多个文件中.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1
@@ -678,7 +680,7 @@
             this.tpDeleteLine.Controls.Add(this.panelDelLine_TeDing);
             this.tpDeleteLine.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteLine.Name = "tpDeleteLine";
-            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpDeleteLine.Padding = new System.Windows.Forms.Padding(3);
             this.tpDeleteLine.Size = new System.Drawing.Size(795, 147);
             this.tpDeleteLine.TabIndex = 0;
             this.tpDeleteLine.Text = "批量删除行";
@@ -976,7 +978,7 @@
             this.tpDeleteData.Controls.Add(this.panelDelData_FirstLastOfLine);
             this.tpDeleteData.Location = new System.Drawing.Point(4, 22);
             this.tpDeleteData.Name = "tpDeleteData";
-            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpDeleteData.Padding = new System.Windows.Forms.Padding(3);
             this.tpDeleteData.Size = new System.Drawing.Size(795, 147);
             this.tpDeleteData.TabIndex = 1;
             this.tpDeleteData.Text = "批量删除文本";
@@ -1314,6 +1316,8 @@
             // 
             // tpSplit
             // 
+            this.tpSplit.Controls.Add(this.label54);
+            this.tpSplit.Controls.Add(this.textBox_竖向拆分分隔符);
             this.tpSplit.Controls.Add(this.nudSplit_Line);
             this.tpSplit.Controls.Add(this.label17);
             this.tpSplit.Controls.Add(this.label15);
@@ -1377,7 +1381,8 @@
             "拆分固定个数",
             "拆分固定行数",
             "含有特定字符",
-            "拆分奇偶行"});
+            "拆分奇偶行",
+            "竖向拆分"});
             this.comboBoxSplit.Location = new System.Drawing.Point(658, 12);
             this.comboBoxSplit.Name = "comboBoxSplit";
             this.comboBoxSplit.Size = new System.Drawing.Size(121, 22);
@@ -1798,6 +1803,51 @@
             this.tpDeleteLineFromFile.Text = "处理多行从文件";
             this.tpDeleteLineFromFile.UseVisualStyleBackColor = true;
             // 
+            // panel_0模板文件中内容提取到多个文件中
+            // 
+            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.label53);
+            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.label51);
+            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.textBox_trans0模板文件中内容提取到多个文件中);
+            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.textBox_call0模板文件中内容提取到多个文件中);
+            this.panel_0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(1, 39);
+            this.panel_0模板文件中内容提取到多个文件中.Name = "panel_0模板文件中内容提取到多个文件中";
+            this.panel_0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(661, 112);
+            this.panel_0模板文件中内容提取到多个文件中.TabIndex = 26;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(16, 62);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(53, 12);
+            this.label53.TabIndex = 3;
+            this.label53.Text = "查找结束";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(19, 17);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(53, 12);
+            this.label51.TabIndex = 2;
+            this.label51.Text = "查找开始";
+            // 
+            // textBox_trans0模板文件中内容提取到多个文件中
+            // 
+            this.textBox_trans0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(84, 12);
+            this.textBox_trans0模板文件中内容提取到多个文件中.Name = "textBox_trans0模板文件中内容提取到多个文件中";
+            this.textBox_trans0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(100, 21);
+            this.textBox_trans0模板文件中内容提取到多个文件中.TabIndex = 1;
+            this.textBox_trans0模板文件中内容提取到多个文件中.Text = "TRANS";
+            // 
+            // textBox_call0模板文件中内容提取到多个文件中
+            // 
+            this.textBox_call0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(84, 58);
+            this.textBox_call0模板文件中内容提取到多个文件中.Name = "textBox_call0模板文件中内容提取到多个文件中";
+            this.textBox_call0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(100, 21);
+            this.textBox_call0模板文件中内容提取到多个文件中.TabIndex = 0;
+            this.textBox_call0模板文件中内容提取到多个文件中.Text = "CALL";
+            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -2021,7 +2071,7 @@
             // nud_限制新名称的长度
             // 
             this.nud_限制新名称的长度.Location = new System.Drawing.Point(214, 78);
-            this.nud_限制新名称的长度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nud_限制新名称的长度.Margin = new System.Windows.Forms.Padding(2);
             this.nud_限制新名称的长度.Maximum = new decimal(new int[] {
             256,
             0,
@@ -2292,50 +2342,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel_0模板文件中内容提取到多个文件中
+            // textBox_竖向拆分分隔符
             // 
-            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.label53);
-            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.label51);
-            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.textBox_trans0模板文件中内容提取到多个文件中);
-            this.panel_0模板文件中内容提取到多个文件中.Controls.Add(this.textBox_call0模板文件中内容提取到多个文件中);
-            this.panel_0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(1, 39);
-            this.panel_0模板文件中内容提取到多个文件中.Name = "panel_0模板文件中内容提取到多个文件中";
-            this.panel_0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(661, 112);
-            this.panel_0模板文件中内容提取到多个文件中.TabIndex = 26;
+            this.textBox_竖向拆分分隔符.Location = new System.Drawing.Point(139, 93);
+            this.textBox_竖向拆分分隔符.Name = "textBox_竖向拆分分隔符";
+            this.textBox_竖向拆分分隔符.Size = new System.Drawing.Size(178, 21);
+            this.textBox_竖向拆分分隔符.TabIndex = 23;
             // 
-            // textBox_call0模板文件中内容提取到多个文件中
+            // label54
             // 
-            this.textBox_call0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(84, 58);
-            this.textBox_call0模板文件中内容提取到多个文件中.Name = "textBox_call0模板文件中内容提取到多个文件中";
-            this.textBox_call0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(100, 21);
-            this.textBox_call0模板文件中内容提取到多个文件中.TabIndex = 0;
-            this.textBox_call0模板文件中内容提取到多个文件中.Text = "CALL";
-            // 
-            // textBox_trans0模板文件中内容提取到多个文件中
-            // 
-            this.textBox_trans0模板文件中内容提取到多个文件中.Location = new System.Drawing.Point(84, 12);
-            this.textBox_trans0模板文件中内容提取到多个文件中.Name = "textBox_trans0模板文件中内容提取到多个文件中";
-            this.textBox_trans0模板文件中内容提取到多个文件中.Size = new System.Drawing.Size(100, 21);
-            this.textBox_trans0模板文件中内容提取到多个文件中.TabIndex = 1;
-            this.textBox_trans0模板文件中内容提取到多个文件中.Text = "TRANS";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(19, 17);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(53, 12);
-            this.label51.TabIndex = 2;
-            this.label51.Text = "查找开始";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(16, 62);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(53, 12);
-            this.label53.TabIndex = 3;
-            this.label53.Text = "查找结束";
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(33, 97);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(101, 12);
+            this.label54.TabIndex = 24;
+            this.label54.Text = "竖向拆分分隔符：";
             // 
             // FormMain
             // 
@@ -2405,6 +2426,8 @@
             this.panelAddData_TopEndOfFile.PerformLayout();
             this.tpDeleteLineFromFile.ResumeLayout(false);
             this.tpDeleteLineFromFile.PerformLayout();
+            this.panel_0模板文件中内容提取到多个文件中.ResumeLayout(false);
+            this.panel_0模板文件中内容提取到多个文件中.PerformLayout();
             this.panel_DealMultiLine.ResumeLayout(false);
             this.panel_DealMultiLine.PerformLayout();
             this.panel_dealMultiLine2.ResumeLayout(false);
@@ -2426,8 +2449,6 @@
             this.panelOtherFind.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
-            this.panel_0模板文件中内容提取到多个文件中.ResumeLayout(false);
-            this.panel_0模板文件中内容提取到多个文件中.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2639,6 +2660,8 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox textBox_trans0模板文件中内容提取到多个文件中;
         private System.Windows.Forms.TextBox textBox_call0模板文件中内容提取到多个文件中;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox textBox_竖向拆分分隔符;
     }
 }
 

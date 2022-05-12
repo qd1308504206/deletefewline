@@ -684,6 +684,54 @@ namespace DeleteFirstFewLine
             }
         }
 
+
+
+        /// <summary>
+        /// 拆分文件
+        /// </summary>
+        /// <param name="filePath">文件路径</param>
+        /// <param name="spliter">Count  Line</param>
+        /// <returns></returns>
+        public static bool SplitFile竖向(string filePath, string spliter)
+        {
+
+            string fileName = filePath;
+            Encoding en = FileEncoding.EncodingType.GetType(fileName);
+
+            //string pathNotLastName = Common.GetFilePathWithoutExtension(fileName);
+            //string lastName = Common.GetFileExtension(fileName);
+
+            List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
+            if (ls.Count == 0)
+                return false;
+            string char_arr = @"+-*/!@#$%^&*,./;'[]|\`~<>{}=:";
+
+            try
+            {
+                
+                for (int i = 0; i < ls.Count; i++)
+                {
+                    var arr = Regex.Split(ls[i], spliter);
+                    for (int j = 0; j < arr.Count(); j++)
+                    {
+                        using (StreamWriter sw = new StreamWriter(MyString.GetNewFileNameOnly(fileName, "_" + (j + 1).ToString()), true))
+                        {
+                            sw.WriteLine(arr[j]);
+                            sw.Close();
+                        }
+                    }
+
+                }
+                return true;
+            }
+            catch(Exception e)
+            {
+                
+                return false;
+            }
+
+        }
+
         public static bool DeleteSpaceLine(string filePath, bool ckedBak)
         {
             if (ckedBak == true)

@@ -299,6 +299,11 @@ namespace DeleteFirstFewLine
                     DeleteLine("SplitFileByOddEven");
                     //SplitFileByOddEven();
                     break;
+                case "开始竖向拆分":
+
+                    DeleteLine("SplitFileBy竖向拆分");
+                    //SplitFileByOddEven();
+                    break;
 
                 case "开始添加到文件的首尾":
                     if(!checkBoxAddData_TopFile.Checked && ! checkBoxAddData_EndFile.Checked)
@@ -422,7 +427,7 @@ namespace DeleteFirstFewLine
         /// <param name="type">删除多行的类型</param>
         public void DeleteLine(string type)
         {
-            bool blCheck = checkBoxBak.Checked;
+            bool blCheck = checkBoxBak.Checked; 
 
             string successState = "成功 √";
             string failedState = "失败";
@@ -556,6 +561,13 @@ namespace DeleteFirstFewLine
                         case "SplitFileByLine"://以固定行数拆分文件
                             int nLine = Convert.ToInt32(nudSplit_Line.Value);
                             bl = Delete.SplitFile(filePath, nLine, false);
+                            successState = "拆分成功";
+                            failedState = "拆分失败";
+                            break;
+
+                        case "SplitFileBy竖向拆分":
+                            String strSplit竖向 = textBox_竖向拆分分隔符.Text;
+                            bl = Delete.SplitFile竖向(filePath, strSplit竖向);
                             successState = "拆分成功";
                             failedState = "拆分失败";
                             break;
@@ -1633,6 +1645,11 @@ namespace DeleteFirstFewLine
                     break;
                 case "拆分奇偶行":
                     this.btnStart.Text = "拆分奇偶行";
+                    break;
+                case "竖向拆分":
+                    this.btnStart.Text = "开始竖向拆分";
+                    nudSplit_Count.Enabled = false;
+                    nudSplit_Line.Enabled = false;
                     break;
                 default:
                     this.btnStart.Text = "还没做";

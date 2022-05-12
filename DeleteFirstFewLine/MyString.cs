@@ -118,6 +118,30 @@ namespace DeleteFirstFewLine
             }
         }
 
+
+        /// <summary>
+        /// 获取新名称 
+        /// </summary>
+        /// <param name="fileFullName">源名称 包括完整路径</param>
+        /// <param name="adder">添加到原名称的字符，在后缀名前面</param>
+        /// <returns>返回新的新名称 如果存在，则备份文件，返回新名称</returns>
+        public static string GetNewFileNameOnly(string fileFullName, string adder)
+        {
+            try
+            {
+                string fileNameWithoutExtension = System.IO.Path.GetDirectoryName(fileFullName) + "\\"
+                                                + System.IO.Path.GetFileNameWithoutExtension(fileFullName);
+                string fileExtension = System.IO.Path.GetExtension(fileFullName);
+
+                string fileNewFullName = fileNameWithoutExtension + adder + fileExtension;
+                
+                return fileNewFullName;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public static string DeleteTopNumber(string str)
         {
             if (str == null || str == "")
