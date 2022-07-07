@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace DeleteFirstFewLine
 {
@@ -355,6 +356,14 @@ namespace DeleteFirstFewLine
                 case "开始排序":
                     DeleteLine("OtherSort");
                     break;
+
+                case "开始查找文件尾空行":
+                    DeleteLine("开始查找文件尾空行");
+
+                    break;
+                case "开始查找小数点后3位":
+                    DeleteLine("开始查找小数点后3位");
+                    break;
                 default:
                     MessageBox.Show("还没做呢");
                     break;
@@ -590,6 +599,23 @@ namespace DeleteFirstFewLine
 
                             successState = "提取" + nret.ToString() + "--" + abc;
                             failedState = "提取" + nret.ToString() + "--" + abc;
+                            break;
+                        case "开始查找文件尾空行":
+                            abc = "";
+                            bool bModifythe文件尾空行 = this.checkBox_查找文件尾空行_是否添加.Checked;
+                            bl = Delete.DeleteFind查找文件尾空行(filePath, bModifythe文件尾空行, ref abc);
+
+                            successState = "succ:" + abc;
+                            failedState = abc;
+                            break;
+                        case "开始查找小数点后3位":
+                            strModlePath = textBox_查找小数点后3位_输出路径.Text;
+                            abc = "";
+                            bl = Delete.DeleteFind开始查找小数点后3位(filePath, strModlePath, ref abc);
+
+
+                            successState = "succ:" + abc;
+                            failedState = abc;
                             break;
 
                         case "DealExtractByKeyWord2file":
@@ -1490,6 +1516,10 @@ namespace DeleteFirstFewLine
                 return;
 
             }
+            if (e.TabPage == tp_find)
+            {
+                cmb_查找.SelectedIndex = 0;
+            }
 
 
         }
@@ -2085,6 +2115,11 @@ namespace DeleteFirstFewLine
 
         private void btnClearState_Click(object sender, EventArgs e)
         {
+            string str = "N185 X-5164.256 Y-1705.222";
+            var pattern = @"[.]\d\d\d";
+            var matches = Regex.Matches(str, pattern, RegexOptions.ExplicitCapture);
+            
+
             DeleteDGV_State();
         }
 
@@ -2464,6 +2499,56 @@ namespace DeleteFirstFewLine
         private void button2_Click_1(object sender, EventArgs e)
         {
             txb_outputExtract.Text = MyDir.OpenFileOne();
+        }
+
+        private void cmb_查找_SelectedValueChanged(object sender, EventArgs e)
+        {
+            switch (this.cmb_查找.Text)
+            {
+                case "查找文件尾空行":
+                    this.btnStart.Text = "开始查找文件尾空行";
+                    this.panel_查找小数点后3位.Hide();
+                    this.panel_查找文件尾空行.Show();
+                    break;
+
+                case "查找小数点后3位":
+                    this.btnStart.Text = "开始查找小数点后3位";
+                    this.panel_查找小数点后3位.Show();
+                    this.panel_查找文件尾空行.Hide();
+                    if (this.textBox_查找小数点后3位_输出路径.Text == "")
+                    {
+                        this.textBox_查找小数点后3位_输出路径.Text = System.IO.Directory.GetCurrentDirectory() + "\\output_log.txt";
+                    }
+                    
+                    break;
+                default:
+                    this.btnStart.Text = "还没做";
+                    break;
+            }
+        }
+
+        private void button_打开查找小数点后3位_文件路径_Click(object sender, EventArgs e)
+        {
+            if (this.textBox_查找小数点后3位_输出路径.Text == "")
+            {
+                return;
+            }
+            try
+            {
+                string str = this.textBox_查找小数点后3位_输出路径.Text;
+                if(File.Exists(str))
+                    MyDir.SystemOpenFolder(str);
+
+                var dirinfo = System.IO.Directory.GetParent(str);
+                MyDir.SystemOpenFolder(dirinfo.ToString() + "\\");
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+
+
         }
     }
 }

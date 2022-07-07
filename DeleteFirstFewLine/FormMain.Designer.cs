@@ -136,6 +136,8 @@
             this.txbMerge_LeftRightData = new System.Windows.Forms.TextBox();
             this.panelMerge_GeHang = new System.Windows.Forms.Panel();
             this.tpSplit = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.textBox_竖向拆分分隔符 = new System.Windows.Forms.TextBox();
             this.nudSplit_Line = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -234,8 +236,16 @@
             this.checkBoxBak = new System.Windows.Forms.CheckBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.textBox_竖向拆分分隔符 = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
+            this.tp_find = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label55 = new System.Windows.Forms.Label();
+            this.cmb_查找 = new System.Windows.Forms.ComboBox();
+            this.panel_查找文件尾空行 = new System.Windows.Forms.Panel();
+            this.panel_查找小数点后3位 = new System.Windows.Forms.Panel();
+            this.textBox_查找小数点后3位_输出路径 = new System.Windows.Forms.TextBox();
+            this.button_打开查找小数点后3位_文件路径 = new System.Windows.Forms.Button();
+            this.btn_查找小数点后3位_设置路径 = new System.Windows.Forms.Button();
+            this.checkBox_查找文件尾空行_是否添加 = new System.Windows.Forms.CheckBox();
             this.menu1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -280,6 +290,10 @@
             this.panelOtherChangeFileType.SuspendLayout();
             this.panelOtherFind.SuspendLayout();
             this.panelStart.SuspendLayout();
+            this.tp_find.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel_查找文件尾空行.SuspendLayout();
+            this.panel_查找小数点后3位.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1
@@ -664,6 +678,7 @@
             this.tabControl1.Controls.Add(this.tpAddData);
             this.tabControl1.Controls.Add(this.tpDeleteLineFromFile);
             this.tabControl1.Controls.Add(this.tpOther);
+            this.tabControl1.Controls.Add(this.tp_find);
             this.tabControl1.Location = new System.Drawing.Point(7, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1332,6 +1347,22 @@
             this.tpSplit.TabIndex = 4;
             this.tpSplit.Text = "拆分";
             this.tpSplit.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(33, 97);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(101, 12);
+            this.label54.TabIndex = 24;
+            this.label54.Text = "竖向拆分分隔符：";
+            // 
+            // textBox_竖向拆分分隔符
+            // 
+            this.textBox_竖向拆分分隔符.Location = new System.Drawing.Point(139, 93);
+            this.textBox_竖向拆分分隔符.Name = "textBox_竖向拆分分隔符";
+            this.textBox_竖向拆分分隔符.Size = new System.Drawing.Size(178, 21);
+            this.textBox_竖向拆分分隔符.TabIndex = 23;
             // 
             // nudSplit_Line
             // 
@@ -2342,21 +2373,107 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // textBox_竖向拆分分隔符
+            // tp_find
             // 
-            this.textBox_竖向拆分分隔符.Location = new System.Drawing.Point(139, 93);
-            this.textBox_竖向拆分分隔符.Name = "textBox_竖向拆分分隔符";
-            this.textBox_竖向拆分分隔符.Size = new System.Drawing.Size(178, 21);
-            this.textBox_竖向拆分分隔符.TabIndex = 23;
+            this.tp_find.Controls.Add(this.panel1);
+            this.tp_find.Location = new System.Drawing.Point(4, 22);
+            this.tp_find.Name = "tp_find";
+            this.tp_find.Size = new System.Drawing.Size(795, 147);
+            this.tp_find.TabIndex = 7;
+            this.tp_find.Text = "查找";
+            this.tp_find.UseVisualStyleBackColor = true;
             // 
-            // label54
+            // panel1
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(33, 97);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(101, 12);
-            this.label54.TabIndex = 24;
-            this.label54.Text = "竖向拆分分隔符：";
+            this.panel1.Controls.Add(this.label55);
+            this.panel1.Controls.Add(this.cmb_查找);
+            this.panel1.Controls.Add(this.panel_查找小数点后3位);
+            this.panel1.Controls.Add(this.panel_查找文件尾空行);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(795, 147);
+            this.panel1.TabIndex = 0;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(759, 18);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(29, 12);
+            this.label55.TabIndex = 25;
+            this.label55.Text = "模式";
+            // 
+            // cmb_查找
+            // 
+            this.cmb_查找.AutoCompleteCustomSource.AddRange(new string[] {
+            "查找文件尾空行",
+            "查找小数点后3位"});
+            this.cmb_查找.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_查找.Font = new System.Drawing.Font("宋体", 10.5F);
+            this.cmb_查找.FormattingEnabled = true;
+            this.cmb_查找.Items.AddRange(new object[] {
+            "查找文件尾空行",
+            "查找小数点后3位"});
+            this.cmb_查找.Location = new System.Drawing.Point(606, 13);
+            this.cmb_查找.Name = "cmb_查找";
+            this.cmb_查找.Size = new System.Drawing.Size(147, 22);
+            this.cmb_查找.TabIndex = 24;
+            this.cmb_查找.SelectedValueChanged += new System.EventHandler(this.cmb_查找_SelectedValueChanged);
+            // 
+            // panel_查找文件尾空行
+            // 
+            this.panel_查找文件尾空行.Controls.Add(this.checkBox_查找文件尾空行_是否添加);
+            this.panel_查找文件尾空行.Location = new System.Drawing.Point(2, 4);
+            this.panel_查找文件尾空行.Name = "panel_查找文件尾空行";
+            this.panel_查找文件尾空行.Size = new System.Drawing.Size(584, 140);
+            this.panel_查找文件尾空行.TabIndex = 26;
+            // 
+            // panel_查找小数点后3位
+            // 
+            this.panel_查找小数点后3位.Controls.Add(this.btn_查找小数点后3位_设置路径);
+            this.panel_查找小数点后3位.Controls.Add(this.button_打开查找小数点后3位_文件路径);
+            this.panel_查找小数点后3位.Controls.Add(this.textBox_查找小数点后3位_输出路径);
+            this.panel_查找小数点后3位.Location = new System.Drawing.Point(5, 0);
+            this.panel_查找小数点后3位.Name = "panel_查找小数点后3位";
+            this.panel_查找小数点后3位.Size = new System.Drawing.Size(584, 140);
+            this.panel_查找小数点后3位.TabIndex = 27;
+            // 
+            // textBox_查找小数点后3位_输出路径
+            // 
+            this.textBox_查找小数点后3位_输出路径.Location = new System.Drawing.Point(41, 18);
+            this.textBox_查找小数点后3位_输出路径.Name = "textBox_查找小数点后3位_输出路径";
+            this.textBox_查找小数点后3位_输出路径.Size = new System.Drawing.Size(458, 21);
+            this.textBox_查找小数点后3位_输出路径.TabIndex = 0;
+            // 
+            // button_打开查找小数点后3位_文件路径
+            // 
+            this.button_打开查找小数点后3位_文件路径.Location = new System.Drawing.Point(503, 47);
+            this.button_打开查找小数点后3位_文件路径.Name = "button_打开查找小数点后3位_文件路径";
+            this.button_打开查找小数点后3位_文件路径.Size = new System.Drawing.Size(75, 28);
+            this.button_打开查找小数点后3位_文件路径.TabIndex = 1;
+            this.button_打开查找小数点后3位_文件路径.Text = "打开路径";
+            this.button_打开查找小数点后3位_文件路径.UseVisualStyleBackColor = true;
+            this.button_打开查找小数点后3位_文件路径.Click += new System.EventHandler(this.button_打开查找小数点后3位_文件路径_Click);
+            // 
+            // btn_查找小数点后3位_设置路径
+            // 
+            this.btn_查找小数点后3位_设置路径.Location = new System.Drawing.Point(503, 13);
+            this.btn_查找小数点后3位_设置路径.Name = "btn_查找小数点后3位_设置路径";
+            this.btn_查找小数点后3位_设置路径.Size = new System.Drawing.Size(75, 28);
+            this.btn_查找小数点后3位_设置路径.TabIndex = 2;
+            this.btn_查找小数点后3位_设置路径.Text = "设置路径";
+            this.btn_查找小数点后3位_设置路径.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_查找文件尾空行_是否添加
+            // 
+            this.checkBox_查找文件尾空行_是否添加.AutoSize = true;
+            this.checkBox_查找文件尾空行_是否添加.Location = new System.Drawing.Point(63, 31);
+            this.checkBox_查找文件尾空行_是否添加.Name = "checkBox_查找文件尾空行_是否添加";
+            this.checkBox_查找文件尾空行_是否添加.Size = new System.Drawing.Size(132, 16);
+            this.checkBox_查找文件尾空行_是否添加.TabIndex = 0;
+            this.checkBox_查找文件尾空行_是否添加.Text = "文件尾是否添加空行";
+            this.checkBox_查找文件尾空行_是否添加.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -2449,6 +2566,13 @@
             this.panelOtherFind.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
+            this.tp_find.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel_查找文件尾空行.ResumeLayout(false);
+            this.panel_查找文件尾空行.PerformLayout();
+            this.panel_查找小数点后3位.ResumeLayout(false);
+            this.panel_查找小数点后3位.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2662,6 +2786,16 @@
         private System.Windows.Forms.TextBox textBox_call0模板文件中内容提取到多个文件中;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.TextBox textBox_竖向拆分分隔符;
+        private System.Windows.Forms.TabPage tp_find;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.ComboBox cmb_查找;
+        private System.Windows.Forms.Panel panel_查找小数点后3位;
+        private System.Windows.Forms.Panel panel_查找文件尾空行;
+        private System.Windows.Forms.Button btn_查找小数点后3位_设置路径;
+        private System.Windows.Forms.Button button_打开查找小数点后3位_文件路径;
+        private System.Windows.Forms.TextBox textBox_查找小数点后3位_输出路径;
+        private System.Windows.Forms.CheckBox checkBox_查找文件尾空行_是否添加;
     }
 }
 

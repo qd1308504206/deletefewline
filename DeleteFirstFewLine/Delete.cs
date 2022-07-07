@@ -832,6 +832,110 @@ namespace DeleteFirstFewLine
         }
 
 
+        public static bool DeleteFind查找文件尾空行(string filePath, bool bModify, ref string abc)
+        {
+            try
+            {
+                Encoding en = FileEncoding.EncodingType.GetType(filePath);
+                byte[] bbb = File.ReadAllBytes(filePath);
+
+                bool has_empty_line_end = false;
+
+                if (bbb.Length > 2 && bbb[bbb.Length - 1] == 10 && bbb[bbb.Length - 2] == 13)
+                {
+                    has_empty_line_end = true;
+                    return true;
+                }
+                if (has_empty_line_end)
+                    return true;
+                if (!bModify)
+                {
+                    abc = "没有空行";
+                    return has_empty_line_end;
+                }
+
+                using (FileStream fs = new FileStream(filePath, FileMode.Append))
+                {
+                    using (BinaryWriter bw = new BinaryWriter(fs))
+                    {
+                        fs.Seek(fs.Length, SeekOrigin.Begin);  //默认是从0开始的，需要移动位置，否则会覆盖文件原有数据
+                        byte [] bbb2 = new byte[2];
+                        bbb2[0] = 13;
+                        bbb2[1] = 10;
+                        bw.Write(bbb2);
+                    }
+                    abc = "已经添加";
+                }
+                
+                return true;
+
+            }
+            catch
+            { return false; }
+
+        }
+
+        
+
+
+        public static bool DeleteFind开始查找小数点后3位(string filePath, string savefile, ref string abc)
+        {
+            try
+            {
+                Encoding en = FileEncoding.EncodingType.GetType(filePath);
+                List<string> ls = new List<string>(File.ReadAllLines(filePath, en));
+
+                List<string> retArr = new List<string>();
+
+
+
+                for (int i = 0; i < ls.Count; i++)
+                {
+                    if (!ls[i].Contains("X") || !ls[i].Contains("Y") || ls[i].Contains("Z"))
+                        continue;
+
+                    //查找以“m”开头，“c”结尾的单词  
+                    var pattern = @"[.]\d\d\d";
+                    var matches = Regex.Matches(ls[i], pattern, RegexOptions.ExplicitCapture);
+                    if (matches.Count == 0)
+                        continue;
+
+                    pattern = "file : " + filePath + "----line: " + i.ToString() + "---- content: " + ls[i] + "";
+                    retArr.Add(pattern);
+                    abc = "存在3位小数";
+
+                }
+
+                if (retArr.Count == 0)
+                {
+                    return true;
+                }
+
+
+
+
+
+
+                StreamWriter sw = File.AppendText(savefile);
+                for (int i = 0; i < retArr.Count; i++)
+                {
+                    sw.Write(retArr[i] + "\n");
+                }
+                
+                sw.Flush();
+                sw.Close();
+                sw.Dispose();
+
+
+
+                return false;
+            }
+            catch
+            { return false; }
+
+        }
+
+
         public static int DeleteExtractByKeyWord(string filePath, string outputFilePath, string strModlePath, ref string abc)
         {
             try
