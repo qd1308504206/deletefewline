@@ -891,7 +891,7 @@ namespace DeleteFirstFewLine
 
                 for (int i = 0; i < ls.Count; i++)
                 {
-                    if (!ls[i].Contains("X") || !ls[i].Contains("Y") || ls[i].Contains("Z"))
+                    if (!ls[i].Contains("X") && !ls[i].Contains("Y") && ls[i].Contains("Z"))
                         continue;
 
                     //查找以“m”开头，“c”结尾的单词  
